@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="92" id="KGk-i7-Jjw" customClass="BestChoiceTVC" customModule="Research_Survey" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="92"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="92"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GHO-Ia-7Cp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="92"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="E7h-JU-es5">
+                                <rect key="frame" x="15" y="36.5" width="20" height="19"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="J5Y-Ly-Ptq"/>
+                                    <constraint firstAttribute="height" constant="20" id="RuO-vz-reG"/>
+                                </constraints>
+                            </imageView>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="oVD-8A-jnt">
+                                <rect key="frame" x="20" y="41.5" width="10" height="9"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="10" id="Dch-Ij-erp"/>
+                                    <constraint firstAttribute="height" constant="10" id="w9n-O3-Ocd"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zx0-WH-rt8">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="92"/>
+                                <connections>
+                                    <action selector="RadioBtnTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="BKR-iV-BWp"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Option" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSg-zE-7Xb">
+                                <rect key="frame" x="50" y="15" width="255" height="62"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="pSg-zE-7Xb" secondAttribute="trailing" constant="15" id="5dN-fz-nAj"/>
+                            <constraint firstItem="oVD-8A-jnt" firstAttribute="centerY" secondItem="E7h-JU-es5" secondAttribute="centerY" id="6kq-Kc-p6m"/>
+                            <constraint firstItem="E7h-JU-es5" firstAttribute="leading" secondItem="GHO-Ia-7Cp" secondAttribute="leading" constant="15" id="EaD-3B-Vru"/>
+                            <constraint firstItem="oVD-8A-jnt" firstAttribute="centerX" secondItem="E7h-JU-es5" secondAttribute="centerX" id="GhN-Qr-b3g"/>
+                            <constraint firstItem="Zx0-WH-rt8" firstAttribute="leading" secondItem="GHO-Ia-7Cp" secondAttribute="leading" id="T2H-6S-0Nv"/>
+                            <constraint firstAttribute="bottom" secondItem="Zx0-WH-rt8" secondAttribute="bottom" id="TKF-mo-AHB"/>
+                            <constraint firstItem="pSg-zE-7Xb" firstAttribute="leading" secondItem="E7h-JU-es5" secondAttribute="trailing" constant="15" id="bfo-TV-v7N"/>
+                            <constraint firstItem="Zx0-WH-rt8" firstAttribute="top" secondItem="GHO-Ia-7Cp" secondAttribute="top" id="dby-fQ-ory"/>
+                            <constraint firstAttribute="trailing" secondItem="Zx0-WH-rt8" secondAttribute="trailing" id="jhv-F6-jvQ"/>
+                            <constraint firstItem="E7h-JU-es5" firstAttribute="centerY" secondItem="GHO-Ia-7Cp" secondAttribute="centerY" id="kVD-3y-QOZ"/>
+                            <constraint firstItem="pSg-zE-7Xb" firstAttribute="top" secondItem="GHO-Ia-7Cp" secondAttribute="top" constant="15" id="r2o-ww-FQV"/>
+                            <constraint firstAttribute="bottom" secondItem="pSg-zE-7Xb" secondAttribute="bottom" constant="15" id="wV8-Gz-dEH"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="GHO-Ia-7Cp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="DDQ-Hh-GCL"/>
+                    <constraint firstAttribute="bottom" secondItem="GHO-Ia-7Cp" secondAttribute="bottom" id="LxY-li-sma"/>
+                    <constraint firstItem="GHO-Ia-7Cp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Qeo-4l-2FQ"/>
+                    <constraint firstAttribute="trailing" secondItem="GHO-Ia-7Cp" secondAttribute="trailing" id="xMC-AD-EhM"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="nameLbl" destination="pSg-zE-7Xb" id="1N3-6H-OX0"/>
+                <outlet property="radioBtnFilled" destination="oVD-8A-jnt" id="qPq-aQ-cWH"/>
+            </connections>
+            <point key="canvasLocation" x="294.20289855072468" y="158.03571428571428"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="circle" catalog="system" width="128" height="121"/>
+        <image name="circle.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
