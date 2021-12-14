@@ -7,7 +7,7 @@
 
 import Foundation
 
-class UserSurvey: Codable {
+struct UserSurvey: Codable {
     var userId : String? = nil
     let username : String
     let surveyName : String

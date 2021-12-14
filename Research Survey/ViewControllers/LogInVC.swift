@@ -17,7 +17,6 @@ class LogInVC: UIViewController {
     //MARK:- Helper Variables
     var userSurvey : UserSurvey?
     var modules: [Module] = []
-    var db : Firestore?
     
     
     //MARK:- LifeCycle Methods
@@ -26,7 +25,6 @@ class LogInVC: UIViewController {
 
         loginBtn.layer.cornerRadius = 10
         loginBtn.clipsToBounds = true
-        db = Firestore.firestore()
         // Do any additional setup after loading the view.
     }
     
@@ -35,8 +33,6 @@ class LogInVC: UIViewController {
         //Check if the credentials are okay
         
         //Retreive the modules list
-        
-        //let modules = getStaticObject()
         getSurvey()
         
         /*
@@ -49,28 +45,32 @@ class LogInVC: UIViewController {
         
         let questionParameters =
             [
-            "question": "What letter starts with C?",
-            "answer_type": "BCQ",
-            "answer_choices": ["Canada","Candy","Australia","British","Boat"],
-            "priority" : 1,
-            "estimated_time" : 4,
-            "next_question_id" : ""
+                "question_id": 1,
+                "question": "Is this a skip question?",
+                "answer_type": "BCQ",
+                "answer_choices": ["Yes","No"],
+                "estimated_time" : 4,
+                "next_question_id" : 2,
+                "skip_logic" : true,
+                "skip_answer" : "Yes",
+                "skip_to_question_id" : 3,
+                "is_first" : true
             ] as [String : AnyObject]
-        self.addModuleQuestion(moduleId: moduleId ?? "", params: questionParameters)
- */
+        self.addModuleQuestion(moduleId:"l6tY3VbQMMJyrsgGt8VS", params: questionParameters)
+    */
     }
     
     //MARK:- Helper Functions
     func addModule(params: [String: AnyObject]?) -> String? {
-        return Helper.addModule(db: db, parameters: params)
+        return Helper.addModule(parameters: params)
     }
     
     func addModuleQuestion(moduleId: String, params: [String: AnyObject]?) -> String? {
-        return Helper.addModuleQuestion(db: db, moduleId: moduleId, parameters: params)
+        return Helper.addModuleQuestion(moduleId: moduleId, parameters: params)
     }
     
     func getSurvey() {
-        db?.collection("user_survey").whereField("username", isEqualTo: "jayzaidi@umd.edu").getDocuments { (querySnapshot, error) in
+        Helper.db?.collection("user_survey").whereField("username", isEqualTo: "jayzaidi@umd.edu").getDocuments { (querySnapshot, error) in
             if let error = error {
                 print("Error getting documents: \(error)")
                 return
@@ -108,14 +108,14 @@ class LogInVC: UIViewController {
         var module: Module?
         var questionList: [Question?]? = []
         
-        db?.collection("module_question").document(documentId).getDocument { (querySnapshot,error) in
+        Helper.db?.collection("module_question").document(documentId).getDocument { (querySnapshot,error) in
             if let error = error {
                 print("Error getting documents: \(error)")
                 return
             }
             
             module = try? querySnapshot?.data(as: Module.self)
-            self.db?.collection("module_question").document(documentId).collection("question").getDocuments { (querySnapshot,error) in
+            Helper.db?.collection("module_question").document(documentId).collection("question").getDocuments { (querySnapshot,error) in
                 if let error = error {
                     print("Error getting documents: \(error)")
                 } else {

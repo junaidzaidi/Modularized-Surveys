@@ -26,13 +26,15 @@ class QuestionVC: UIViewController {
     var question : Question? = nil
     var moduleName = ""
     var questionNumber : Int = 0
+    var answer : [String] = []
+    
     
    
     //MARK:- LifeCycle Methods
     override func viewDidLoad() {
-       super.viewDidLoad()
-       setup()
-       
+        super.viewDidLoad()
+        setup()
+        self.hideKeyboardWhenTappedAround()
        // Do any additional setup after loading the view.
     }
 
@@ -94,6 +96,20 @@ class QuestionVC: UIViewController {
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     
+    func writeAnswerToFirestore() {
+        let params = [
+            "username": "jayzaidi@umd.edu",
+            "module_name": moduleName,
+            "question": question?.question,
+            "question_type": question?.answerType,
+            "answer": answer,
+            "change_count": 0,
+            "time_taken": 10
+        ] as [String : AnyObject]
+        
+        Helper.addAnswer(parameters: params)
+    }
+    
 }
 
 extension QuestionVC : UITableViewDelegate, UITableViewDataSource {
@@ -108,21 +124,25 @@ extension QuestionVC : UITableViewDelegate, UITableViewDataSource {
             case "MCQ":
                 let cell = tableView.dequeueReusableCell(withIdentifier: "MultipleChoiceTVC", for: indexPath) as? MultipleChoiceTVC ?? MultipleChoiceTVC()
                 cell.setChoiceName(name: question?.answerChoices?[indexPath.row] ?? "")
+                answer.contains(question?.answerChoices?[indexPath.row] ?? " ") ? cell.setActive(state: true) : cell.setActive(state: false)
                 return cell
                 
         
             case "BCQ":
                 let cell = tableView.dequeueReusableCell(withIdentifier: "BestChoiceTVC", for: indexPath) as? BestChoiceTVC ?? BestChoiceTVC()
                 cell.setChoiceName(name: question?.answerChoices?[indexPath.row] ?? "")
+                answer.contains(question?.answerChoices?[indexPath.row] ?? " ") ? cell.setActive(state: true) : cell.setActive(state: false)
                 return cell
             
             
             case "Text":
                 let cell = tableView.dequeueReusableCell(withIdentifier: "TextTVC", for: indexPath) as? TextTVC ?? TextTVC()
+                cell.delegate = self
                 return cell
             
             case "Numeric":
                 let cell = tableView.dequeueReusableCell(withIdentifier: "NumericTVC", for: indexPath) as? NumericTVC ?? NumericTVC()
+                cell.delegate = self
                 return cell
         
             default:
@@ -132,11 +152,24 @@ extension QuestionVC : UITableViewDelegate, UITableViewDataSource {
     }
 
     
-    /*func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-       let viewController = storyboard.instantiateViewController(identifier: "QuestionVC") as? QuestionVC ?? QuestionVC()
-       self.navigationController?.pushViewController(viewController, animated: true)
-    }*/
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if (question?.answerType ?? "" == "MCQ") {
+            if (answer.contains(question?.answerChoices?[indexPath.row] ?? "")) {
+                answer.remove(at: answer.firstIndex(where: { $0 == question?.answerChoices?[indexPath.row] ?? ""}) ?? -1)
+            }
+            else{
+                answer.append(question?.answerChoices?[indexPath.row] ?? "")
+            }
+        }
+    
+        if (question?.answerType ?? "" == "BCQ") {
+            answer = []
+            answer.append(question?.answerChoices?[indexPath.row] ?? "")
+        }
+        
+        tableView.reloadData()
+    }
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let cell = tableView.dequeueReusableHeaderFooterView(withIdentifier: "FooterTVC") as? FooterTVC ?? FooterTVC()
@@ -163,13 +196,41 @@ extension QuestionVC : FooterTVCDelegate {
     }
     
     func nextBtnTapped() {
-        let nextQuestionId = question?.nextQuestionId
-        let nextQuestion = module?.questions?.first(where: {$0.questionId == nextQuestionId})
-        pushNewQuestionVC(question: nextQuestion, questionNumber: nextQuestionId)
+        
+        //Write Answer To FireStore
+        
+        
+        writeAnswerToFirestore()
+        
+        if (question?.skipLogic == true && answer.count > 0) {
+            let nextQuestionId = question?.skipAnswer == answer[0] ? question?.skipToQuestionId : question?.nextQuestionId
+            let nextQuestion = module?.questions?.first(where: {$0.questionId == nextQuestionId})
+            pushNewQuestionVC(question: nextQuestion, questionNumber: nextQuestionId)
+        }
+        else {
+            let nextQuestionId = question?.nextQuestionId
+            let nextQuestion = module?.questions?.first(where: {$0.questionId == nextQuestionId})
+            pushNewQuestionVC(question: nextQuestion, questionNumber: nextQuestionId)
+        }
     }
     
     func previousBtnTapped() {
+        print(answer)
         self.navigationController?.popViewController(animated: true)
     }
     
+}
+
+extension QuestionVC : TextTVCDelegate {
+    func textFieldValueChanged(newValue: String) {
+        answer = []
+        answer.append(newValue)
+    }
+}
+
+extension QuestionVC : NumericTVCDelegate {
+    func numericFieldValueChanged(newValue: String) {
+        answer = []
+        answer.append(newValue)
+    }
 }

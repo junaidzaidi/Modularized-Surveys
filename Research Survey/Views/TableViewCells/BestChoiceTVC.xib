@@ -17,6 +17,13 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="92"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zx0-WH-rt8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="92"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <connections>
+                            <action selector="RadioBtnTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="BKR-iV-BWp"/>
+                        </connections>
+                    </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GHO-Ia-7Cp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="92"/>
                         <subviews>
@@ -34,12 +41,6 @@
                                     <constraint firstAttribute="height" constant="10" id="w9n-O3-Ocd"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zx0-WH-rt8">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="92"/>
-                                <connections>
-                                    <action selector="RadioBtnTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="BKR-iV-BWp"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Option" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSg-zE-7Xb">
                                 <rect key="frame" x="50" y="15" width="255" height="62"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -53,11 +54,7 @@
                             <constraint firstItem="oVD-8A-jnt" firstAttribute="centerY" secondItem="E7h-JU-es5" secondAttribute="centerY" id="6kq-Kc-p6m"/>
                             <constraint firstItem="E7h-JU-es5" firstAttribute="leading" secondItem="GHO-Ia-7Cp" secondAttribute="leading" constant="15" id="EaD-3B-Vru"/>
                             <constraint firstItem="oVD-8A-jnt" firstAttribute="centerX" secondItem="E7h-JU-es5" secondAttribute="centerX" id="GhN-Qr-b3g"/>
-                            <constraint firstItem="Zx0-WH-rt8" firstAttribute="leading" secondItem="GHO-Ia-7Cp" secondAttribute="leading" id="T2H-6S-0Nv"/>
-                            <constraint firstAttribute="bottom" secondItem="Zx0-WH-rt8" secondAttribute="bottom" id="TKF-mo-AHB"/>
                             <constraint firstItem="pSg-zE-7Xb" firstAttribute="leading" secondItem="E7h-JU-es5" secondAttribute="trailing" constant="15" id="bfo-TV-v7N"/>
-                            <constraint firstItem="Zx0-WH-rt8" firstAttribute="top" secondItem="GHO-Ia-7Cp" secondAttribute="top" id="dby-fQ-ory"/>
-                            <constraint firstAttribute="trailing" secondItem="Zx0-WH-rt8" secondAttribute="trailing" id="jhv-F6-jvQ"/>
                             <constraint firstItem="E7h-JU-es5" firstAttribute="centerY" secondItem="GHO-Ia-7Cp" secondAttribute="centerY" id="kVD-3y-QOZ"/>
                             <constraint firstItem="pSg-zE-7Xb" firstAttribute="top" secondItem="GHO-Ia-7Cp" secondAttribute="top" constant="15" id="r2o-ww-FQV"/>
                             <constraint firstAttribute="bottom" secondItem="pSg-zE-7Xb" secondAttribute="bottom" constant="15" id="wV8-Gz-dEH"/>

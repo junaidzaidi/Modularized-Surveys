@@ -28,7 +28,7 @@ class Question1 {
     var nextQuestionId : Int? = nil
 }
 
-class Answer {
+class Answer1 {
     var username = ""
     var question = ""
     var answer = ""

@@ -8,7 +8,9 @@
 import Foundation
 import FirebaseFirestore
 class Helper {
-    static func addModuleQuestion(db: Firestore?, moduleId: String, parameters: [String : AnyObject]?) -> String? {
+    static let db: Firestore? = Firestore.firestore()
+    
+    static func addModuleQuestion(moduleId: String, parameters: [String : AnyObject]?) -> String? {
         /*[
             "question_id" : ""
             "question": "What letter starts with C?",
@@ -30,7 +32,7 @@ class Helper {
         return ref?.documentID
     }
     
-    static func addModule(db: Firestore?, parameters: [String : AnyObject]?) -> String? {
+    static func addModule(parameters: [String : AnyObject]?) -> String? {
         /*
         [
             "date_added": Date(),
@@ -48,7 +50,7 @@ class Helper {
         return ref?.documentID
     }
     
-    static func addUserSurvey(db: Firestore?, parameters: [String : AnyObject]?) -> String? {
+    static func addUserSurvey(parameters: [String : AnyObject]?) -> String? {
         /*
         [
             "username": "junaid_masroor@hotmail.com,
@@ -66,8 +68,32 @@ class Helper {
         }
         return ref?.documentID
     }
+    
+    static func addAnswer(parameters: [String : AnyObject]?) -> String? {
+        /*
+        [
+            "username": "junaid_masroor@hotmail.com,
+            "module_name": "Junaid Test Module 2",
+            "question": "",
+            "question_type": "",
+            "answer": "",
+            "change_count": 0,
+            "time_taken": 10
+        ]
+         */
+        var ref = db?.collection("user_answer").addDocument(data: parameters ?? [:]
+        ) { err in
+            if let err = err {
+                print("Error adding document: \(err)")
+            } else {
+                print("Question added with ID: \(ref?.documentID)")
+            }
+        }
+        return ref?.documentID
+    }
+    
     /*
-    static func assignModuleToUser(db: Firestore?, parameters: [String : AnyObject]?) -> String? {
+    static func assignModuleToUser(parameters: [String : AnyObject]?) -> String? {
         /*
         [
             "username": Date(),

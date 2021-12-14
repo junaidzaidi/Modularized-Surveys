@@ -41,6 +41,7 @@
 		3993358A275835F5006F9C11 /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39933589275835F5006F9C11 /* Module.swift */; };
 		3993358C2758367D006F9C11 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3993358B2758367D006F9C11 /* Question.swift */; };
 		3993358F275855AD006F9C11 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3993358E275855AD006F9C11 /* Helper.swift */; };
+		39933591276910A7006F9C11 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39933590276910A6006F9C11 /* Answer.swift */; };
 		480D8096BB2C2979A85740C5 /* Pods_Research_Survey_Research_SurveyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC4ADEEECB83C224014677AC /* Pods_Research_Survey_Research_SurveyUITests.framework */; };
 		5C0E7C7A59A73E7EA2CCCED6 /* Pods_Research_Survey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0BB0ED62E8F2A1525C4FB64 /* Pods_Research_Survey.framework */; };
 /* End PBXBuildFile section */
@@ -104,6 +105,7 @@
 		39933589275835F5006F9C11 /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
 		3993358B2758367D006F9C11 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		3993358E275855AD006F9C11 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		39933590276910A6006F9C11 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		4331F9503D72095DEFCD7791 /* Pods-Research SurveyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Research SurveyTests.release.xcconfig"; path = "Target Support Files/Pods-Research SurveyTests/Pods-Research SurveyTests.release.xcconfig"; sourceTree = "<group>"; };
 		7F9BCED748D84BDAC4DF7B01 /* Pods-Research Survey-Research SurveyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Research Survey-Research SurveyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Research Survey-Research SurveyUITests/Pods-Research Survey-Research SurveyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		85309D97AB53246AC6713A9E /* Pods_Research_SurveyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Research_SurveyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -206,6 +208,7 @@
 				398C3B7D2757F90400504A5F /* UserSurvey.swift */,
 				39933589275835F5006F9C11 /* Module.swift */,
 				3993358B2758367D006F9C11 /* Question.swift */,
+				39933590276910A6006F9C11 /* Answer.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -548,6 +551,7 @@
 				3946BF50272E0D6E005DFFC2 /* TextTVC.swift in Sources */,
 				3946BF4C272E0D5A005DFFC2 /* MultipleChoiceTVC.swift in Sources */,
 				3946BF2A272AFD8F005DFFC2 /* HomeVC.swift in Sources */,
+				39933591276910A7006F9C11 /* Answer.swift in Sources */,
 				398C3B7827418BE400504A5F /* StaticClasses.swift in Sources */,
 				3946BEF6272AF7A1005DFFC2 /* AppDelegate.swift in Sources */,
 				3946BF3E272B0861005DFFC2 /* UIColor+Extentions.swift in Sources */,

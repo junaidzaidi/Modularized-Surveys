@@ -7,11 +7,26 @@
 
 import UIKit
 
-class NumericTVC: UITableViewCell {
+protocol NumericTVCDelegate : AnyObject {
+    func numericFieldValueChanged(newValue: String)
+}
 
+class NumericTVC: UITableViewCell, UITextFieldDelegate {
+
+    @IBOutlet weak var textFld: UITextField!
+    
+    weak var delegate: NumericTVCDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        textFld.delegate = self
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if let del = delegate {
+            del.numericFieldValueChanged(newValue: textField.text ?? "")
+        }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

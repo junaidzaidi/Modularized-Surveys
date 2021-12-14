@@ -17,6 +17,13 @@
                 <rect key="frame" x="0.0" y="0.0" width="383" height="101"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vex-jU-buJ">
+                        <rect key="frame" x="0.0" y="0.0" width="383" height="101"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <connections>
+                            <action selector="checkBtnTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="GT6-7U-S4b"/>
+                        </connections>
+                    </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AsU-2K-hDl">
                         <rect key="frame" x="0.0" y="0.0" width="383" height="101"/>
                         <subviews>
@@ -33,25 +40,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vex-jU-buJ">
-                                <rect key="frame" x="0.0" y="0.0" width="383" height="101"/>
-                                <connections>
-                                    <action selector="checkBtnTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="GT6-7U-S4b"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Vex-jU-buJ" secondAttribute="trailing" id="AYj-Tc-7Iu"/>
                             <constraint firstItem="9Rr-I1-j89" firstAttribute="top" secondItem="AsU-2K-hDl" secondAttribute="top" constant="15" id="FED-yk-a58"/>
                             <constraint firstAttribute="bottom" secondItem="9Rr-I1-j89" secondAttribute="bottom" constant="15" id="GOP-tS-PkW"/>
-                            <constraint firstItem="Vex-jU-buJ" firstAttribute="top" secondItem="AsU-2K-hDl" secondAttribute="top" id="SvN-67-6hk"/>
-                            <constraint firstItem="Vex-jU-buJ" firstAttribute="leading" secondItem="AsU-2K-hDl" secondAttribute="leading" id="aOE-FY-RZ4"/>
                             <constraint firstItem="6Kv-mE-2zx" firstAttribute="leading" secondItem="AsU-2K-hDl" secondAttribute="leading" constant="15" id="cb5-0q-wuA"/>
                             <constraint firstAttribute="trailing" secondItem="9Rr-I1-j89" secondAttribute="trailing" constant="15" id="gQC-aV-G3S"/>
                             <constraint firstItem="6Kv-mE-2zx" firstAttribute="centerY" secondItem="9Rr-I1-j89" secondAttribute="centerY" id="icx-L8-my6"/>
                             <constraint firstItem="9Rr-I1-j89" firstAttribute="leading" secondItem="6Kv-mE-2zx" secondAttribute="trailing" constant="15" id="oai-i1-rXd"/>
-                            <constraint firstAttribute="bottom" secondItem="Vex-jU-buJ" secondAttribute="bottom" id="snB-nd-aTm"/>
                         </constraints>
                     </view>
                 </subviews>

@@ -8,8 +8,11 @@
 import UIKit
 
 protocol FooterTVCDelegate : AnyObject {
+    func submitBtnTapped()
     func nextBtnTapped()
-    func previousBtnTapped()}
+    func previousBtnTapped()
+    
+}
 
 class FooterTVC: UITableViewHeaderFooterView {
 
@@ -44,7 +47,8 @@ class FooterTVC: UITableViewHeaderFooterView {
     
     @IBAction func nextBtnTapped(_ sender: UIButton) {
         if let del = delegate {
-            del.nextBtnTapped()
+            
+            self.nextBtn.currentTitle == "Submit" ? del.submitBtnTapped() : del.nextBtnTapped()
         }
     }
     

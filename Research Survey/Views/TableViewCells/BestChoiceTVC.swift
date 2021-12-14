@@ -7,6 +7,8 @@
 
 import UIKit
 
+
+
 class BestChoiceTVC: UITableViewCell {
 
     
@@ -28,12 +30,18 @@ class BestChoiceTVC: UITableViewCell {
     
     //MARK:- IBActions
     @IBAction func RadioBtnTapped(_ sender: UIButton) {
-        radioBtnFilled.isHidden = radioBtnFilled.isHidden == true ? false : true
+        
     }
+    
+    
     
     //MARK:- Helper Function
     func setChoiceName(name: String) {
         nameLbl.text = name
+    }
+    
+    func setActive(state: Bool) {
+        radioBtnFilled.isHidden = state ? false : true
     }
     
 }

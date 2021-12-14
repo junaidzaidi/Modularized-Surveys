@@ -8,15 +8,17 @@
 import Foundation
 struct Question: Codable {
     
-    var questionId: Int?
+    let questionId: Int?
     let question: String
     let answerType: String
     let answerChoices: [String]?
     let priority: Int?
     let estimatedTime: Int?
     let nextQuestionId: Int?
-    var isFirst : Bool?
-    
+    let isFirst: Bool?
+    let skipLogic: Bool?
+    let skipAnswer: String?
+    let skipToQuestionId: Int?
     
     enum CodingKeys: String, CodingKey {
         case questionId = "question_id"
@@ -27,5 +29,8 @@ struct Question: Codable {
         case estimatedTime = "estimated_time"
         case nextQuestionId = "next_question_id"
         case isFirst = "is_first"
+        case skipLogic = "skip_logic"
+        case skipAnswer = "skip_answer"
+        case skipToQuestionId = "skip_to_question_id"
     }
 }
