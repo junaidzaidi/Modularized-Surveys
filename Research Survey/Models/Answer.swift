@@ -6,11 +6,13 @@
 //
 
 import Foundation
-
+/*
 struct Answer {
+    
     var username = ""
     var question = ""
     var answer = ""
     var answerChangeCount = ""
     
 }
+ */

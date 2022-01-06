@@ -21,6 +21,7 @@ class HomeVC: UIViewController {
     //MARK:- Helper Variables
     var modules : [Module]? = nil
     var surveyName = ""
+    var previousAnsweredQuestionsVCs : [UIViewController] = []
     
     //MARK:- LifeCycle Methods
     override func viewDidLoad() {
@@ -34,13 +35,13 @@ class HomeVC: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-       
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         DispatchQueue.main.async {
             self.homeView.dropShadow()
+            self.tableView.reloadData()
         }
         surveyNameLbl.text = surveyName
     }
@@ -77,7 +78,12 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HomeTVC", for: indexPath) as? HomeTVC ?? HomeTVC()
         //cell.mainView.backgroundColor = indexPath.row > 5 ? .white : UIColor(red: 178/255, green: 220/255, blue: 255/255, alpha: 0.90)
         cell.moduleName.text = modules?[indexPath.row].moduleName ?? ""
-        cell.questionStatus.text = "1/\(modules?[indexPath.row].questions?.count ?? 0)"
+        
+        let allQuestions = modules?[indexPath.row].questions?.allObjects as? [Question]
+        let answeredQuestions = allQuestions?.filter({ $0.answer?.answer != nil && $0.answer?.answer?.count ?? 0 > 0
+        })
+        
+        cell.questionStatus.text = "\(answeredQuestions?.count ?? 0)/\(modules?[indexPath.row].questions?.count ?? 0)"
         
         cell.mainView.backgroundColor = .white
         cell.selectionStyle = .none
@@ -96,16 +102,50 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let question = modules?[indexPath.row].questions?.first(where: {$0.isFirst == true})
+        let questions = modules?[indexPath.row].questions?.allObjects as? [Question]
+        var question = questions?.first(where: {$0.isFirst == true})
+        
+        
+        
+        
+        while (question?.answer?.answer?.count ?? 0 > 0) {
+            let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+            let viewController = storyboard.instantiateViewController(identifier: "QuestionVC") as? QuestionVC ?? QuestionVC()
+            viewController.module = modules?[indexPath.row]
+            viewController.question = question
+            viewController.questionNumber = Int(question?.questionId ?? 0)
+            viewController.moduleName = modules?[indexPath.row].moduleName ?? ""
+            previousAnsweredQuestionsVCs.append(viewController)
+            //self.navigationController?.viewControllers.append(viewController)
+            
+            if (question?.skipLogic == true && question?.answer?.answer?.count ?? 0 > 0) {
+                let nextQuestionId = question?.skipAnswer == question?.answer?.answer?[0] ? question?.skipToQuestionId : question?.nextQuestionId
+                question = questions?.first(where: {$0.questionId == nextQuestionId})
+                }
+            else {
+                let nextQuestionId = question?.nextQuestionId
+                question = questions?.first(where: {$0.questionId == nextQuestionId})
+            }
+        }
+        
+        
+        
         //let question = modules?[indexPath.row].questions?[0]
         
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
         let viewController = storyboard.instantiateViewController(identifier: "QuestionVC") as? QuestionVC ?? QuestionVC()
         viewController.module = modules?[indexPath.row]
         viewController.question = question
-        viewController.questionNumber = 1
+        viewController.questionNumber = Int(question?.questionId ?? 0)
         viewController.moduleName = modules?[indexPath.row].moduleName ?? ""
-        self.navigationController?.pushViewController(viewController, animated: true)
+        previousAnsweredQuestionsVCs.append(viewController)
+        self.navigationController?.viewControllers.append(contentsOf: previousAnsweredQuestionsVCs)
+        
+        
+        //Navigate to the not answered question
+        
+        //self.navigationController?.pushViewController(viewController, animated: true)
+     
     }
     
     

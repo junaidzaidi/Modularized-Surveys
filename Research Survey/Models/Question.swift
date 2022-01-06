@@ -6,6 +6,7 @@
 //
 
 import Foundation
+/*
 struct Question: Codable {
     
     let questionId: Int?
@@ -34,3 +35,4 @@ struct Question: Codable {
         case skipToQuestionId = "skip_to_question_id"
     }
 }
+ */

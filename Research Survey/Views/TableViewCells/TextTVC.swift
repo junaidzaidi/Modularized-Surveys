@@ -36,4 +36,8 @@ class TextTVC: UITableViewCell, UITextFieldDelegate {
         }
     }
     
+    func setText(text: String?) {
+        textFld.text = text
+    }
+    
 }

@@ -35,4 +35,8 @@ class NumericTVC: UITableViewCell, UITextFieldDelegate {
         // Configure the view for the selected state
     }
     
+    func setText(text: String?) {
+        textFld.text = text
+    }
+    
 }

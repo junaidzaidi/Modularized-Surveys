@@ -7,7 +7,9 @@
 
 import Foundation
 
+/*
 struct Module: Codable {
+    
     let moduleName : String?
     let dateAdded : Date?
     var questions : [Question]? = nil
@@ -17,3 +19,4 @@ struct Module: Codable {
         case dateAdded = "date_added"
     }
 }
+*/

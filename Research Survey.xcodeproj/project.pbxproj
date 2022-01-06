@@ -30,6 +30,13 @@
 		3946BF51272E0D6E005DFFC2 /* TextTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3946BF4F272E0D6E005DFFC2 /* TextTVC.xib */; };
 		3946BF54272E0D7F005DFFC2 /* NumericTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3946BF52272E0D7F005DFFC2 /* NumericTVC.swift */; };
 		3946BF55272E0D7F005DFFC2 /* NumericTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3946BF53272E0D7F005DFFC2 /* NumericTVC.xib */; };
+		396C5A94277A904900B367C0 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 396C5A92277A904800B367C0 /* Model.xcdatamodeld */; };
+		396C5A9B277A907300B367C0 /* Answer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396C5A96277A907200B367C0 /* Answer+CoreDataClass.swift */; };
+		396C5A9C277A907300B367C0 /* Answer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396C5A99277A907200B367C0 /* Answer+CoreDataProperties.swift */; };
+		396C5A9D277A907300B367C0 /* Question+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396C5A9A277A907200B367C0 /* Question+CoreDataProperties.swift */; };
+		396C5A9E277A907300B367C0 /* Question+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396C5A95277A907200B367C0 /* Question+CoreDataClass.swift */; };
+		396C5A9F277A907300B367C0 /* Module+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396C5A97277A907200B367C0 /* Module+CoreDataClass.swift */; };
+		396C5AA0277A907300B367C0 /* Module+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396C5A98277A907200B367C0 /* Module+CoreDataProperties.swift */; };
 		398C3B6F273CA61600504A5F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 398C3B6E273CA61600504A5F /* GoogleService-Info.plist */; };
 		398C3B71273DB78000504A5F /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398C3B70273DB78000504A5F /* SettingVC.swift */; };
 		398C3B74274185DD00504A5F /* FooterTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398C3B72274185DD00504A5F /* FooterTVC.swift */; };
@@ -94,6 +101,13 @@
 		3946BF4F272E0D6E005DFFC2 /* TextTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextTVC.xib; sourceTree = "<group>"; };
 		3946BF52272E0D7F005DFFC2 /* NumericTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericTVC.swift; sourceTree = "<group>"; };
 		3946BF53272E0D7F005DFFC2 /* NumericTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NumericTVC.xib; sourceTree = "<group>"; };
+		396C5A93277A904800B367C0 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		396C5A95277A907200B367C0 /* Question+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Question+CoreDataClass.swift"; path = "/Users/JunaidZaidi/Documents/GitHub/Survey-App-RA/Research Survey/Models/Question+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		396C5A96277A907200B367C0 /* Answer+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Answer+CoreDataClass.swift"; path = "/Users/JunaidZaidi/Documents/GitHub/Survey-App-RA/Research Survey/Models/Answer+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		396C5A97277A907200B367C0 /* Module+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Module+CoreDataClass.swift"; path = "/Users/JunaidZaidi/Documents/GitHub/Survey-App-RA/Research Survey/Models/Module+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		396C5A98277A907200B367C0 /* Module+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Module+CoreDataProperties.swift"; path = "/Users/JunaidZaidi/Documents/GitHub/Survey-App-RA/Research Survey/Models/Module+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		396C5A99277A907200B367C0 /* Answer+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Answer+CoreDataProperties.swift"; path = "/Users/JunaidZaidi/Documents/GitHub/Survey-App-RA/Research Survey/Models/Answer+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		396C5A9A277A907200B367C0 /* Question+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Question+CoreDataProperties.swift"; path = "/Users/JunaidZaidi/Documents/GitHub/Survey-App-RA/Research Survey/Models/Question+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
 		398C3B6E273CA61600504A5F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		398C3B70273DB78000504A5F /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 		398C3B72274185DD00504A5F /* FooterTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterTVC.swift; sourceTree = "<group>"; };
@@ -178,6 +192,7 @@
 				3946BEFE272AF7A5005DFFC2 /* Assets.xcassets */,
 				3946BF00272AF7A5005DFFC2 /* LaunchScreen.storyboard */,
 				3946BF03272AF7A5005DFFC2 /* Info.plist */,
+				396C5A92277A904800B367C0 /* Model.xcdatamodeld */,
 				398C3B6E273CA61600504A5F /* GoogleService-Info.plist */,
 			);
 			path = "Research Survey";
@@ -204,6 +219,12 @@
 		3946BF25272AFBF3005DFFC2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				396C5A97277A907200B367C0 /* Module+CoreDataClass.swift */,
+				396C5A98277A907200B367C0 /* Module+CoreDataProperties.swift */,
+				396C5A95277A907200B367C0 /* Question+CoreDataClass.swift */,
+				396C5A9A277A907200B367C0 /* Question+CoreDataProperties.swift */,
+				396C5A96277A907200B367C0 /* Answer+CoreDataClass.swift */,
+				396C5A99277A907200B367C0 /* Answer+CoreDataProperties.swift */,
 				398C3B7727418BE400504A5F /* StaticClasses.swift */,
 				398C3B7D2757F90400504A5F /* UserSurvey.swift */,
 				39933589275835F5006F9C11 /* Module.swift */,
@@ -551,24 +572,31 @@
 				3946BF50272E0D6E005DFFC2 /* TextTVC.swift in Sources */,
 				3946BF4C272E0D5A005DFFC2 /* MultipleChoiceTVC.swift in Sources */,
 				3946BF2A272AFD8F005DFFC2 /* HomeVC.swift in Sources */,
+				396C5AA0277A907300B367C0 /* Module+CoreDataProperties.swift in Sources */,
 				39933591276910A7006F9C11 /* Answer.swift in Sources */,
 				398C3B7827418BE400504A5F /* StaticClasses.swift in Sources */,
+				396C5A9C277A907300B367C0 /* Answer+CoreDataProperties.swift in Sources */,
+				396C5A9B277A907300B367C0 /* Answer+CoreDataClass.swift in Sources */,
 				3946BEF6272AF7A1005DFFC2 /* AppDelegate.swift in Sources */,
 				3946BF3E272B0861005DFFC2 /* UIColor+Extentions.swift in Sources */,
 				3946BF3F272B0861005DFFC2 /* UIViewController + Extension.swift in Sources */,
 				3993358F275855AD006F9C11 /* Helper.swift in Sources */,
+				396C5A94277A904900B367C0 /* Model.xcdatamodeld in Sources */,
 				398C3B74274185DD00504A5F /* FooterTVC.swift in Sources */,
 				3946BF41272DF8CA005DFFC2 /* QuestionVC.swift in Sources */,
 				3946BF3D272B0861005DFFC2 /* UIView+Extentions.swift in Sources */,
 				3946BF2F272AFEAF005DFFC2 /* HomeTVC.swift in Sources */,
 				3993358A275835F5006F9C11 /* Module.swift in Sources */,
 				398C3B7B2741BE5300504A5F /* ReleaseDateTVC.swift in Sources */,
+				396C5A9D277A907300B367C0 /* Question+CoreDataProperties.swift in Sources */,
 				3993358C2758367D006F9C11 /* Question.swift in Sources */,
+				396C5A9F277A907300B367C0 /* Module+CoreDataClass.swift in Sources */,
 				3946BF48272E0D3F005DFFC2 /* BestChoiceTVC.swift in Sources */,
 				3946BF28272AFC1C005DFFC2 /* LogInVC.swift in Sources */,
 				3946BF54272E0D7F005DFFC2 /* NumericTVC.swift in Sources */,
 				398C3B7E2757F90400504A5F /* UserSurvey.swift in Sources */,
 				398C3B71273DB78000504A5F /* SettingVC.swift in Sources */,
+				396C5A9E277A907300B367C0 /* Question+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -907,6 +935,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		396C5A92277A904800B367C0 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				396C5A93277A904800B367C0 /* Model.xcdatamodel */,
+			);
+			currentVersion = 396C5A93277A904800B367C0 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3946BEEA272AF7A1005DFFC2 /* Project object */;
 }

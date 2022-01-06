@@ -28,6 +28,8 @@ class QuestionVC: UIViewController {
     var questionNumber : Int = 0
     var answer : [String] = []
     
+    let coreDataContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
     
    
     //MARK:- LifeCycle Methods
@@ -48,6 +50,7 @@ class QuestionVC: UIViewController {
        DispatchQueue.main.async {
            self.homeView.dropShadow()
        }
+        answer = question?.answer?.answer ?? []
         moduleNameLbl.text = moduleName
         questionLbl.text = question?.question ?? ""
         questionNumberLbl.text = "\(questionNumber)/\(module?.questions?.count ?? 0)"
@@ -85,12 +88,12 @@ class QuestionVC: UIViewController {
        
     }
     
-    func pushNewQuestionVC(question: Question? , questionNumber: Int?) {
+    func pushNewQuestionVC(question: Question? , questionNumber: Int16?) {
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
         let viewController = storyboard.instantiateViewController(identifier: "QuestionVC") as? QuestionVC ?? QuestionVC()
         viewController.module = module
         viewController.question = question
-        viewController.questionNumber = questionNumber ?? 0
+        viewController.questionNumber = Int(questionNumber ?? 0)
         viewController.moduleName = moduleName
         
         self.navigationController?.pushViewController(viewController, animated: true)
@@ -108,6 +111,19 @@ class QuestionVC: UIViewController {
         ] as [String : AnyObject]
         
         Helper.addAnswer(parameters: params)
+    }
+    
+    func saveAnswerInCoreData() {
+        let answerToStore = Answer(context: self.coreDataContext)
+        answerToStore.answer = answer
+        answerToStore.question = question
+        
+        do {
+            try coreDataContext.save()
+        }
+        catch {
+            print("Error Saving Data")
+        }
     }
     
 }
@@ -138,11 +154,19 @@ extension QuestionVC : UITableViewDelegate, UITableViewDataSource {
             case "Text":
                 let cell = tableView.dequeueReusableCell(withIdentifier: "TextTVC", for: indexPath) as? TextTVC ?? TextTVC()
                 cell.delegate = self
+                
+                let previousAnswer = answer.count > 0 ? answer[0] : ""
+                cell.setText(text: previousAnswer)
+                
                 return cell
             
             case "Numeric":
                 let cell = tableView.dequeueReusableCell(withIdentifier: "NumericTVC", for: indexPath) as? NumericTVC ?? NumericTVC()
                 cell.delegate = self
+                
+                let previousAnswer = answer.count > 0 ? answer[0] : ""
+                cell.setText(text: previousAnswer)
+                
                 return cell
         
             default:
@@ -193,25 +217,33 @@ extension QuestionVC : UITableViewDelegate, UITableViewDataSource {
 extension QuestionVC : FooterTVCDelegate {
     func submitBtnTapped() {
         
+        module?.isCompleted = true
+        saveAnswerInCoreData()
+        
     }
     
     func nextBtnTapped() {
         
         //Write Answer To FireStore
         
+       
+        //writeAnswerToFirestore()
         
-        writeAnswerToFirestore()
+        saveAnswerInCoreData()
+        
+        let questions = module?.questions?.allObjects as? [Question]
         
         if (question?.skipLogic == true && answer.count > 0) {
             let nextQuestionId = question?.skipAnswer == answer[0] ? question?.skipToQuestionId : question?.nextQuestionId
-            let nextQuestion = module?.questions?.first(where: {$0.questionId == nextQuestionId})
+            let nextQuestion = questions?.first(where: {$0.questionId == nextQuestionId})
             pushNewQuestionVC(question: nextQuestion, questionNumber: nextQuestionId)
         }
         else {
             let nextQuestionId = question?.nextQuestionId
-            let nextQuestion = module?.questions?.first(where: {$0.questionId == nextQuestionId})
+            let nextQuestion = questions?.first(where: {$0.questionId == nextQuestionId})
             pushNewQuestionVC(question: nextQuestion, questionNumber: nextQuestionId)
         }
+ 
     }
     
     func previousBtnTapped() {
