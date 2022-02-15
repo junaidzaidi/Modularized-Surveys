@@ -76,11 +76,18 @@ class QuestionVC: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
        
+        
+        tableView.register(UINib(nibName: "OtherMCQTVC", bundle: nil), forCellReuseIdentifier: "OtherMCQTVC")
         tableView.register(UINib(nibName: "MultipleChoiceTVC", bundle: nil), forCellReuseIdentifier: "MultipleChoiceTVC")
         tableView.register(UINib(nibName: "BestChoiceTVC", bundle: nil), forCellReuseIdentifier: "BestChoiceTVC")
         tableView.register(UINib(nibName: "TextTVC", bundle: nil), forCellReuseIdentifier: "TextTVC")
         tableView.register(UINib(nibName: "NumericTVC", bundle: nil), forCellReuseIdentifier: "NumericTVC")
+        tableView.register(UINib(nibName: "GridSatisfyTVC", bundle: nil), forCellReuseIdentifier: "GridSatisfyTVC")
+        
         tableView.register(UINib(nibName: "FooterTVC", bundle: nil), forHeaderFooterViewReuseIdentifier: "FooterTVC")
+        
+        
+        
 
     }
 
@@ -120,6 +127,7 @@ class QuestionVC: UIViewController {
         
         do {
             try coreDataContext.save()
+            
         }
         catch {
             print("Error Saving Data")
@@ -138,6 +146,11 @@ extension QuestionVC : UITableViewDelegate, UITableViewDataSource {
         switch question?.answerType ?? "" {
         
             case "MCQ":
+                if (question?.answerChoices?[indexPath.row] ?? "" == "Other") {
+                    let cell = tableView.dequeueReusableCell(withIdentifier: "OtherMCQTVC", for: indexPath) as? OtherMCQTVC ?? OtherMCQTVC()
+                    answer.contains(question?.answerChoices?[indexPath.row] ?? " ") ? cell.setActiveCheck(state: true) : cell.setActiveCheck(state: false)
+                    return cell
+                }
                 let cell = tableView.dequeueReusableCell(withIdentifier: "MultipleChoiceTVC", for: indexPath) as? MultipleChoiceTVC ?? MultipleChoiceTVC()
                 cell.setChoiceName(name: question?.answerChoices?[indexPath.row] ?? "")
                 answer.contains(question?.answerChoices?[indexPath.row] ?? " ") ? cell.setActive(state: true) : cell.setActive(state: false)
@@ -145,6 +158,11 @@ extension QuestionVC : UITableViewDelegate, UITableViewDataSource {
                 
         
             case "BCQ":
+                if (question?.answerChoices?[indexPath.row] ?? "" == "Other") {
+                    let cell = tableView.dequeueReusableCell(withIdentifier: "OtherMCQTVC", for: indexPath) as? OtherMCQTVC ?? OtherMCQTVC()
+                    answer.contains(question?.answerChoices?[indexPath.row] ?? " ") ? cell.setActiveRadio(state: true) : cell.setActiveRadio(state: false)
+                    return cell
+                }
                 let cell = tableView.dequeueReusableCell(withIdentifier: "BestChoiceTVC", for: indexPath) as? BestChoiceTVC ?? BestChoiceTVC()
                 cell.setChoiceName(name: question?.answerChoices?[indexPath.row] ?? "")
                 answer.contains(question?.answerChoices?[indexPath.row] ?? " ") ? cell.setActive(state: true) : cell.setActive(state: false)
@@ -166,6 +184,14 @@ extension QuestionVC : UITableViewDelegate, UITableViewDataSource {
                 
                 let previousAnswer = answer.count > 0 ? answer[0] : ""
                 cell.setText(text: previousAnswer)
+                
+                return cell
+                
+            case "Grid":
+                let cell = tableView.dequeueReusableCell(withIdentifier: "GridSatisfyTVC", for: indexPath) as? GridSatisfyTVC ?? GridSatisfyTVC()
+                //cell.delegate = self
+                //let previousAnswer = answer.count > 0 ? answer[0] : ""
+                //cell.setText(text: previousAnswer)
                 
                 return cell
         
@@ -219,6 +245,11 @@ extension QuestionVC : FooterTVCDelegate {
         
         module?.isCompleted = true
         saveAnswerInCoreData()
+        
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewController(identifier: "ModuleCompletedVC") as? ModuleCompletedVC ?? ModuleCompletedVC()
+        viewController.module = module
+        self.navigationController?.pushViewController(viewController, animated: true)
         
     }
     

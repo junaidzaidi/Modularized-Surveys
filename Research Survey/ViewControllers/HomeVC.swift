@@ -22,16 +22,23 @@ class HomeVC: UIViewController {
     var modules : [Module]? = nil
     var surveyName = ""
     var previousAnsweredQuestionsVCs : [UIViewController] = []
-    
+    var notifyUsers: Bool = false
     //MARK:- LifeCycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
         
+        let totalModules = modules?.count
+        modules = modules?.filter({ $0.dateAdded! <= Date()
+        })
+        modules?.sort(by: { $0.dateAdded! < $1.dateAdded!
+        })
+        
+        if(totalModules == modules?.count) {
+            notifyUsers = false
+        }
         // Do any additional setup after loading the view.
     }
-    
-    
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -44,6 +51,10 @@ class HomeVC: UIViewController {
             self.tableView.reloadData()
         }
         surveyNameLbl.text = surveyName
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        //self.view.showBlurLoader()
     }
     //MARK:- IBActions
     @IBAction func settingBtnTapped(_ sender: UIButton) {
@@ -60,6 +71,7 @@ class HomeVC: UIViewController {
         tableView.dataSource = self
         
         tableView.register(UINib(nibName: "HomeTVC", bundle: nil), forCellReuseIdentifier: "HomeTVC")
+        tableView.register(UINib(nibName: "HomeCompletedTVC", bundle: nil), forCellReuseIdentifier: "HomeCompletedTVC")
         tableView.register(UINib(nibName: "ReleaseDateTVC", bundle: nil), forHeaderFooterViewReuseIdentifier: "ReleaseDateTVC")
         
     }
@@ -75,6 +87,12 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        if (modules?[indexPath.row].isCompleted == true) {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCompletedTVC", for: indexPath) as? HomeCompletedTVC ?? HomeCompletedTVC()
+            cell.moduleNameLbl.text = modules?[indexPath.row].moduleName ?? ""
+            return cell
+        }
         let cell = tableView.dequeueReusableCell(withIdentifier: "HomeTVC", for: indexPath) as? HomeTVC ?? HomeTVC()
         //cell.mainView.backgroundColor = indexPath.row > 5 ? .white : UIColor(red: 178/255, green: 220/255, blue: 255/255, alpha: 0.90)
         cell.moduleName.text = modules?[indexPath.row].moduleName ?? ""
@@ -83,17 +101,28 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource {
         let answeredQuestions = allQuestions?.filter({ $0.answer?.answer != nil && $0.answer?.answer?.count ?? 0 > 0
         })
         
-        cell.questionStatus.text = "\(answeredQuestions?.count ?? 0)/\(modules?[indexPath.row].questions?.count ?? 0)"
         
-        cell.mainView.backgroundColor = .white
+        let answerCount = answeredQuestions?.max(by: { $0.questionId < $1.questionId
+        })?.questionId ?? 0
+        let questionCount = modules?[indexPath.row].questions?.count ?? 0
+        cell.questionStatus.text = "\(String(describing: answerCount))/\(String(describing: questionCount))"
+        
+        cell.setProgressBarProgress(progress: Float(answerCount)/Float(questionCount))
+        
         cell.selectionStyle = .none
+        
+        //modules?[indexPath.row].isCompleted ?? false ? cell.markCellCompleted() : cell.markCellDefault()
+            
         return cell
         
     }
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        let cell = tableView.dequeueReusableHeaderFooterView(withIdentifier: "ReleaseDateTVC") as? ReleaseDateTVC ?? ReleaseDateTVC()
-        return cell
+        if (notifyUsers) {
+            let cell = tableView.dequeueReusableHeaderFooterView(withIdentifier: "ReleaseDateTVC") as? ReleaseDateTVC ?? ReleaseDateTVC()
+            return cell
+        }
+        return UIView()
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
