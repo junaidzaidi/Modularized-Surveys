@@ -23,6 +23,7 @@ class HomeVC: UIViewController {
     var surveyName = ""
     var previousAnsweredQuestionsVCs : [UIViewController] = []
     var notifyUsers: Bool = false
+    var lastQuestionAnswered: [Int] = []
     //MARK:- LifeCycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,6 +52,7 @@ class HomeVC: UIViewController {
             self.tableView.reloadData()
         }
         surveyNameLbl.text = surveyName
+        lastQuestionAnswered = []
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -90,6 +92,7 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource {
         
         if (modules?[indexPath.row].isCompleted == true) {
             let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCompletedTVC", for: indexPath) as? HomeCompletedTVC ?? HomeCompletedTVC()
+            lastQuestionAnswered.append(-1)
             cell.moduleNameLbl.text = modules?[indexPath.row].moduleName ?? ""
             return cell
         }
@@ -97,6 +100,7 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource {
         //cell.mainView.backgroundColor = indexPath.row > 5 ? .white : UIColor(red: 178/255, green: 220/255, blue: 255/255, alpha: 0.90)
         cell.moduleName.text = modules?[indexPath.row].moduleName ?? ""
         
+        /*
         let allQuestions = modules?[indexPath.row].questions?.allObjects as? [Question]
         let answeredQuestions = allQuestions?.filter({ $0.answer?.answer != nil && $0.answer?.answer?.count ?? 0 > 0
         })
@@ -104,7 +108,14 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource {
         
         let answerCount = answeredQuestions?.max(by: { $0.questionId < $1.questionId
         })?.questionId ?? 0
-        let questionCount = modules?[indexPath.row].questions?.count ?? 0
+        lastQuestionAnswered.append(Int(answerCount))
+         */
+        
+        let answerCount = modules?[indexPath.row].lastQuestionAnswered ?? 0
+        var questionCount = modules?[indexPath.row].questions?.count ?? 0
+        if questionCount == 18 || questionCount == 16 || questionCount == 19 {
+            questionCount -= 1
+        }
         cell.questionStatus.text = "\(String(describing: answerCount))/\(String(describing: questionCount))"
         
         cell.setProgressBarProgress(progress: Float(answerCount)/Float(questionCount))
@@ -133,13 +144,12 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource {
         
         let questions = modules?[indexPath.row].questions?.allObjects as? [Question]
         var question = questions?.first(where: {$0.isFirst == true})
+        var currentQuestionNumber = 0
         
-        
-        
-        
-        while (question?.answer?.answer?.count ?? 0 > 0) {
+        while (currentQuestionNumber != modules?[indexPath.row].lastQuestionAnswered ?? 0) {
             let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
             let viewController = storyboard.instantiateViewController(identifier: "QuestionVC") as? QuestionVC ?? QuestionVC()
+            currentQuestionNumber = Int(question!.questionId)
             viewController.module = modules?[indexPath.row]
             viewController.question = question
             viewController.questionNumber = Int(question?.questionId ?? 0)
@@ -148,7 +158,7 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource {
             //self.navigationController?.viewControllers.append(viewController)
             
             if (question?.skipLogic == true && question?.answer?.answer?.count ?? 0 > 0) {
-                let nextQuestionId = question?.skipAnswer == question?.answer?.answer?[0] ? question?.skipToQuestionId : question?.nextQuestionId
+                let nextQuestionId = question?.skipAnswer?.contains(question?.answer?.answer?[0] ?? "") ?? true  ? question?.skipToQuestionId : question?.nextQuestionId
                 question = questions?.first(where: {$0.questionId == nextQuestionId})
                 }
             else {

@@ -48,6 +48,7 @@ class MultipleChoiceTVC: UITableViewCell {
     
     func setActive(state: Bool) {
         checkImgView.image = state ? UIImage(systemName: "checkmark.square.fill") : UIImage(systemName: "square")
+        checkImgView.tintColor = .systemBlue
     }
     
 }

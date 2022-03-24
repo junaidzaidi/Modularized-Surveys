@@ -8,7 +8,7 @@
 import UIKit
 
 protocol NumericTVCDelegate : AnyObject {
-    func numericFieldValueChanged(newValue: String)
+    func numericFieldValueChanged(newValue: String, placeholder: String)
 }
 
 class NumericTVC: UITableViewCell, UITextFieldDelegate {
@@ -25,7 +25,7 @@ class NumericTVC: UITableViewCell, UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         if let del = delegate {
-            del.numericFieldValueChanged(newValue: textField.text ?? "")
+            del.numericFieldValueChanged(newValue: textField.text ?? "",placeholder: textField.placeholder ?? "")
         }
     }
 
@@ -37,6 +37,10 @@ class NumericTVC: UITableViewCell, UITextFieldDelegate {
     
     func setText(text: String?) {
         textFld.text = text
+    }
+    
+    func setPlaceholder(placeholderText: String?) {
+        textFld.placeholder = placeholderText
     }
     
 }

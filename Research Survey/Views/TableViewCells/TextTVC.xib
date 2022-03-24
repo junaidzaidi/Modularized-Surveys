@@ -11,14 +11,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="50" id="KGk-i7-Jjw" customClass="TextTVC" customModule="Research_Survey" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="74"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="74"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wrk-d4-PYm">
-                        <rect key="frame" x="8" y="0.0" width="304" height="50"/>
+                        <rect key="frame" x="8" y="12" width="304" height="50"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Text" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0DS-lk-1Sv">
                                 <rect key="frame" x="0.0" y="0.0" width="304" height="50"/>
@@ -41,8 +41,8 @@
                 <constraints>
                     <constraint firstItem="wrk-d4-PYm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="2No-2k-GJ8"/>
                     <constraint firstAttribute="trailing" secondItem="wrk-d4-PYm" secondAttribute="trailing" constant="8" id="bQM-9M-IPN"/>
-                    <constraint firstAttribute="bottom" secondItem="wrk-d4-PYm" secondAttribute="bottom" id="gld-YN-Soo"/>
-                    <constraint firstItem="wrk-d4-PYm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="sQP-Qy-uAc"/>
+                    <constraint firstAttribute="bottom" secondItem="wrk-d4-PYm" secondAttribute="bottom" constant="12" id="gld-YN-Soo"/>
+                    <constraint firstItem="wrk-d4-PYm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="sQP-Qy-uAc"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

@@ -7,7 +7,10 @@
 
 import UIKit
 
-class OtherMCQTVC: UITableViewCell {
+protocol otherTVCDelegate: AnyObject {
+    func otherTextChanged(newValue: String)
+}
+class OtherMCQTVC: UITableViewCell, UITextFieldDelegate {
 
     //MARK:- IBOutlets
     @IBOutlet weak var checkImgView: UIImageView!
@@ -19,13 +22,14 @@ class OtherMCQTVC: UITableViewCell {
     
     @IBOutlet weak var radioBtnFilled: UIImageView!
     //MARK:- Helper Variables
-    weak var delegate : MultipleChoiceTVCDelegate?
+    weak var delegate : otherTVCDelegate?
     
     //MARK:- Lifecycle Methods
     override func awakeFromNib() {
         super.awakeFromNib()
         txtFldViewHeightConst.constant = 0
         txtFldView.isHidden = true
+        otherTxtFld.delegate = self
         // Initialization code
     }
 
@@ -45,12 +49,21 @@ class OtherMCQTVC: UITableViewCell {
     }
     
     //MARK:- Helper Function
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if let del = delegate {
+            
+            del.otherTextChanged(newValue: "-101:\(textField.text ?? "")")
+
+        }
+    }
+    
     func setChoiceName(name: String) {
         nameLbl.text = name
     }
     
     func setActiveCheck(state: Bool) {
         checkImgView.image = state ? UIImage(systemName: "checkmark.square.fill") : UIImage(systemName: "square")
+        checkImgView.tintColor = .systemBlue
             txtFldViewHeightConst.constant = state ? 32 : 0
             txtFldView.isHidden = state ? false : true
     }
@@ -59,6 +72,15 @@ class OtherMCQTVC: UITableViewCell {
         radioBtnFilled.isHidden = state ? false : true
         txtFldViewHeightConst.constant = state ? 32 : 0
         txtFldView.isHidden = state ? false : true
+    }
+    
+    func setPlaceholder(text: String?) {
+        otherTxtFld.placeholder = text
+    }
+    
+    func setText(text: String?) {
+        var newText = text?.replacingOccurrences(of: "-101:", with: "")
+        otherTxtFld.text = newText
     }
     
 }

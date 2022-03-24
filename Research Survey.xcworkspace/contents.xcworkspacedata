@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/JunaidZaidi/Documents/GitHub/Survey-App-RA/Research Survey/Models/Answer+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/JunaidZaidi/Documents/GitHub/Survey-App-RA/Research Survey/Models/Answer+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
       location = "group:/Users/JunaidZaidi/Documents/GitHub/Survey-App-RA/Research Survey/Models/Module+CoreDataClass.swift">
    </FileRef>
    <FileRef
@@ -12,12 +18,6 @@
    </FileRef>
    <FileRef
       location = "group:/Users/JunaidZaidi/Documents/GitHub/Survey-App-RA/Research Survey/Models/Question+CoreDataProperties.swift">
-   </FileRef>
-   <FileRef
-      location = "group:/Users/JunaidZaidi/Documents/GitHub/Survey-App-RA/Research Survey/Models/Answer+CoreDataClass.swift">
-   </FileRef>
-   <FileRef
-      location = "group:/Users/JunaidZaidi/Documents/GitHub/Survey-App-RA/Research Survey/Models/Answer+CoreDataProperties.swift">
    </FileRef>
    <FileRef
       location = "group:Research Survey.xcodeproj">

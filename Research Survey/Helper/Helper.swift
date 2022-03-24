@@ -9,78 +9,11 @@ import Foundation
 import FirebaseFirestore
 class Helper {
     static let db: Firestore? = Firestore.firestore()
-    
-    static func addModuleQuestion(moduleId: String, parameters: [String : AnyObject]?) -> String? {
-        /*[
-            "question_id" : ""
-            "question": "What letter starts with C?",
-            "answer_type": "BCQ",
-            "answer_choices": ["Canada","Candy","Australia","British"],
-            "priority" : 2,
-            "estimated_time" : 4,
-            "next_question_id" : ""
-            ]*/
-        var ref = db?.collection("module_question").document(moduleId).collection("question").addDocument(data: parameters ?? [:]
-        ) { err in
-            if let err = err {
-                print("Error adding document: \(err)")
-            } else {
-                print("Question added with ID: \(ref?.documentID)")
-            }
-        }
-        
-        return ref?.documentID
-    }
-    
-    static func addModule(parameters: [String : AnyObject]?) -> String? {
-        /*
-        [
-            "date_added": Date(),
-            "module_name": "Junaid Test Module 2",
-            ]
-         */
-        var ref = db?.collection("module_question").addDocument(data: parameters ?? [:]
-        ) { err in
-            if let err = err {
-                print("Error adding document: \(err)")
-            } else {
-                print("Question added with ID: \(ref?.documentID)")
-            }
-        }
-        return ref?.documentID
-    }
-    
-    static func addUserSurvey(parameters: [String : AnyObject]?) -> String? {
-        /*
-        [
-            "username": "junaid_masroor@hotmail.com,
-            "survey_name": "Junaid Test Module 2",
-            "modules": [""]
-        ]
-         */
-        var ref = db?.collection("user_survey").addDocument(data: parameters ?? [:]
-        ) { err in
-            if let err = err {
-                print("Error adding document: \(err)")
-            } else {
-                print("Question added with ID: \(ref?.documentID)")
-            }
-        }
-        return ref?.documentID
-    }
+    static var startDate: Date?
+    static var modules: [Module]?
     
     static func addAnswer(parameters: [String : AnyObject]?) -> String? {
-        /*
-        [
-            "username": "junaid_masroor@hotmail.com,
-            "module_name": "Junaid Test Module 2",
-            "question": "",
-            "question_type": "",
-            "answer": "",
-            "change_count": 0,
-            "time_taken": 10
-        ]
-         */
+    
         var ref = db?.collection("user_answer").addDocument(data: parameters ?? [:]
         ) { err in
             if let err = err {
@@ -92,16 +25,9 @@ class Helper {
         return ref?.documentID
     }
     
-    /*
-    static func assignModuleToUser(parameters: [String : AnyObject]?) -> String? {
-        /*
-        [
-            "username": Date(),
-            "survey_name": "Junaid Test Module 2",
-            "modules": [""]
-            ]
-         */
-        var ref = db?.collection("user_survey").addDocument(data: parameters ?? [:]
+    static func addAnswerInQuestionCollection(parameters: [String : AnyObject]?, collection: String) -> String? {
+    
+        var ref = db?.collection(collection).addDocument(data: parameters ?? [:]
         ) { err in
             if let err = err {
                 print("Error adding document: \(err)")
@@ -111,5 +37,70 @@ class Helper {
         }
         return ref?.documentID
     }
- */
+    
+    static func addTimeLog() -> String? {
+        
+        let params = ["username": UserDefaults.standard.string(forKey: "LoggedInUsername"),
+                      "password": UserDefaults.standard.string(forKey: "UserPassword"),
+                      "start_time": startDate,
+                      "end_time": Date(),
+                      "duration": Calendar.current.dateComponents([.second], from: startDate ?? Date(), to: Date()).second] as [String : AnyObject]
+    
+        var ref = db?.collection("user_logs").addDocument(data: params ?? [:]
+        ) { err in
+            if let err = err {
+                print("Error adding document: \(err)")
+            } else {
+                print("Question added with ID: \(ref?.documentID)")
+            }
+        }
+        return ref?.documentID
+    }
+    
+    static func addFeedback(parameters: [String : AnyObject]?) -> String? {
+    
+        var ref = db?.collection("user_feedback").addDocument(data: parameters ?? [:]
+        ) { err in
+            if let err = err {
+                print("Error adding document: \(err)")
+            } else {
+                print("Question added with ID: \(ref?.documentID)")
+            }
+        }
+        return ref?.documentID
+    }
+    
+    
+    static func makeAtrributesString(text: String, boldPartsOfString:[String]=[]) -> NSAttributedString{
+        let boldFontAttribute = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 15)]
+        let attributedString = NSMutableAttributedString(string: text)
+        for i in 0 ..< boldPartsOfString.count {
+            attributedString.addAttributes(boldFontAttribute as [NSAttributedString.Key : Any], range: attributedString.mutableString.range(of: boldPartsOfString[i] as String))
+        }
+        return attributedString
+    }
+    
+    static func setUnderlineText(forLabel label : UILabel, onText underlineText: String, labelText : String){
+        let text = labelText
+        let underlineAttriString = NSMutableAttributedString(string: text)
+        let range = (text as NSString).range(of: underlineText)
+        
+        underlineAttriString.addAttribute(.underlineStyle, value: NSUnderlineStyle.single.rawValue, range: range)
+        
+//        let underlineAttribute = [NSAttributedString.Key.underlineStyle: NSUnderlineStyle.thick.rawValue]
+//        let underlineAttributedString = NSAttributedString(string: "StringWithUnderLine", attributes: underlineAttribute)
+//        myLabel.attributedText = underlineAttributedString
+
+        
+//        underlineAttriString.addAttribute(.font, value: UIFont.init(name: AppFontName.bold, size: 15) ?? UIFont.boldSystemFont(ofSize: 15), range: range)
+//        underlineAttriString.addAttribute(.foregroundColor, value: tappableTextColor, range: range)
+//
+        label.attributedText = underlineAttriString
+        
+//        let tap = UITapGestureRecognizer(target: self, action: #selector(tapped(tap:)))
+//        label.addGestureRecognizer(tap)
+//        label.isUserInteractionEnabled = true
+    }
+    
+    
 }

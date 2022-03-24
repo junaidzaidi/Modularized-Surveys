@@ -9,6 +9,8 @@ target 'Research Survey' do
   pod 'Firebase/Core'
   pod 'Firebase/Firestore'
   pod 'FirebaseFirestoreSwift'
+  pod "MonthYearPicker", '~> 4.0.2'
+  pod 'IQKeyboardManagerSwift'
 
   target 'Research SurveyTests' do
     inherit! :search_paths

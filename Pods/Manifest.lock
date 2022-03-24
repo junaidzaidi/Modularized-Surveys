@@ -314,7 +314,9 @@ PODS:
     - BoringSSL-GRPC (= 0.0.7)
     - gRPC-Core/Interface (= 1.28.2)
   - gRPC-Core/Interface (1.28.2)
+  - IQKeyboardManagerSwift (6.5.6)
   - leveldb-library (1.22)
+  - MonthYearPicker (4.0.2)
   - nanopb (1.30906.0):
     - nanopb/decode (= 1.30906.0)
     - nanopb/encode (= 1.30906.0)
@@ -326,6 +328,8 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Firestore
   - FirebaseFirestoreSwift
+  - IQKeyboardManagerSwift
+  - MonthYearPicker (~> 4.0.2)
 
 SPEC REPOS:
   trunk:
@@ -343,7 +347,9 @@ SPEC REPOS:
     - GoogleUtilities
     - "gRPC-C++"
     - gRPC-Core
+    - IQKeyboardManagerSwift
     - leveldb-library
+    - MonthYearPicker
     - nanopb
     - PromisesObjC
 
@@ -362,10 +368,12 @@ SPEC CHECKSUMS:
   GoogleUtilities: 7f2f5a07f888cdb145101d6042bc4422f57e70b3
   "gRPC-C++": 13d8ccef97d5c3c441b7e3c529ef28ebee86fad2
   gRPC-Core: 4afa11bfbedf7cdecd04de535a9e046893404ed5
+  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
+  MonthYearPicker: 91f77106e6806d8c93c69e943ab0795fd420657f
   nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
   PromisesObjC: b14b1c6b68e306650688599de8a45e49fae81151
 
-PODFILE CHECKSUM: 891782508a6ba9c6d1b28f2695915403b0d264bd
+PODFILE CHECKSUM: 73e454f0285dbfeeb0b75f88ebe6040010831c72
 
 COCOAPODS: 1.9.3

@@ -3,12 +3,15 @@
     <entity name="Answer" representedClassName="Answer" syncable="YES">
         <attribute name="answer" optional="YES" attributeType="Transformable" customClassName="[String]"/>
         <attribute name="answerChangeCount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="totalTime" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="endTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="startTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="totalTime" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES"/>
         <relationship name="question" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Question" inverseName="answer" inverseEntity="Question"/>
     </entity>
     <entity name="Module" representedClassName="Module" syncable="YES">
         <attribute name="dateAdded" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="isCompleted" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="lastQuestionAnswered" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="moduleName" optional="YES" attributeType="String"/>
         <relationship name="questions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Question" inverseName="module" inverseEntity="Question"/>
     </entity>
@@ -16,19 +19,26 @@
         <attribute name="answerChoices" optional="YES" attributeType="Transformable" customClassName="[String]"/>
         <attribute name="answerType" optional="YES" attributeType="String"/>
         <attribute name="estimatedTime" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="firebaseId" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="gridQuestions" optional="YES" attributeType="Transformable" customClassName="[String]"/>
         <attribute name="isFirst" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="moduleStartInfo" optional="YES" attributeType="String"/>
         <attribute name="nextQuestionId" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="otherFlag" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="otherOption" optional="YES" attributeType="Transformable" customClassName="[String]"/>
+        <attribute name="placeholderText" optional="YES" attributeType="String"/>
         <attribute name="question" optional="YES" attributeType="String"/>
         <attribute name="questionId" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="skipAnswer" optional="YES" attributeType="String"/>
+        <attribute name="questionItalicText" optional="YES" attributeType="String"/>
+        <attribute name="skipAnswer" optional="YES" attributeType="Transformable" customClassName="[String]"/>
         <attribute name="skipLogic" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="skipToQuestionId" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <relationship name="answer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Answer" inverseName="question" inverseEntity="Answer"/>
         <relationship name="module" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Module" inverseName="questions" inverseEntity="Module"/>
     </entity>
     <elements>
-        <element name="Answer" positionX="-45" positionY="108" width="128" height="89"/>
-        <element name="Module" positionX="-63" positionY="-18" width="128" height="89"/>
-        <element name="Question" positionX="-54" positionY="18" width="128" height="209"/>
+        <element name="Answer" positionX="-45" positionY="108" width="128" height="119"/>
+        <element name="Module" positionX="-63" positionY="-18" width="128" height="104"/>
+        <element name="Question" positionX="-54" positionY="18" width="128" height="314"/>
     </elements>
 </model>

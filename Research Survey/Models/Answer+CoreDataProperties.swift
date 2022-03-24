@@ -2,7 +2,7 @@
 //  Answer+CoreDataProperties.swift
 //  
 //
-//  Created by Junaid Zaidi on 27/12/2021.
+//  Created by Junaid Zaidi on 23/03/2022.
 //
 //
 
@@ -18,7 +18,9 @@ extension Answer {
 
     @NSManaged public var answer: [String]?
     @NSManaged public var answerChangeCount: Int16
-    @NSManaged public var totalTime: Int16
+    @NSManaged public var endTime: Date?
+    @NSManaged public var startTime: Date?
+    @NSManaged public var totalTime: Double
     @NSManaged public var question: Question?
 
 }

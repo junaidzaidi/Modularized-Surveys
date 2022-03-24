@@ -26,6 +26,7 @@
                         <subviews>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ETl-2M-tRe">
                                 <rect key="frame" x="15" y="16.5" width="20" height="17.5"/>
+                                <color key="tintColor" systemColor="systemBlueColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="Fe6-3z-QO7"/>
                                     <constraint firstAttribute="width" constant="20" id="pyU-co-tIf"/>
@@ -33,6 +34,7 @@
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="xa4-6d-kx7">
                                 <rect key="frame" x="15" y="16" width="20" height="19"/>
+                                <color key="tintColor" systemColor="systemBlueColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="17R-FG-Req"/>
                                     <constraint firstAttribute="width" constant="20" id="aP9-l0-O9B"/>
@@ -40,6 +42,7 @@
                             </imageView>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="SrM-O8-OLi">
                                 <rect key="frame" x="20" y="21" width="10" height="9"/>
+                                <color key="tintColor" systemColor="systemBlueColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="10" id="Kop-JM-Sac"/>
                                     <constraint firstAttribute="width" constant="10" id="X1g-zm-tdx"/>
@@ -131,6 +134,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

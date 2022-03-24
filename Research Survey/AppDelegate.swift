@@ -8,6 +8,7 @@
 import UIKit
 import Firebase
 import CoreData
+import IQKeyboardManagerSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,8 +18,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+        IQKeyboardManager.shared.enable = true
         
         return true
+    }
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        Helper.startDate = Date()
+    }
+    
+    func applicationWillResignActive(_ application: UIApplication) {
+        if((UserDefaults.standard.string(forKey: "LoggedInUsername")) != nil) {
+            Helper.addTimeLog()
+        }
     }
     
     // MARK: - Core Data stack

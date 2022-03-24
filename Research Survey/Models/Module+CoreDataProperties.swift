@@ -2,7 +2,7 @@
 //  Module+CoreDataProperties.swift
 //  
 //
-//  Created by Junaid Zaidi on 27/12/2021.
+//  Created by Junaid Zaidi on 23/03/2022.
 //
 //
 
@@ -17,8 +17,9 @@ extension Module {
     }
 
     @NSManaged public var dateAdded: Date?
-    @NSManaged public var moduleName: String?
     @NSManaged public var isCompleted: Bool
+    @NSManaged public var lastQuestionAnswered: Int64
+    @NSManaged public var moduleName: String?
     @NSManaged public var questions: NSSet?
 
 }
