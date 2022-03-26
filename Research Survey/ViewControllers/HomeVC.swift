@@ -27,6 +27,43 @@ class HomeVC: UIViewController {
     //MARK:- LifeCycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(grabData),
+            name: UIApplication.didBecomeActiveNotification,
+            object: nil)
+        
+        // Do any additional setup after loading the view.
+    }
+    
+    @objc func grabData() {
+        
+        modules = Helper.modules
+        let totalModules = modules?.count
+        modules = modules?.filter({ $0.dateAdded! <= Date()
+        })
+        modules?.sort(by: { $0.dateAdded! < $1.dateAdded!
+        })
+        
+        if(totalModules == modules?.count) {
+            notifyUsers = false
+        }
+        
+        DispatchQueue.main.async {
+            self.homeView.dropShadow()
+            self.tableView.reloadData()
+        }
+        surveyNameLbl.text = surveyName
+        lastQuestionAnswered = []
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         setup()
         
         let totalModules = modules?.count
@@ -38,15 +75,7 @@ class HomeVC: UIViewController {
         if(totalModules == modules?.count) {
             notifyUsers = false
         }
-        // Do any additional setup after loading the view.
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
         
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
         DispatchQueue.main.async {
             self.homeView.dropShadow()
             self.tableView.reloadData()
@@ -57,6 +86,7 @@ class HomeVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         //self.view.showBlurLoader()
+        print("Appearing")
     }
     //MARK:- IBActions
     @IBAction func settingBtnTapped(_ sender: UIButton) {
@@ -80,6 +110,9 @@ class HomeVC: UIViewController {
     
     func configure() {
         
+    }
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
 }
 
@@ -113,7 +146,7 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource {
         
         let answerCount = modules?[indexPath.row].lastQuestionAnswered ?? 0
         var questionCount = modules?[indexPath.row].questions?.count ?? 0
-        if questionCount == 18 || questionCount == 16 || questionCount == 19 {
+        if questionCount == 18 || questionCount == 16 || questionCount == 19 || questionCount == 65 {
             questionCount -= 1
         }
         cell.questionStatus.text = "\(String(describing: answerCount))/\(String(describing: questionCount))"
@@ -186,8 +219,4 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource {
         //self.navigationController?.pushViewController(viewController, animated: true)
      
     }
-    
-    
-    
-    
 }

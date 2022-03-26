@@ -63,7 +63,7 @@ class QuestionVC: UIViewController {
         }
         ItalicLbl.text = question?.questionItalicText ?? nil
         var count = module?.questions?.count ?? 0
-        if count == 18 {
+        if count == 18 || count == 65 || count == 19 {
             count -= 1
         }
         questionNumberLbl.text = "\(questionNumber)/\(count)"
@@ -376,7 +376,7 @@ extension QuestionVC : UITableViewDelegate, UITableViewDataSource {
         cell.delegate = self
         
         questionNumber == 1 ? cell.setPreviousBtnInactive() : cell.setPreviousBtnActive()
-        if (questionNumber == module?.questions?.count || (module?.questions?.count == 18 && questionNumber == 17) || (module?.questions?.count == 16 && questionNumber == 15) || (module?.questions?.count == 19 && questionNumber == 18)) {
+        if (questionNumber == module?.questions?.count || (module?.questions?.count == 18 && questionNumber == 17) || (module?.questions?.count == 16 && questionNumber == 15) || (module?.questions?.count == 19 && questionNumber == 18) || (module?.questions?.count == 65 && questionNumber == 64)) {
             cell.setNextBtnToProceed()
         }
         
@@ -414,7 +414,7 @@ extension QuestionVC : FooterTVCDelegate {
         if (question?.skipLogic == true && answer.count > 0) {
             let firebaseId = question?.skipAnswer?.contains(answer[0]) ?? true ? 69 : 68
             let nextQuestion = questions?.first(where: {$0.firebaseId == firebaseId})
-            pushNewQuestionVC(question: nextQuestion, questionNumber: 17)
+            pushNewQuestionVC(question: nextQuestion, questionNumber: nextQuestion?.questionId)
         }
         else {
             let nextQuestionId = question?.nextQuestionId

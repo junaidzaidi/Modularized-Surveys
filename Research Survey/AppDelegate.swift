@@ -14,6 +14,7 @@ import IQKeyboardManagerSwift
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    let center = UNUserNotificationCenter.current()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -24,11 +25,58 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     func applicationDidBecomeActive(_ application: UIApplication) {
         Helper.startDate = Date()
+        self.cancelLocalNotification()
+        
     }
     
     func applicationWillResignActive(_ application: UIApplication) {
         if((UserDefaults.standard.string(forKey: "LoggedInUsername")) != nil) {
             Helper.addTimeLog()
+            center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
+//                        guard error == nil else {
+//                            print("Error creating notification")
+//                            //return
+//                        }
+                let scheduledDate = Calendar.current.date(byAdding: .minute, value: 2, to: Date()) ?? Date()
+                self.createLocalNotification(title: "Survey Pending", body: "There are some question unanswered in the survey", date: scheduledDate)
+                
+            }
+        }
+    }
+    
+    func cancelLocalNotification() {
+        let notificationId = UserDefaults.standard.string(forKey: "AppNotUsedNotification")
+        
+        if let removeNotification = notificationId {
+            center.removePendingNotificationRequests(withIdentifiers: [removeNotification])
+        }
+    }
+    
+    func createLocalNotification(title: String, body: String, date: Date){
+        
+        // Create Notification Content
+        let content = UNMutableNotificationContent()
+        content.title = title
+        content.body = body
+        
+        // Create Notification Trigger
+        //let date = Calendar.current.date(byAdding: .second, value: days, to: Date())
+        
+        let dateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
+        
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
+        
+        // Create The Request
+        let uuidString = UUID().uuidString
+        UserDefaults.standard.set(uuidString, forKey: "AppNotUsedNotification")
+        let request = UNNotificationRequest(identifier: uuidString, content: content, trigger: trigger)
+        
+        //Register The Request With Notification Center
+        center.add(request) { (error) in
+            guard error == nil else {
+                print("Error registering notification")
+                return
+            }
         }
     }
     

@@ -16,6 +16,7 @@
 		392853F927EC23C500A01979 /* Answer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392853F227EC23C400A01979 /* Answer+CoreDataClass.swift */; };
 		392853FA27EC23C500A01979 /* Module+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392853F127EC23C400A01979 /* Module+CoreDataProperties.swift */; };
 		392853FB27EC23C500A01979 /* Question+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392853F027EC23C400A01979 /* Question+CoreDataProperties.swift */; };
+		39376AC927ED11B3009EFCF0 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39376AC827ED11B3009EFCF0 /* SplashVC.swift */; };
 		39396DA127EBA4AD00B46233 /* HelpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39396DA027EBA4AD00B46233 /* HelpVC.swift */; };
 		39396DA327EBA4C200B46233 /* DataPrivacyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39396DA227EBA4C200B46233 /* DataPrivacyVC.swift */; };
 		39396DA527EBA4CF00B46233 /* FeedbackVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39396DA427EBA4CF00B46233 /* FeedbackVC.swift */; };
@@ -102,6 +103,7 @@
 		392853F327EC23C400A01979 /* Answer+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Answer+CoreDataProperties.swift"; path = "/Users/JunaidZaidi/Documents/GitHub/Survey-App-RA/Research Survey/Models/Answer+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
 		392853F427EC23C500A01979 /* Question+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Question+CoreDataClass.swift"; path = "/Users/JunaidZaidi/Documents/GitHub/Survey-App-RA/Research Survey/Models/Question+CoreDataClass.swift"; sourceTree = "<absolute>"; };
 		392853F527EC23C500A01979 /* Module+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Module+CoreDataClass.swift"; path = "/Users/JunaidZaidi/Documents/GitHub/Survey-App-RA/Research Survey/Models/Module+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		39376AC827ED11B3009EFCF0 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
 		39396DA027EBA4AD00B46233 /* HelpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpVC.swift; sourceTree = "<group>"; };
 		39396DA227EBA4C200B46233 /* DataPrivacyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPrivacyVC.swift; sourceTree = "<group>"; };
 		39396DA427EBA4CF00B46233 /* FeedbackVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackVC.swift; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 				39396DA027EBA4AD00B46233 /* HelpVC.swift */,
 				39396DA227EBA4C200B46233 /* DataPrivacyVC.swift */,
 				39396DA427EBA4CF00B46233 /* FeedbackVC.swift */,
+				39376AC827ED11B3009EFCF0 /* SplashVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -673,6 +676,7 @@
 				398C3B7B2741BE5300504A5F /* ReleaseDateTVC.swift in Sources */,
 				3993358C2758367D006F9C11 /* Question.swift in Sources */,
 				396D304D279F8A0100BC768B /* OtherTVC.swift in Sources */,
+				39376AC927ED11B3009EFCF0 /* SplashVC.swift in Sources */,
 				392853F627EC23C500A01979 /* Question+CoreDataClass.swift in Sources */,
 				3946BF48272E0D3F005DFFC2 /* BestChoiceTVC.swift in Sources */,
 				3946BF28272AFC1C005DFFC2 /* LogInVC.swift in Sources */,
@@ -860,10 +864,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 689H338NR2;
 				INFOPLIST_FILE = "Research Survey/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.test.Research-Survey";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -880,10 +886,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 689H338NR2;
 				INFOPLIST_FILE = "Research Survey/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.test.Research-Survey";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

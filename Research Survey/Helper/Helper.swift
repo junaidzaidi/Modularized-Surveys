@@ -51,7 +51,7 @@ class Helper {
             if let err = err {
                 print("Error adding document: \(err)")
             } else {
-                print("Question added with ID: \(ref?.documentID)")
+                //print("Question added with ID: \(ref?.documentID)")
             }
         }
         return ref?.documentID
@@ -64,7 +64,7 @@ class Helper {
             if let err = err {
                 print("Error adding document: \(err)")
             } else {
-                print("Question added with ID: \(ref?.documentID)")
+                //print("Question added with ID: \(ref?.documentID)")
             }
         }
         return ref?.documentID
