@@ -89,6 +89,7 @@ class LogInVC: UIViewController {
                     UserDefaults.standard.set(true, forKey: "NotifyUsers")
                     UserDefaults.standard.set("a",forKey: "VoiceCondition")
                     UserDefaults.standard.set("1",forKey: "AppCondition")
+                    UserDefaults.standard.set(true,forKey: "MainHeading")
                     center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
 //                        guard error == nil else {
 //                            print("Error creating notification")
@@ -103,6 +104,7 @@ class LogInVC: UIViewController {
                     UserDefaults.standard.set(true, forKey: "NotifyUsers")
                     UserDefaults.standard.set("b",forKey: "VoiceCondition")
                     UserDefaults.standard.set("1",forKey: "AppCondition")
+                    UserDefaults.standard.set(true,forKey: "MainHeading")
                     center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
 //                        guard error == nil else {
 //                            print("Error creating notification")
@@ -117,6 +119,7 @@ class LogInVC: UIViewController {
                     UserDefaults.standard.set(true, forKey: "NotifyUsers")
                     UserDefaults.standard.set("c",forKey: "VoiceCondition")
                     UserDefaults.standard.set("1",forKey: "AppCondition")
+                    UserDefaults.standard.set(true,forKey: "MainHeading")
                     center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
 //                        guard error == nil else {
 //                            print("Error creating notification")
@@ -131,6 +134,7 @@ class LogInVC: UIViewController {
                     UserDefaults.standard.set(true, forKey: "NotifyUsers")
                     UserDefaults.standard.set("d",forKey: "VoiceCondition")
                     UserDefaults.standard.set("1",forKey: "AppCondition")
+                    UserDefaults.standard.set(true,forKey: "MainHeading")
                     center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
 //                        guard error == nil else {
 //                            print("Error creating notification")
@@ -145,6 +149,7 @@ class LogInVC: UIViewController {
                     UserDefaults.standard.set(false, forKey: "NotifyUsers")
                     UserDefaults.standard.set("a",forKey: "VoiceCondition")
                     UserDefaults.standard.set("2",forKey: "AppCondition")
+                    UserDefaults.standard.set(true,forKey: "MainHeading")
                     createCoreDataWithAllModules()
                 case "2bhkdso":
                     self.view.showBlurLoader()
@@ -153,6 +158,7 @@ class LogInVC: UIViewController {
                     UserDefaults.standard.set(false, forKey: "NotifyUsers")
                     UserDefaults.standard.set("b",forKey: "VoiceCondition")
                     UserDefaults.standard.set("2",forKey: "AppCondition")
+                    UserDefaults.standard.set(true,forKey: "MainHeading")
                     createCoreDataWithAllModules()
                 case "2chkdso":
                     self.view.showBlurLoader()
@@ -161,6 +167,7 @@ class LogInVC: UIViewController {
                     UserDefaults.standard.set(false, forKey: "NotifyUsers")
                     UserDefaults.standard.set("c",forKey: "VoiceCondition")
                     UserDefaults.standard.set("2",forKey: "AppCondition")
+                    UserDefaults.standard.set(true,forKey: "MainHeading")
                     createCoreDataWithAllModules()
                 case "2dhkdso":
                     self.view.showBlurLoader()
@@ -169,6 +176,7 @@ class LogInVC: UIViewController {
                     UserDefaults.standard.set(false, forKey: "NotifyUsers")
                     UserDefaults.standard.set("d",forKey: "VoiceCondition")
                     UserDefaults.standard.set("2",forKey: "AppCondition")
+                    UserDefaults.standard.set(true,forKey: "MainHeading")
                     createCoreDataWithAllModules()
                 case "3ahkdso":
                     self.view.showBlurLoader()
@@ -177,6 +185,7 @@ class LogInVC: UIViewController {
                     UserDefaults.standard.set(false, forKey: "NotifyUsers")
                     UserDefaults.standard.set("a",forKey: "VoiceCondition")
                     UserDefaults.standard.set("3",forKey: "AppCondition")
+                    UserDefaults.standard.set(false,forKey: "MainHeading")
                     createCoreDataWithOneModule()
                 case "3bhkdso":
                     self.view.showBlurLoader()
@@ -185,6 +194,8 @@ class LogInVC: UIViewController {
                     UserDefaults.standard.set(false, forKey: "NotifyUsers")
                     UserDefaults.standard.set("b",forKey: "VoiceCondition")
                     UserDefaults.standard.set("3",forKey: "AppCondition")
+                    UserDefaults.standard.set(false,forKey: "MainHeading")
+                    
                     createCoreDataWithOneModule()
                     
                 case "3chkdso":
@@ -194,6 +205,7 @@ class LogInVC: UIViewController {
                     UserDefaults.standard.set(false, forKey: "NotifyUsers")
                     UserDefaults.standard.set("c",forKey: "VoiceCondition")
                     UserDefaults.standard.set("3",forKey: "AppCondition")
+                    UserDefaults.standard.set(false,forKey: "MainHeading")
                     createCoreDataWithOneModule()
                     
                 case "3dhkdso":
@@ -203,6 +215,7 @@ class LogInVC: UIViewController {
                     UserDefaults.standard.set(false, forKey: "NotifyUsers")
                     UserDefaults.standard.set("d",forKey: "VoiceCondition")
                     UserDefaults.standard.set("3",forKey: "AppCondition")
+                    UserDefaults.standard.set(false,forKey: "MainHeading")
                     createCoreDataWithOneModule()
                     
                 default:
@@ -260,7 +273,7 @@ class LogInVC: UIViewController {
         let appCondition = UserDefaults.standard.string(forKey: "AppCondition")
         let newModule1 = Module(context: self.coreDataContext)
         newModule1.dateAdded = Calendar.current.date(byAdding: .minute, value: -8, to: Date())
-        newModule1.moduleName = "Module 1"
+        newModule1.moduleName = "General Economic Survey"
         
         let question1 = Question(context: self.coreDataContext)
         question1.questionId = 1
@@ -357,7 +370,7 @@ class LogInVC: UIViewController {
         question22.nextQuestionId = 9
         question22.question = "What kind of work were you doing on this job – that is, what were your duties and responsibilities on your principal job? Please be as specific as possible, including any area of specialization."
         question22.questionItalicText = "Examples: Analyzed financial information, prepared technical reports, specialized in asset management."
-        question22.answerType = "Text"
+        question22.answerType = "TextView"
         question22.module = newModule1
         
         let question23 = Question(context: self.coreDataContext)
@@ -435,9 +448,10 @@ class LogInVC: UIViewController {
                                     "Professional services (e.g., health care, counseling, financial services, legal services)",
                                     "Sales, purchasing, marketing, customer service, public relations",
                                     "Quality or productivity management",
-                                    "Teaching"
-        ]
-        
+                                    "Teaching",
+                                    "Other activity"]
+        question27.otherOption = ["Other activity"]
+        question27.placeholderText = "Specify"
         question27.module = newModule1
         
         
@@ -808,28 +822,27 @@ class LogInVC: UIViewController {
         question61.questionId = 42
         question61.firebaseId = 42
         question61.nextQuestionId = 43
-        question61.question = "We would like to ask you about some things people think about today. We are faced with many problems in this country, none of which can be solved easily or inexpensively. We are going to list some of these problems, and for each one we would like you to tell us whether you think we're spending too much money on it, too little money, or about the right amount."
+        question61.question = "We would like to ask you about your expectations for America’s economy in the year ahead. We are going to list some indicators related to the economy. For each one we would like you to tell us whether you think during the next twelve months it will go up, go down, or stay about the same compared to now?"
         
         question61.questionItalicText = "Select one answer for each question."
         question61.answerType = "Grid"
-        question61.gridQuestions = ["The space exploration program",
-                                    "Improving and protecting the environment",
-                                    "Improving and protecting the nation’s health",
-                                    "Solving the problems of the big cities",
-                                    "Halting the rising crime rate",
-                                    "Dealing with drug addiction",
-                                    "Improving the nation’s education system",
-                                    "Improving the conditions of Blacks",
-                                    "The military, armaments and defense",
-                                    "Foreign aid",
-                                    "Welfare"]
+        question61.gridQuestions = ["Unemployment",
+                                    "Interest rates for borrowing money",
+                                    "Prices in general",
+                                    "Prices of major household items (e.g., furniture, refrigerator, stove, television)",
+                                    "Prices of vehicles (e.g., car, pickup, van)",
+                                    "Price of gasoline",
+                                    "Availability of affordable housing",
+                                    "Stock market",
+                                    "Average income in the country as a whole"
+                                    ]
         question61.answerChoices = [
-            "Too little",
-            "About right",
-            "Too much"
+            "Go up",
+            "Stay the same",
+            "Go down"
         ]
         question61.module = newModule1
-        question61.moduleStartInfo = "This section focuses on social issues. Please read each question carefully and provide an answer."
+        question61.moduleStartInfo = "This section focuses on economic and social issues. Please read each question carefully and provide an answer."
         
         
         
@@ -837,11 +850,11 @@ class LogInVC: UIViewController {
         question62.questionId = 43
         question62.firebaseId = 43
         question62.nextQuestionId = 44
-        question62.question = "In general, do you think the courts in your area deal too harshly or not harshly enough with criminals?"
+        question62.question = "Do you expect that your household income will increase by more than the rate of inflation during the next five years or so?"
         question62.answerType = "BCQ"
         question62.answerChoices = [
-            "Too harshly",
-            "Not harshly enough"]
+            "Yes",
+            "No"]
         question62.module = newModule1
         
         let question63 = Question(context: self.coreDataContext)
@@ -942,7 +955,7 @@ class LogInVC: UIViewController {
         question73.nextQuestionId = 53
         question73.question = "How many apps do you currently have on your iPhone, including those that came preloaded on the phone and those you downloaded yourself?"
         question73.answerType = "Numeric"
-        question73.placeholderText = "Number of times"
+        question73.placeholderText = "Number"
         question73.module = newModule1
         
         let question74 = Question(context: self.coreDataContext)
@@ -1105,8 +1118,8 @@ class LogInVC: UIViewController {
         question713.answerChoices = ["At home",
                                    "At work",
                                    "In transit",
-                                   "Other activities"]
-        question713.otherOption = ["Other activities"]
+                                   "Other location"]
+        question713.otherOption = ["Other location"]
         question713.placeholderText = "Specify"
         question713.module = newModule1
         
@@ -1182,7 +1195,7 @@ class LogInVC: UIViewController {
         let appCondition = UserDefaults.standard.string(forKey: "AppCondition")
         let newModule1 = Module(context: self.coreDataContext)
         newModule1.dateAdded = Calendar.current.date(byAdding: .minute, value: -8, to: Date())
-        newModule1.moduleName = "Module 1"
+        newModule1.moduleName = "Module 1: Employer"
         
         let question1 = Question(context: self.coreDataContext)
         question1.questionId = 1
@@ -1264,7 +1277,7 @@ class LogInVC: UIViewController {
         
         let newModule2 = Module(context: self.coreDataContext)
         newModule2.dateAdded = Calendar.current.date(byAdding: .minute, value: -7, to: Date())
-        newModule2.moduleName = "Module 2"
+        newModule2.moduleName = "Module 2: Job duties"
         
         let question21 = Question(context: self.coreDataContext)
         question21.questionId = 1
@@ -1283,7 +1296,7 @@ class LogInVC: UIViewController {
         question22.nextQuestionId = 3
         question22.question = "What kind of work were you doing on this job – that is, what were your duties and responsibilities on your principal job? Please be as specific as possible, including any area of specialization."
         question22.questionItalicText = "Examples: Analyzed financial information, prepared technical reports, specialized in asset management."
-        question22.answerType = "Text"
+        question22.answerType = "TextView"
         question22.module = newModule2
         
         let question23 = Question(context: self.coreDataContext)
@@ -1361,9 +1374,10 @@ class LogInVC: UIViewController {
                                     "Professional services (e.g., health care, counseling, financial services, legal services)",
                                     "Sales, purchasing, marketing, customer service, public relations",
                                     "Quality or productivity management",
-                                    "Teaching"
-        ]
-        
+                                    "Teaching",
+                                    "Other activity"]
+        question27.otherOption = ["Other activity"]
+        question27.placeholderText = "Specify"
         question27.module = newModule2
         
         
@@ -1431,7 +1445,7 @@ class LogInVC: UIViewController {
         
         let newModule3 = Module(context: self.coreDataContext)
         newModule3.dateAdded = Calendar.current.date(byAdding: .minute, value: -6, to: Date())
-        newModule3.moduleName = "Module 3"
+        newModule3.moduleName = "Module 3: Job satisfaction"
         
         let question31 = Question(context: self.coreDataContext)
         question31.questionId = 1
@@ -1505,7 +1519,7 @@ class LogInVC: UIViewController {
         
         let newModule4 = Module(context: self.coreDataContext)
         newModule4.dateAdded = Calendar.current.date(byAdding: .minute, value: -3, to: Date())
-        newModule4.moduleName = "Module 4"
+        newModule4.moduleName = "Module 4: Job benefits"
         
         let question41 = Question(context: self.coreDataContext)
         question41.questionId = 1
@@ -1656,7 +1670,7 @@ class LogInVC: UIViewController {
         
         let newModule5 = Module(context: self.coreDataContext)
         newModule5.dateAdded = Calendar.current.date(byAdding: .minute, value: -3, to: Date())
-        newModule5.moduleName = "Module 5"
+        newModule5.moduleName = "Module 5: Job expectations"
         
         
         let question51 = Question(context: self.coreDataContext)
@@ -1747,35 +1761,34 @@ class LogInVC: UIViewController {
         
         let newModule6 = Module(context: self.coreDataContext)
         newModule6.dateAdded = Calendar.current.date(byAdding: .minute, value: -3, to: Date())
-        newModule6.moduleName = "Module 6"
+        newModule6.moduleName = "Module 6: Economy and society"
         
         let question61 = Question(context: self.coreDataContext)
         question61.questionId = 1
         question61.firebaseId = 42
         question61.nextQuestionId = 2
-        question61.question = "We would like to ask you about some things people think about today. We are faced with many problems in this country, none of which can be solved easily or inexpensively. We are going to list some of these problems, and for each one we would like you to tell us whether you think we're spending too much money on it, too little money, or about the right amount."
+        question61.question = "We would like to ask you about your expectations for America’s economy in the year ahead. We are going to list some indicators related to the economy. For each one we would like you to tell us whether you think during the next twelve months it will go up, go down, or stay about the same compared to now?"
         
         question61.questionItalicText = "Select one answer for each question."
         question61.answerType = "Grid"
-        question61.gridQuestions = ["The space exploration program",
-                                    "Improving and protecting the environment",
-                                    "Improving and protecting the nation’s health",
-                                    "Solving the problems of the big cities",
-                                    "Halting the rising crime rate",
-                                    "Dealing with drug addiction",
-                                    "Improving the nation’s education system",
-                                    "Improving the conditions of Blacks",
-                                    "The military, armaments and defense",
-                                    "Foreign aid",
-                                    "Welfare"]
+        question61.gridQuestions = ["Unemployment",
+                                    "Interest rates for borrowing money",
+                                    "Prices in general",
+                                    "Prices of major household items (e.g., furniture, refrigerator, stove, television)",
+                                    "Prices of vehicles (e.g., car, pickup, van)",
+                                    "Price of gasoline",
+                                    "Availability of affordable housing",
+                                    "Stock market",
+                                    "Average income in the country as a whole"
+                                    ]
         question61.answerChoices = [
-            "Too little",
-            "About right",
-            "Too much"
+            "Go up",
+            "Stay the same",
+            "Go down"
         ]        
         question61.isFirst = true
         question61.module = newModule6
-        question61.moduleStartInfo = "This section focuses on social issues. Please read each question carefully and provide an answer."
+        question61.moduleStartInfo = "This section focuses on economic and social issues. Please read each question carefully and provide an answer."
         
         
         
@@ -1783,11 +1796,11 @@ class LogInVC: UIViewController {
         question62.questionId = 2
         question62.firebaseId = 43
         question62.nextQuestionId = 3
-        question62.question = "In general, do you think the courts in your area deal too harshly or not harshly enough with criminals?"
+        question62.question = "Do you expect that your household income will increase by more than the rate of inflation during the next five years or so?"
         question62.answerType = "BCQ"
         question62.answerChoices = [
-            "Too harshly",
-            "Not harshly enough"]
+            "Yes",
+            "No"]
         question62.module = newModule6
         
         let question63 = Question(context: self.coreDataContext)
@@ -1864,7 +1877,7 @@ class LogInVC: UIViewController {
         
         let newModule7 = Module(context: self.coreDataContext)
         newModule7.dateAdded = Calendar.current.date(byAdding: .minute, value: -3, to: Date())
-        newModule7.moduleName = "Module 7"
+        newModule7.moduleName = "Module 7: Technology"
         
         let question71 = Question(context: self.coreDataContext)
         question71.questionId = 1
@@ -1892,7 +1905,7 @@ class LogInVC: UIViewController {
         question73.nextQuestionId = 4
         question73.question = "How many apps do you currently have on your iPhone, including those that came preloaded on the phone and those you downloaded yourself?"
         question73.answerType = "Numeric"
-        question73.placeholderText = "Number of times"
+        question73.placeholderText = "Number"
         question73.module = newModule7
         
         let question74 = Question(context: self.coreDataContext)
@@ -2055,8 +2068,8 @@ class LogInVC: UIViewController {
         question713.answerChoices = ["At home",
                                    "At work",
                                    "In transit",
-                                   "Other activities"]
-        question713.otherOption = ["Other activities"]
+                                   "Other location"]
+        question713.otherOption = ["Other location"]
         question713.placeholderText = "Specify"
         question713.module = newModule7
         
@@ -2452,7 +2465,7 @@ class LogInVC: UIViewController {
         let newModule1 = Module(context: self.coreDataContext)
         let date = Calendar.current.date(byAdding: .minute, value: -1, to: Date())
         newModule1.dateAdded = date
-        newModule1.moduleName = "Module 1"
+        newModule1.moduleName = "Module 1: Employer"
         
         let question1 = Question(context: self.coreDataContext)
         question1.questionId = 1
@@ -2533,9 +2546,9 @@ class LogInVC: UIViewController {
         
         
         let newModule2 = Module(context: self.coreDataContext)
-        let date2 = Calendar.current.date(byAdding: .minute, value: 3, to: Date())
+        let date2 = Calendar.current.date(byAdding: .minute, value: 2, to: Date())
         newModule2.dateAdded = date2
-        newModule2.moduleName = "Module 2"
+        newModule2.moduleName = "Module 2: Job duties"
         createLocalNotification(title: "New Module Published", body: "Module 2 has been released", date: date2!)
         
         let question21 = Question(context: self.coreDataContext)
@@ -2555,7 +2568,7 @@ class LogInVC: UIViewController {
         question22.nextQuestionId = 3
         question22.question = "What kind of work were you doing on this job – that is, what were your duties and responsibilities on your principal job? Please be as specific as possible, including any area of specialization."
         question22.questionItalicText = "Examples: Analyzed financial information, prepared technical reports, specialized in asset management."
-        question22.answerType = "Text"
+        question22.answerType = "TextView"
         question22.module = newModule2
         
         let question23 = Question(context: self.coreDataContext)
@@ -2633,9 +2646,10 @@ class LogInVC: UIViewController {
                                     "Professional services (e.g., health care, counseling, financial services, legal services)",
                                     "Sales, purchasing, marketing, customer service, public relations",
                                     "Quality or productivity management",
-                                    "Teaching"
-        ]
-        
+                                    "Teaching",
+                                    "Other activity"]
+        question27.otherOption = ["Other activity"]
+        question27.placeholderText = "Specify"
         question27.module = newModule2
         
         
@@ -2702,9 +2716,9 @@ class LogInVC: UIViewController {
         question212.module = newModule2
         
         let newModule3 = Module(context: self.coreDataContext)
-        let date3 = Calendar.current.date(byAdding: .minute, value: 6, to: Date())
+        let date3 = Calendar.current.date(byAdding: .minute, value: 4, to: Date())
         newModule3.dateAdded = date3
-        newModule3.moduleName = "Module 3"
+        newModule3.moduleName = "Module 3: Job satisfaction"
         createLocalNotification(title: "New Module Published", body: "Module 3 has been released", date: date3!)
         
         
@@ -2779,9 +2793,9 @@ class LogInVC: UIViewController {
         
         
         let newModule4 = Module(context: self.coreDataContext)
-        let date4 = Calendar.current.date(byAdding: .minute, value: 9, to: Date())
+        let date4 = Calendar.current.date(byAdding: .minute, value: 6, to: Date())
         newModule4.dateAdded = date4
-        newModule4.moduleName = "Module 4"
+        newModule4.moduleName = "Module 4: Job benefits"
         createLocalNotification(title: "New Module Published", body: "Module 4 has been released", date: date4!)
         
         let question41 = Question(context: self.coreDataContext)
@@ -2932,9 +2946,9 @@ class LogInVC: UIViewController {
         
         
         let newModule5 = Module(context: self.coreDataContext)
-        let date5 = Calendar.current.date(byAdding: .minute, value: 12, to: Date())
+        let date5 = Calendar.current.date(byAdding: .minute, value: 8, to: Date())
         newModule5.dateAdded = date5
-        newModule5.moduleName = "Module 5"
+        newModule5.moduleName = "Module 5: Job expectations"
         createLocalNotification(title: "New Module Published", body: "Module 5 has been released", date: date5!)
         
         
@@ -3025,38 +3039,37 @@ class LogInVC: UIViewController {
         
         
         let newModule6 = Module(context: self.coreDataContext)
-        let date6 = Calendar.current.date(byAdding: .minute, value: 15, to: Date())
+        let date6 = Calendar.current.date(byAdding: .minute, value: 10, to: Date())
         newModule6.dateAdded = date6
-        newModule6.moduleName = "Module 6"
+        newModule6.moduleName = "Module 6: Economy and society"
         createLocalNotification(title: "New Module Published", body: "Module 6 has been released", date: date6!)
         
         let question61 = Question(context: self.coreDataContext)
         question61.questionId = 1
         question61.firebaseId = 42
         question61.nextQuestionId = 2
-        question61.question = "We would like to ask you about some things people think about today. We are faced with many problems in this country, none of which can be solved easily or inexpensively. We are going to list some of these problems, and for each one we would like you to tell us whether you think we're spending too much money on it, too little money, or about the right amount."
+        question61.question = "We would like to ask you about your expectations for America’s economy in the year ahead. We are going to list some indicators related to the economy. For each one we would like you to tell us whether you think during the next twelve months it will go up, go down, or stay about the same compared to now?"
         
         question61.questionItalicText = "Select one answer for each question."
         question61.answerType = "Grid"
-        question61.gridQuestions = ["The space exploration program",
-                                    "Improving and protecting the environment",
-                                    "Improving and protecting the nation’s health",
-                                    "Solving the problems of the big cities",
-                                    "Halting the rising crime rate",
-                                    "Dealing with drug addiction",
-                                    "Improving the nation’s education system",
-                                    "Improving the conditions of Blacks",
-                                    "The military, armaments and defense",
-                                    "Foreign aid",
-                                    "Welfare"]
+        question61.gridQuestions = ["Unemployment",
+                                    "Interest rates for borrowing money",
+                                    "Prices in general",
+                                    "Prices of major household items (e.g., furniture, refrigerator, stove, television)",
+                                    "Prices of vehicles (e.g., car, pickup, van)",
+                                    "Price of gasoline",
+                                    "Availability of affordable housing",
+                                    "Stock market",
+                                    "Average income in the country as a whole"
+                                    ]
         question61.answerChoices = [
-            "Too little",
-            "About right",
-            "Too much"
+            "Go up",
+            "Stay the same",
+            "Go down"
         ]
         question61.isFirst = true
         question61.module = newModule6
-        question61.moduleStartInfo = "This section focuses on social issues. Please read each question carefully and provide an answer."
+        question61.moduleStartInfo = "This section focuses on economic and social issues. Please read each question carefully and provide an answer."
         
         
         
@@ -3064,11 +3077,11 @@ class LogInVC: UIViewController {
         question62.questionId = 2
         question62.firebaseId = 43
         question62.nextQuestionId = 3
-        question62.question = "In general, do you think the courts in your area deal too harshly or not harshly enough with criminals?"
+        question62.question = "Do you expect that your household income will increase by more than the rate of inflation during the next five years or so?"
         question62.answerType = "BCQ"
         question62.answerChoices = [
-            "Too harshly",
-            "Not harshly enough"]
+            "Yes",
+            "No"]
         question62.module = newModule6
         
         let question63 = Question(context: self.coreDataContext)
@@ -3144,9 +3157,9 @@ class LogInVC: UIViewController {
         question68.module = newModule6
         
         let newModule7 = Module(context: self.coreDataContext)
-        let date7 = Calendar.current.date(byAdding: .minute, value: 18, to: Date())
+        let date7 = Calendar.current.date(byAdding: .minute, value: 12, to: Date())
         newModule7.dateAdded = date7
-        newModule7.moduleName = "Module 7"
+        newModule7.moduleName = "Module 7: Technology"
         
         createLocalNotification(title: "New Module Published", body: "Module 7 has been released", date: date7!)
         
@@ -3176,7 +3189,7 @@ class LogInVC: UIViewController {
         question73.nextQuestionId = 4
         question73.question = "How many apps do you currently have on your iPhone, including those that came preloaded on the phone and those you downloaded yourself?"
         question73.answerType = "Numeric"
-        question73.placeholderText = "Number of times"
+        question73.placeholderText = "Number"
         question73.module = newModule7
         
         let question74 = Question(context: self.coreDataContext)
@@ -3339,8 +3352,8 @@ class LogInVC: UIViewController {
         question713.answerChoices = ["At home",
                                    "At work",
                                    "In transit",
-                                   "Other activities"]
-        question713.otherOption = ["Other activities"]
+                                   "Other location"]
+        question713.otherOption = ["Other location"]
         question713.placeholderText = "Specify"
         question713.module = newModule7
         
@@ -3628,7 +3641,7 @@ class LogInVC: UIViewController {
                 homeVC.notifyUsers = notifyUsers
                 homeVC.modules = self.modules
                 Helper.modules = self.modules
-                homeVC.surveyName = "Survey Modules" //self.userSurvey?.surveyName ?? ""
+                homeVC.surveyName = "General Economic Survey\nSurvey Modules" //self.userSurvey?.surveyName ?? ""
                 self.view.removeBluerLoader()
                 self.navigationController?.pushViewController(homeVC, animated: true)
             }

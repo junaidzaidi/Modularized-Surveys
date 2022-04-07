@@ -7,6 +7,9 @@
 
 import Foundation
 import FirebaseFirestore
+import CoreData
+
+
 class Helper {
     static let db: Firestore? = Firestore.firestore()
     static var startDate: Date?
@@ -100,6 +103,25 @@ class Helper {
 //        let tap = UITapGestureRecognizer(target: self, action: #selector(tapped(tap:)))
 //        label.addGestureRecognizer(tap)
 //        label.isUserInteractionEnabled = true
+    }
+    
+    static func isSurveyPending() -> Bool{
+        let coreDataContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let request = Module.fetchRequest() as NSFetchRequest<Module>
+        let sortingCriteria = NSSortDescriptor(key: "dateAdded", ascending: true)
+        request.sortDescriptors = [sortingCriteria]
+        do {
+            var retrievedModules = try coreDataContext.fetch(request)
+            retrievedModules = retrievedModules.filter({ $0.dateAdded! <= Date()
+            })
+            retrievedModules = retrievedModules.filter({ $0.isCompleted == false
+            })
+            return retrievedModules.count > 0
+        }
+        catch {
+            print("Error Getting Modules From Core Data")
+        }
+        return false
     }
     
     

@@ -15,6 +15,10 @@ class HomeVC: UIViewController {
     @IBOutlet weak var headerTitleLbl: UILabel!
     @IBOutlet weak var gradientView: UIView!
     
+    @IBOutlet weak var topConst: NSLayoutConstraint!
+    @IBOutlet weak var bottomConst: NSLayoutConstraint!
+    @IBOutlet weak var proceedBtn: UIButton!
+    @IBOutlet weak var informationView: UIView!
     @IBOutlet weak var surveyNameLbl: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var homeView: UIView!
@@ -28,11 +32,27 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        proceedBtn.layer.cornerRadius = 8
+        proceedBtn.clipsToBounds = true
+        
+        if UserDefaults.standard.bool(forKey: "InfoPresented") == true {
+            informationView.isHidden = true
+        }
+        
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(grabData),
             name: UIApplication.didBecomeActiveNotification,
             object: nil)
+        
+        
+        let condition = UserDefaults.standard.bool(forKey: "MainHeading")
+        if !condition {
+            surveyNameLbl.isHidden = !condition
+            surveyNameLbl.text = nil
+            topConst.constant = 0
+            bottomConst.constant = 0
+        }
         
         // Do any additional setup after loading the view.
     }
@@ -66,6 +86,7 @@ class HomeVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         setup()
         
+        modules = Helper.modules
         let totalModules = modules?.count
         modules = modules?.filter({ $0.dateAdded! <= Date()
         })
@@ -86,7 +107,7 @@ class HomeVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         //self.view.showBlurLoader()
-        print("Appearing")
+        
     }
     //MARK:- IBActions
     @IBAction func settingBtnTapped(_ sender: UIButton) {
@@ -95,6 +116,10 @@ class HomeVC: UIViewController {
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     
+    @IBAction func proceedBtnTapped(_ sender: UIButton) {
+        informationView.isHidden = true
+        UserDefaults.standard.set(true, forKey: "InfoPresented")
+    }
     
     //MARK:- Helper Functions
     func setup() {

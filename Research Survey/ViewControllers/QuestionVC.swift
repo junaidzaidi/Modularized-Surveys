@@ -16,12 +16,12 @@ class QuestionVC: UIViewController {
     @IBOutlet weak var headerTitleLbl: UILabel!
    
     @IBOutlet weak var questionNumberLbl: UILabel!
-    @IBOutlet weak var moduleNameLbl: UILabel!
     @IBOutlet weak var questionLbl: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var homeView: UIView!
     @IBOutlet weak var ItalicLbl: UILabel!
     @IBOutlet weak var moduleStartLbl: UILabel!
+    @IBOutlet weak var moduleNameLbl: UILabel!
     
     //MARK:- Helper Variables
     

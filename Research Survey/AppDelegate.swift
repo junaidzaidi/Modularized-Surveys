@@ -25,6 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     func applicationDidBecomeActive(_ application: UIApplication) {
         Helper.startDate = Date()
+        center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
+        }
         self.cancelLocalNotification()
         
     }
@@ -37,9 +39,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //                            print("Error creating notification")
 //                            //return
 //                        }
-                let scheduledDate = Calendar.current.date(byAdding: .minute, value: 2, to: Date()) ?? Date()
-                self.createLocalNotification(title: "Survey Pending", body: "There are some question unanswered in the survey", date: scheduledDate)
                 
+                if (Helper.isSurveyPending()) {
+                    
+                    let scheduledDate = Calendar.current.date(byAdding: .second, value: 5, to: Date()) ?? Date()
+                    self.createLocalNotification(title: "Survey Pending", body: "You still have some questions that have not been answered on the General Economic Survey. Please tap here to continue!", date: scheduledDate)
+                    }
             }
         }
     }
