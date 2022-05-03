@@ -112,8 +112,8 @@ class Helper {
         request.sortDescriptors = [sortingCriteria]
         do {
             var retrievedModules = try coreDataContext.fetch(request)
-            retrievedModules = retrievedModules.filter({ $0.dateAdded! <= Date()
-            })
+//            retrievedModules = retrievedModules.filter({ $0.dateAdded! <= Date()
+//            })
             retrievedModules = retrievedModules.filter({ $0.isCompleted == false
             })
             return retrievedModules.count > 0

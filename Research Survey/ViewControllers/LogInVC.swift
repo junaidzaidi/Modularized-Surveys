@@ -279,7 +279,7 @@ class LogInVC: UIViewController {
         question1.questionId = 1
         question1.firebaseId = 1
         question1.nextQuestionId = 2
-        question1.question = "During the week of Mar 28, 2022, who was your principal employer?"
+        question1.question = "During the week of April 25, 2022, who was your principal employer?"
         question1.questionItalicText = "If you had more than one job, report the one for which you worked the most hours that week.\nIf you worked for a contracting or consulting company, report the name of that company, not the client organization."
         question1.placeholderText = "Employer Name"
         question1.answerType = "Text"
@@ -291,7 +291,7 @@ class LogInVC: UIViewController {
         question2.questionId = 2
         question2.firebaseId = 2
         question2.nextQuestionId = 3
-        question2.question = "Which one of the following best describes your principal employer during the week of March 28, 2022?"
+        question2.question = "Which one of the following best describes your principal employer during the week of April 25, 2022?"
         question2.answerType = "BCQ"
         question2.answerChoices = [
             "SELF EMPLOYED OR A BUSINESS OWNER in a non-incorporated business, professional practice, or farm",
@@ -358,7 +358,7 @@ class LogInVC: UIViewController {
         question21.questionId = 7
         question21.firebaseId = 7
         question21.nextQuestionId = 8
-        question21.question = "During the week of March 28, 2022, what was the title of the principal job you held?"
+        question21.question = "During the week of April 25, 2022, what was the title of the principal job you held?"
         question21.questionItalicText = "Example: Financial Analyst"
         question21.answerType = "Text"
         question21.module = newModule1
@@ -397,7 +397,7 @@ class LogInVC: UIViewController {
         question25.questionId = 11
         question25.firebaseId = 11
         question25.nextQuestionId = 12
-        question25.question = "During what month and year did you start this job (that is, the principal job you held during the week of March 28, 2022)?"
+        question25.question = "During what month and year did you start this job (that is, the principal job you held during the week of April 25, 2022)?"
         //question25.questionItalicText = "Principal job started??? Date Time??"
         question25.answerType = "Date"
         question25.placeholderText = "Principal job started"
@@ -459,7 +459,7 @@ class LogInVC: UIViewController {
         question28.questionId = 14
         question28.firebaseId = 14
         question28.nextQuestionId = 15
-        question28.question = "As part of the principal job you held during the week of March 28, 2022, did you supervise the work of others?"
+        question28.question = "As part of the principal job you held during the week of April 25, 2022, did you supervise the work of others?"
         question28.questionItalicText = "Mark “Yes” if you recommended or initiated personnel actions such as hiring, firing, evaluating, or promoting others.\nTeachers: Do not count students."
         question28.answerType = "BCQ"
         question28.answerChoices = ["Yes",
@@ -479,7 +479,7 @@ class LogInVC: UIViewController {
         question210.questionId = 16
         question210.firebaseId = 16
         question210.nextQuestionId = 17
-        question210.question = "As of the week of March 28, 2022, what was your basic annual salary on your principal job, before deductions?"
+        question210.question = "As of the week of April 25, 2022, what was your basic annual salary on your principal job, before deductions?"
         question210.questionItalicText = "Do not include bonuses, overtime, or additional compensation for summertime teaching or research. If you are not salaried, please estimate your earned income, excluding business expenses."
         question210.answerType = "Numeric"
         question210.placeholderText = "$"
@@ -522,7 +522,7 @@ class LogInVC: UIViewController {
         question31.questionId = 19
         question31.firebaseId = 19
         question31.nextQuestionId = 20
-        question31.question = "Thinking about the principal job you held during the week of March 28, 2022, how would you rate your overall satisfaction?"
+        question31.question = "Thinking about the principal job you held during the week of April 25, 2022, how would you rate your overall satisfaction?"
         question31.answerType = "BCQ"
         question31.answerChoices = [
             "Very satisfied",
@@ -539,7 +539,7 @@ class LogInVC: UIViewController {
         question32.questionId = 20
         question32.firebaseId = 20
         question32.nextQuestionId = 21
-        question32.question = "Thinking about the principal job you held during the week of March 28, 2022, how satisfied or dissatisfied were you with the following aspects of the job?"
+        question32.question = "Thinking about the principal job you held during the week of April 25, 2022, how satisfied or dissatisfied were you with the following aspects of the job?"
         question32.gridQuestions = ["Salary",
                                     "Benefits",
                                     "Job security",
@@ -563,7 +563,7 @@ class LogInVC: UIViewController {
         question33.questionId = 21
         question33.firebaseId = 21
         question33.nextQuestionId = 22
-        question33.question = "For the principal job you held during the week of March 28, 2022, has your basic annual salary been affected at any time by the coronavirus pandemic?"
+        question33.question = "For the principal job you held during the week of April 25, 2022, has your basic annual salary been affected at any time by the coronavirus pandemic?"
         question33.answerType = "BCQ"
         question33.answerChoices = ["Yes",
                                     "No"]
@@ -592,7 +592,7 @@ class LogInVC: UIViewController {
         question41.questionId = 24
         question41.firebaseId = 24
         question41.nextQuestionId = 25
-        question41.question = "Thinking of your principal job during the week of March 28, 2022, which of the following benefits were available to you, even if you chose not to take them?"
+        question41.question = "Thinking of your principal job during the week of April 25, 2022, which of the following benefits were available to you, even if you chose not to take them?"
         question41.questionItalicText = "Check all that apply"
         question41.answerType = "MCQ"
         question41.answerChoices = ["Health insurance that was at least partially paid by your employer",
@@ -608,7 +608,7 @@ class LogInVC: UIViewController {
         question42.questionId = 25
         question42.firebaseId = 25
         question42.nextQuestionId = 26
-        question42.question = "Thinking of your principal job during the week of March 28, 2022, which of the following best describes whether you were allowed or required to telecommute/work remotely?"
+        question42.question = "Thinking of your principal job during the week of April 25, 2022, which of the following best describes whether you were allowed or required to telecommute/work remotely?"
         question42.answerType = "BCQ"
         question42.answerChoices = ["I was allowed or required to telecommute/work remotely due to the coronavirus pandemic",
                                     "I was allowed or required to telecommute/work remotely regardless of the coronavirus pandemic",
@@ -623,7 +623,7 @@ class LogInVC: UIViewController {
         question43.question = "Thinking back now to 2021 was any of your work during 2021 supported by contracts or grants from the U.S. Federal Government?"
         question43.questionItalicText = "Federal employees: Please answer “No.“"
         question43.answerType = "BCQ"
-        question43.answerChoices = ["Did not work in 2020",
+        question43.answerChoices = ["Did not work in 2021",
                                     "Yes",
                                     "No",
                                     "Don’t know"]
@@ -660,19 +660,19 @@ class LogInVC: UIViewController {
                                     "Not at all likely"]
         question45.module = newModule1
         
-        let question46 = Question(context: self.coreDataContext)
-        question46.questionId = 29
-        question46.firebaseId = 29
-        question46.nextQuestionId = 30
-        question46.question = "Could you tell us why you say that?"
-        question46.answerType = "TextView"
-        //question46.placeholderText = "Specify"
-        question46.module = newModule1
+//        let question46 = Question(context: self.coreDataContext)
+//        question46.questionId = 29
+//        question46.firebaseId = 29
+//        question46.nextQuestionId = 30
+//        question46.question = "Could you tell us why you say that?"
+//        question46.answerType = "TextView"
+//        //question46.placeholderText = "Specify"
+//        question46.module = newModule1
         
         let question47 = Question(context: self.coreDataContext)
-        question47.questionId = 30
+        question47.questionId = 29
         question47.firebaseId = 30
-        question47.nextQuestionId = 31
+        question47.nextQuestionId = 30
         question47.question = "About how easy would it be for you to find a job with another employer with approximately the same income and fringe benefits you now have?"
         question47.answerType = "BCQ"
         question47.answerChoices = ["Very likely",
@@ -682,20 +682,20 @@ class LogInVC: UIViewController {
         question47.module = newModule1
         
         
-        let question48 = Question(context: self.coreDataContext)
-        question48.questionId = 31
-        question48.firebaseId = 31
-        question48.nextQuestionId = 32
-        question48.question = "Could you tell us why you say that?"
-        question48.answerType = "TextView"
-        //question48.placeholderText = "Specify"
-        question48.module = newModule1
+//        let question48 = Question(context: self.coreDataContext)
+//        question48.questionId = 31
+//        question48.firebaseId = 31
+//        question48.nextQuestionId = 32
+//        question48.question = "Could you tell us why you say that?"
+//        question48.answerType = "TextView"
+//        //question48.placeholderText = "Specify"
+//        question48.module = newModule1
         
         let question49 = Question(context: self.coreDataContext)
-        question49.questionId = 32
+        question49.questionId = 30
         question49.firebaseId = 32
-        question49.nextQuestionId = 33
-        question49.question = "As of March 28, 2022, did you have any active professional certifications or state or industry licenses?"
+        question49.nextQuestionId = 31
+        question49.question = "As of April 25, 2022, did you have any active professional certifications or state or industry licenses?"
         question49.questionItalicText = "A professional certification or license shows you are qualified to perform a specific job. Only include certifications or licenses obtained by an individual. Examples include Certified Teacher, Registered Nurse, Licensed Professional Engineer, a Project Management certification, or an IT certification.\nDo not include licenses needed by a business to operate."
         question49.answerType = "BCQ"
         question49.answerChoices = ["Yes",
@@ -703,9 +703,9 @@ class LogInVC: UIViewController {
         question49.module = newModule1
         
         let question410 = Question(context: self.coreDataContext)
-        question410.questionId = 33
+        question410.questionId = 31
         question410.firebaseId = 33
-        question410.nextQuestionId = 34
+        question410.nextQuestionId = 32
         question410.question = "During the past 12 months, did you take any work-related training, such as workshops or seminars?"
         question410.questionItalicText = "Include conferences or professional meetings only if you attended a training session at the conference or meeting.\nDo not include college coursework for which you were enrolled in a degree program."
         question410.answerType = "BCQ"
@@ -714,9 +714,9 @@ class LogInVC: UIViewController {
         question410.module = newModule1
         
         let question411 = Question(context: self.coreDataContext)
-        question411.questionId = 34
+        question411.questionId = 32
         question411.firebaseId = 34
-        question411.nextQuestionId = 35
+        question411.nextQuestionId = 33
         question411.question = "During the past 12 months, did you attend any professional conferences or professional society or association meetings?"
         question411.questionItalicText = "Include regional, national, or international meetings."
         question411.answerType = "BCQ"
@@ -725,8 +725,8 @@ class LogInVC: UIViewController {
         question411.module = newModule1
         
         let question412 = Question(context: self.coreDataContext)
-        question412.questionId = 35
-        question412.nextQuestionId = 36
+        question412.questionId = 33
+        question412.nextQuestionId = 34
         question412.firebaseId = 35
         question412.question = "To how many regional, national, or international professional societies or associations do you currently belong?"
         question412.answerType = "Numeric"
@@ -735,9 +735,9 @@ class LogInVC: UIViewController {
         question412.module = newModule1
         
         let question51 = Question(context: self.coreDataContext)
-        question51.questionId = 36
+        question51.questionId = 34
         question51.firebaseId = 36
-        question51.nextQuestionId = 37
+        question51.nextQuestionId = 35
         question51.question = "When thinking about a job, how important is each of the following factors to you?"
         question51.questionItalicText = "Select one answer for each question."
         question51.gridQuestions = ["Salary",
@@ -762,9 +762,9 @@ class LogInVC: UIViewController {
         
         
         let question52 = Question(context: self.coreDataContext)
-        question52.questionId = 37
+        question52.questionId = 35
         question52.firebaseId = 37
-        question52.nextQuestionId = 38
+        question52.nextQuestionId = 36
         question52.question = "We are interested in how people are getting along financially these days. So far as you and your family are concerned, would you say that you are pretty well satisfied with your present financial situation, more or less satisfied, or not satisfied at all?"
         question52.answerType = "BCQ"
         question52.answerChoices = [
@@ -774,18 +774,18 @@ class LogInVC: UIViewController {
         question52.module = newModule1
         
         let question53 = Question(context: self.coreDataContext)
-        question53.questionId = 38
+        question53.questionId = 36
         question53.firebaseId = 38
-        question53.nextQuestionId = 39
+        question53.nextQuestionId = 37
         question53.question = "Could you tell us a little more about that?"
         question53.answerType = "TextView"
         //question53.placeholderText = "Specify"
         question53.module = newModule1
         
         let question54 = Question(context: self.coreDataContext)
-        question54.questionId = 39
+        question54.questionId = 37
         question54.firebaseId = 39
-        question54.nextQuestionId = 40
+        question54.nextQuestionId = 38
         question54.question = "Compared with American families in general, would you say your family income is--far below average, below average, average, above average, or far above average? If you are uncertain, just give us your best guess."
         question54.answerType = "BCQ"
         question54.answerChoices = [
@@ -797,9 +797,9 @@ class LogInVC: UIViewController {
         question54.module = newModule1
         
         let question55 = Question(context: self.coreDataContext)
-        question55.questionId = 40
+        question55.questionId = 38
         question55.firebaseId = 40
-        question55.nextQuestionId = 41
+        question55.nextQuestionId = 39
         question55.question = "Some people say that people get ahead by their own hard work; others say that lucky breaks or help from other people are more important. Which do you think is most important?"
         question55.answerType = "BCQ"
         question55.answerChoices = [
@@ -810,8 +810,8 @@ class LogInVC: UIViewController {
         question55.module = newModule1
         
         let question56 = Question(context: self.coreDataContext)
-        question56.questionId = 41
-        question56.nextQuestionId = 42
+        question56.questionId = 39
+        question56.nextQuestionId = 40
         question56.firebaseId = 41
         question56.question = "Why do you say that?"
         question56.answerType = "TextView"
@@ -819,9 +819,9 @@ class LogInVC: UIViewController {
         question56.module = newModule1
         
         let question61 = Question(context: self.coreDataContext)
-        question61.questionId = 42
+        question61.questionId = 40
         question61.firebaseId = 42
-        question61.nextQuestionId = 43
+        question61.nextQuestionId = 41
         question61.question = "We would like to ask you about your expectations for America’s economy in the year ahead. We are going to list some indicators related to the economy. For each one we would like you to tell us whether you think during the next twelve months it will go up, go down, or stay about the same compared to now?"
         
         question61.questionItalicText = "Select one answer for each question."
@@ -847,9 +847,9 @@ class LogInVC: UIViewController {
         
         
         let question62 = Question(context: self.coreDataContext)
-        question62.questionId = 43
+        question62.questionId = 41
         question62.firebaseId = 43
-        question62.nextQuestionId = 44
+        question62.nextQuestionId = 42
         question62.question = "Do you expect that your household income will increase by more than the rate of inflation during the next five years or so?"
         question62.answerType = "BCQ"
         question62.answerChoices = [
@@ -858,9 +858,9 @@ class LogInVC: UIViewController {
         question62.module = newModule1
         
         let question63 = Question(context: self.coreDataContext)
-        question63.questionId = 44
+        question63.questionId = 42
         question63.firebaseId = 44
-        question63.nextQuestionId = 45
+        question63.nextQuestionId = 43
         question63.question = "Please read the following statements and indicate whether you strongly agree, agree, disagree, or strongly disagree with each statement:"
         question63.questionItalicText = "Select one answer for each question."
         question63.gridQuestions = ["A working mother can establish just as warm and secure a relationship with her children as a mother who does not work.",
@@ -876,9 +876,9 @@ class LogInVC: UIViewController {
         question63.module = newModule1
         
         let question64 = Question(context: self.coreDataContext)
-        question64.questionId = 45
+        question64.questionId = 43
         question64.firebaseId = 45
-        question64.nextQuestionId = 46
+        question64.nextQuestionId = 44
         question64.question = "Some people say that because of past discrimination, women should be given preference in hiring and promotion. Others say that such preference in hiring and promotion of women is wrong because it discriminates against men. What about your opinion - are you for or against preferential hiring and promotion of women?"
         question64.answerType = "BCQ"
         question64.answerChoices = [
@@ -886,18 +886,18 @@ class LogInVC: UIViewController {
             "Against"]
         question64.module = newModule1
         
-        let question65 = Question(context: self.coreDataContext)
-        question65.questionId = 46
-        question65.firebaseId = 46
-        question65.nextQuestionId = 47
-        question65.question = "Could you tell us why you say that?"
-        question65.answerType = "TextView"
-        question65.module = newModule1
+//        let question65 = Question(context: self.coreDataContext)
+//        question65.questionId = 46
+//        question65.firebaseId = 46
+//        question65.nextQuestionId = 47
+//        question65.question = "Could you tell us why you say that?"
+//        question65.answerType = "TextView"
+//        question65.module = newModule1
         
         let question66 = Question(context: self.coreDataContext)
-        question66.questionId = 47
+        question66.questionId = 44
         question66.firebaseId = 47
-        question66.nextQuestionId = 48
+        question66.nextQuestionId = 45
         question66.question = "What do you think the chances are these days that a man won't get a job or promotion while an equally or less qualified woman gets one instead?"
         question66.answerType = "BCQ"
         question66.answerChoices = [
@@ -909,9 +909,9 @@ class LogInVC: UIViewController {
         question66.module = newModule1
         
         let question67 = Question(context: self.coreDataContext)
-        question67.questionId = 48
+        question67.questionId = 45
         question67.firebaseId = 48
-        question67.nextQuestionId = 49
+        question67.nextQuestionId = 46
         question67.question = "What do you think the chances are these days that a woman won't get a job or promotion while an equally or less qualified man gets one instead?"
         question67.answerType = "BCQ"
         question67.answerChoices = [
@@ -922,18 +922,18 @@ class LogInVC: UIViewController {
         ]
         question67.module = newModule1
         
-        let question68 = Question(context: self.coreDataContext)
-        question68.questionId = 49
-        question68.nextQuestionId = 50
-        question68.firebaseId = 49
-        question68.question = "Could you tell us more about that?"
-        question68.answerType = "TextView"
-        question68.module = newModule1
+//        let question68 = Question(context: self.coreDataContext)
+//        question68.questionId = 49
+//        question68.nextQuestionId = 50
+//        question68.firebaseId = 49
+//        question68.question = "Could you tell us more about that?"
+//        question68.answerType = "TextView"
+//        question68.module = newModule1
         
         let question71 = Question(context: self.coreDataContext)
-        question71.questionId = 50
+        question71.questionId = 46
         question71.firebaseId = 50
-        question71.nextQuestionId = 51
+        question71.nextQuestionId = 47
         question71.question = "During the last month, how many times did you use your iPhone to watch any streaming video?"
         question71.answerType = "Numeric"
         question71.placeholderText = "Number of times"
@@ -941,80 +941,80 @@ class LogInVC: UIViewController {
         question71.moduleStartInfo = "The next few questions are about smartphone usage."
         
         let question72 = Question(context: self.coreDataContext)
-        question72.questionId = 51
+        question72.questionId = 47
         question72.firebaseId = 51
-        question72.nextQuestionId = 52
+        question72.nextQuestionId = 48
         question72.question = "During the last month, how many times did you use your iPhone to make an online purchase?"
         question72.answerType = "Numeric"
         question72.placeholderText = "Number of times"
         question72.module = newModule1
         
         let question73 = Question(context: self.coreDataContext)
-        question73.questionId = 52
+        question73.questionId = 48
         question73.firebaseId = 52
-        question73.nextQuestionId = 53
+        question73.nextQuestionId = 49
         question73.question = "How many apps do you currently have on your iPhone, including those that came preloaded on the phone and those you downloaded yourself?"
         question73.answerType = "Numeric"
         question73.placeholderText = "Number"
         question73.module = newModule1
         
         let question74 = Question(context: self.coreDataContext)
-        question74.questionId = 53
+        question74.questionId = 49
         question74.firebaseId = 53
-        question74.nextQuestionId = 54
+        question74.nextQuestionId = 50
         question74.question = "During the past week, how many minutes or hours did use the apps on your iPhone?"
-        question74.questionItalicText = "You can find this information on your iPhone in four steps: 1. launch the Settings app; 2. scroll down to the words \"Screen Time\" or search for \"screen time\"; 3. tap \"See All Activity\"; and 4. Tap \"Week\" at the top of the screen to see your \"Total Screen Time\" for the week."
+        question74.questionItalicText = "You can find this information on your iPhone in four steps: 1. launch the Settings app; 2. scroll down to the words \"Screen Time\" or search for \"screen time\"; 3. tap \"See All Activity\"; and 4. Tap \"Week\" at the top of the screen to see your \"Total Screen Time\" for the week. If you don't have Screen Time enabled then enter your best estimate"
         question74.answerType = "Numeric&Numeric"
         question74.placeholderText = "Hour:Minutes"
         question74.module = newModule1
         
         //Condition Wise
         let question75 = Question(context: self.coreDataContext)
-        question75.questionId = 54
+        question75.questionId = 50
         question75.firebaseId = 54
-        question75.nextQuestionId = 55
+        question75.nextQuestionId = 51
         question75.question = "Currently, what information sources do you usually turn to for news about current issues and events?"
         switch condition{
         case "a":
             question75.answerType = "TextView"
         case "b":
             question75.answerType = "TextView"
-            question75.questionItalicText = "Instructions: tap on the text box to bring up your keyboard, tap on the dictation button and start speaking. You should notice the words come up as you speak. Tap on the keyboard button when you are done speaking."
-            question75.moduleStartInfo = "Next, please answer the following questions in your own words.\nPlease use the dictation button on your keyboard to answer this question."
+            question75.questionItalicText = "Instructions: tap anywhere in the text box to bring up your keyboard, and then tap on the microphone button on the bottom right corner to start speaking. When you are done speaking, tap the keyboard button to stop dictation. Your answer should appear in the text box."
+            question75.moduleStartInfo = "Please use the dictation button on your keyboard to answer this question."
         case "c":
             question75.answerType = "Voice"
-            question75.questionItalicText = "Instructions: tap and hold on the record button and start speaking. You can’t replay your voice answer, however, you can tap and hold on the button to record again. Only the last recorded answer will be submitted. Please note that your voice will be automatically transcribed by the app and as researchers we will not have access to your voice information.\nRecord your voice using the button below:"
-            question75.moduleStartInfo = "Next, please answer the following questions in your own words.\nPlease use the voice recording button below to record a voice answer."
+            question75.questionItalicText = "Instructions: tap the recording button below and start speaking, once you are done, tap the button again to stop recording. You can click on next to submit your voice answer. You can’t replay your voice answer, however, you can record again and only the last recorded answer will be submitted."
+            question75.moduleStartInfo = "Please use the voice recording button below to record a voice answer."
         case "d":
             question75.answerType = "TextAndVoice"
             question75.moduleStartInfo =
-                "Next, please answer the following questions in your own words.\nThere are a few ways you can answer this question: 1) using the text box to type in your answer, 2) using the dictation button to turn your voice into text, 3) using the voice recording button below to submit your answer. Please feel free to choose any one of them to answer this question."
-            question75.questionItalicText = "Dictation button: tap on the text box to bring up your keyboard, tap on the dictation button and start speaking. You should notice the words come up as you speak. Tap on the keyboard button when you are done speaking.\nVoice record button: tap and hold on the record button and start speaking. You can’t replay your voice answer, however, you can tap and hold on the button to record again. Only the last recorded answer will be submitted. Please note that your voice will be automatically transcribed by the app and as researchers we will not have access to your voice information."
+                "There are a few ways you can answer this question: 1) using the text box to type in your answer, 2) using the dictation button to turn your voice into text, 3) using the voice recording button below to submit your answer. Please feel free to choose any one of them to answer this question."
+            question75.questionItalicText = "Dictation button: tap anywhere in the text box to bring up your keyboard, and then tap on the microphone button on the bottom right corner to start speaking. When you are done speaking, tap the keyboard button to stop dictation. Your answer should appear in the text box.\nVoice record button: tap the recording button below and start speaking, once you are done, tap the button again to stop recording. You can click on next to submit your voice answer. You can’t replay your voice answer, however, you can record again and only the last recorded answer will be submitted."
         default:
             question75.answerType = "TextView"
         }
         question75.module = newModule1
         
         let question76 = Question(context: self.coreDataContext)
-        question76.questionId = 55
+        question76.questionId = 51
         question76.firebaseId = 55
-        question76.nextQuestionId = 56
+        question76.nextQuestionId = 52
         question76.question = "When thinking about a job, what factors are important to you?"
         switch condition{
         case "a":
             question76.answerType = "TextView"
         case "b":
             question76.answerType = "TextView"
-            question76.questionItalicText = "Instructions: tap on the text box to bring up your keyboard, tap on the dictation button and start speaking. You should notice the words come up as you speak. Tap on the keyboard button when you are done speaking."
+            question76.questionItalicText = "Instructions: tap anywhere in the text box to bring up your keyboard, and then tap on the microphone button on the bottom right corner to start speaking. When you are done speaking, tap the keyboard button to stop dictation. Your answer should appear in the text box."
             question76.moduleStartInfo = "Please use the dictation button on your keyboard to answer this question."
         case "c":
             question76.answerType = "Voice"
-            question76.questionItalicText = "Instructions: tap and hold on the record button and start speaking. You can’t replay your voice answer, however, you can tap and hold on the button to record again. Only the last recorded answer will be submitted. Please note that your voice will be automatically transcribed by the app and as researchers we will not have access to your voice information.\nRecord your voice using the button below:"
+            question76.questionItalicText = "Instructions: tap the recording button below and start speaking, once you are done, tap the button again to stop recording. You can click on next to submit your voice answer. You can’t replay your voice answer, however, you can record again and only the last recorded answer will be submitted."
             question76.moduleStartInfo = "Please use the voice recording button below to record a voice answer."
         case "d":
             question76.moduleStartInfo =
                 "There are a few ways you can answer this question: 1) using the text box to type in your answer, 2) using the dictation button to turn your voice into text, 3) using the voice recording button below to submit your answer. Please feel free to choose any one of them to answer this question."
-            question76.questionItalicText = "Dictation button: tap on the text box to bring up your keyboard, tap on the dictation button and start speaking. You should notice the words come up as you speak. Tap on the keyboard button when you are done speaking.\nVoice record button: tap and hold on the record button and start speaking. You can’t replay your voice answer, however, you can tap and hold on the button to record again. Only the last recorded answer will be submitted. Please note that your voice will be automatically transcribed by the app and as researchers we will not have access to your voice information."
+            question76.questionItalicText = "Dictation button: tap anywhere in the text box to bring up your keyboard, and then tap on the microphone button on the bottom right corner to start speaking. When you are done speaking, tap the keyboard button to stop dictation. Your answer should appear in the text box.\nVoice record button: tap the recording button below and start speaking, once you are done, tap the button again to stop recording. You can click on next to submit your voice answer. You can’t replay your voice answer, however, you can record again and only the last recorded answer will be submitted."
             question76.answerType = "TextAndVoice"
         default:
             question76.answerType = "TextView"
@@ -1023,26 +1023,26 @@ class LogInVC: UIViewController {
         question76.module = newModule1
         
         let question77 = Question(context: self.coreDataContext)
-        question77.questionId = 56
+        question77.questionId = 52
         question77.firebaseId = 56
-        question77.nextQuestionId = 57
+        question77.nextQuestionId = 53
         question77.question = "In your own words, what are some lessons that humankind should learn from the coronavirus outbreak?"
         switch condition{
         case "a":
             question77.answerType = "TextView"
         case "b":
             question77.answerType = "TextView"
-            question77.questionItalicText = "Instructions: tap on the text box to bring up your keyboard, tap on the dictation button and start speaking. You should notice the words come up as you speak. Tap on the keyboard button when you are done speaking."
+            question77.questionItalicText = "Instructions: tap anywhere in the text box to bring up your keyboard, and then tap on the microphone button on the bottom right corner to start speaking. When you are done speaking, tap the keyboard button to stop dictation. Your answer should appear in the text box."
             question77.moduleStartInfo = "Please use the dictation button on your keyboard to answer this question."
         case "c":
             question77.answerType = "Voice"
-            question77.questionItalicText = "Instructions: tap and hold on the record button and start speaking. You can’t replay your voice answer, however, you can tap and hold on the button to record again. Only the last recorded answer will be submitted. Please note that your voice will be automatically transcribed by the app and as researchers we will not have access to your voice information.\nRecord your voice using the button below:"
+            question77.questionItalicText = "Instructions: tap the recording button below and start speaking, once you are done, tap the button again to stop recording. You can click on next to submit your voice answer. You can’t replay your voice answer, however, you can record again and only the last recorded answer will be submitted."
             question77.moduleStartInfo = "Please use the voice recording button below to record a voice answer."
         case "d":
             question77.answerType = "TextAndVoice"
             question77.moduleStartInfo =
                 "There are a few ways you can answer this question: 1) using the text box to type in your answer, 2) using the dictation button to turn your voice into text, 3) using the voice recording button below to submit your answer. Please feel free to choose any one of them to answer this question."
-            question77.questionItalicText = "Dictation button: tap on the text box to bring up your keyboard, tap on the dictation button and start speaking. You should notice the words come up as you speak. Tap on the keyboard button when you are done speaking.\nVoice record button: tap and hold on the record button and start speaking. You can’t replay your voice answer, however, you can tap and hold on the button to record again. Only the last recorded answer will be submitted. Please note that your voice will be automatically transcribed by the app and as researchers we will not have access to your voice information."
+            question77.questionItalicText = "Dictation button: tap anywhere in the text box to bring up your keyboard, and then tap on the microphone button on the bottom right corner to start speaking. When you are done speaking, tap the keyboard button to stop dictation. Your answer should appear in the text box.\nVoice record button: tap the recording button below and start speaking, once you are done, tap the button again to stop recording. You can click on next to submit your voice answer. You can’t replay your voice answer, however, you can record again and only the last recorded answer will be submitted."
             
         default:
             question77.answerType = "TextView"
@@ -1051,9 +1051,9 @@ class LogInVC: UIViewController {
         
         // Debreifing Question
         let question78 = Question(context: self.coreDataContext)
-        question78.questionId = 57
+        question78.questionId = 53
         question78.firebaseId = 57
-        question78.nextQuestionId = 58
+        question78.nextQuestionId = 54
         question78.question = "How easy or difficult was it for you to complete this study?"
         question78.answerType = "BCQ"
         question78.answerChoices = ["Very easy",
@@ -1065,34 +1065,34 @@ class LogInVC: UIViewController {
         question78.moduleStartInfo = "This is the final section of the study. It has questions about your experience with the study. When answering these questions, please consider all parts of the survey, from the first section to the current section."
         
         let question79 = Question(context: self.coreDataContext)
-        question79.questionId = 58
+        question79.questionId = 54
         question79.firebaseId = 58
-        question79.nextQuestionId = 59
+        question79.nextQuestionId = 55
         question79.question = "Why did you say that?"
         question79.answerType = "TextView"
         question79.module = newModule1
         
         
         let question710 = Question(context: self.coreDataContext)
-        question710.questionId = 59
+        question710.questionId = 55
         question710.firebaseId = 59
-        question710.nextQuestionId = 60
+        question710.nextQuestionId = 56
         question710.question = "How many minutes do you think that you spent on this study?"
         question710.answerType = "Numeric"
         question710.placeholderText = "Number of minutes"
         question710.module = newModule1
         
         let question711 = Question(context: self.coreDataContext)
-        question711.questionId = 60
+        question711.questionId = 56
         question711.firebaseId = 60
-        question711.nextQuestionId = 61
+        question711.nextQuestionId = 57
         question711.question = "Did you experience any technical difficulties with the survey? Please tell us what problems you encountered and (if applicable) how you solved them."
         question711.answerType = "TextView"
         question711.module = newModule1
         
         let question712 = Question(context: self.coreDataContext)
-        question712.questionId = 61
-        question712.nextQuestionId = 62
+        question712.questionId = 57
+        question712.nextQuestionId = 58
         question712.firebaseId = 61
         question712.question = "Did you do any of the following activities while completing any part of the survey? Please select all that apply."
         question712.answerType = "MCQ"
@@ -1109,8 +1109,8 @@ class LogInVC: UIViewController {
         question712.module = newModule1
         
         let question713 = Question(context: self.coreDataContext)
-        question713.questionId = 62
-        question713.nextQuestionId = 63
+        question713.questionId = 58
+        question713.nextQuestionId = 59
         question713.firebaseId = 62
         question713.question = "Where were you when you were working on the survey? Please select all that apply."
         question713.questionItalicText = "Please consider where you were when completing all parts of the survey, from the first section to the current section."
@@ -1129,10 +1129,10 @@ class LogInVC: UIViewController {
         if (appCondition == "3") {
             if (condition == "b" || condition == "c" || condition == "d") {
                 let question717 = Question(context: self.coreDataContext)
-                question717.questionId = 63
-                question717.nextQuestionId = 64
+                question717.questionId = 59
+                question717.nextQuestionId = 60
                 question717.firebaseId = 67
-                question717.question = "When answering open-ended questions like the one in the screenshot below, did you try using any voice input features as instructed?"
+                question717.question = "When answering open-ended questions earlier, did you try using any voice input features as instructed?"
                 
                 question717.answerType = "BCQ"
                 question717.answerChoices = ["Yes, I tried using the dictation button",
@@ -1148,7 +1148,7 @@ class LogInVC: UIViewController {
                 question717.module = newModule1
                 
                 let question718 = Question(context: self.coreDataContext)
-                question718.questionId = 64
+                question718.questionId = 60
                 //question718.nextQuestionId = 16
                 question718.firebaseId = 68
                 question718.question = "What prevented you from using voice input features? Please select all that apply."
@@ -1165,7 +1165,7 @@ class LogInVC: UIViewController {
                 question718.module = newModule1
                 
                 let question719 = Question(context: self.coreDataContext)
-                question719.questionId = 64
+                question719.questionId = 60
                 question719.firebaseId = 69
                 question719.question = "How helpful were the voice input features to you when answering open-ended questions in the app?"
                 question719.answerType = "BCQ"
@@ -1201,7 +1201,7 @@ class LogInVC: UIViewController {
         question1.questionId = 1
         question1.firebaseId = 1
         question1.nextQuestionId = 2
-        question1.question = "During the week of Mar 28, 2022, who was your principal employer?"
+        question1.question = "During the week of April 25, 2022, who was your principal employer?"
         question1.questionItalicText = "If you had more than one job, report the one for which you worked the most hours that week.\nIf you worked for a contracting or consulting company, report the name of that company, not the client organization."
         question1.placeholderText = "Employer Name"
         question1.answerType = "Text"
@@ -1213,7 +1213,7 @@ class LogInVC: UIViewController {
         question2.questionId = 2
         question2.firebaseId = 2
         question2.nextQuestionId = 3
-        question2.question = "Which one of the following best describes your principal employer during the week of March 28, 2022?"
+        question2.question = "Which one of the following best describes your principal employer during the week of April 25, 2022?"
         question2.answerType = "BCQ"
         question2.answerChoices = [
             "SELF EMPLOYED OR A BUSINESS OWNER in a non-incorporated business, professional practice, or farm",
@@ -1277,13 +1277,13 @@ class LogInVC: UIViewController {
         
         let newModule2 = Module(context: self.coreDataContext)
         newModule2.dateAdded = Calendar.current.date(byAdding: .minute, value: -7, to: Date())
-        newModule2.moduleName = "Module 2: Job duties"
+        newModule2.moduleName = "Module 2: Job Duties"
         
         let question21 = Question(context: self.coreDataContext)
         question21.questionId = 1
         question21.firebaseId = 7
         question21.nextQuestionId = 2
-        question21.question = "During the week of March 28, 2022, what was the title of the principal job you held?"
+        question21.question = "During the week of April 25, 2022, what was the title of the principal job you held?"
         question21.questionItalicText = "Example: Financial Analyst"
         question21.answerType = "Text"
         question21.isFirst = true
@@ -1323,7 +1323,7 @@ class LogInVC: UIViewController {
         question25.questionId = 5
         question25.firebaseId = 11
         question25.nextQuestionId = 6
-        question25.question = "During what month and year did you start this job (that is, the principal job you held during the week of March 28, 2022)?"
+        question25.question = "During what month and year did you start this job (that is, the principal job you held during the week of April 25, 2022)?"
         //question25.questionItalicText = "Principal job started??? Date Time??"
         question25.answerType = "Date"
         question25.placeholderText = "Principal job started"
@@ -1385,7 +1385,7 @@ class LogInVC: UIViewController {
         question28.questionId = 8
         question28.firebaseId = 14
         question28.nextQuestionId = 9
-        question28.question = "As part of the principal job you held during the week of March 28, 2022, did you supervise the work of others?"
+        question28.question = "As part of the principal job you held during the week of April 25, 2022, did you supervise the work of others?"
         question28.questionItalicText = "Mark “Yes” if you recommended or initiated personnel actions such as hiring, firing, evaluating, or promoting others.\nTeachers: Do not count students."
         question28.answerType = "BCQ"
         question28.answerChoices = ["Yes",
@@ -1405,7 +1405,7 @@ class LogInVC: UIViewController {
         question210.questionId = 10
         question210.firebaseId = 16
         question210.nextQuestionId = 11
-        question210.question = "As of the week of March 28, 2022, what was your basic annual salary on your principal job, before deductions?"
+        question210.question = "As of the week of April 25, 2022, what was your basic annual salary on your principal job, before deductions?"
         question210.questionItalicText = "Do not include bonuses, overtime, or additional compensation for summertime teaching or research. If you are not salaried, please estimate your earned income, excluding business expenses."
         question210.answerType = "Numeric"
         question210.placeholderText = "$"
@@ -1445,13 +1445,13 @@ class LogInVC: UIViewController {
         
         let newModule3 = Module(context: self.coreDataContext)
         newModule3.dateAdded = Calendar.current.date(byAdding: .minute, value: -6, to: Date())
-        newModule3.moduleName = "Module 3: Job satisfaction"
+        newModule3.moduleName = "Module 3: Job Satisfaction"
         
         let question31 = Question(context: self.coreDataContext)
         question31.questionId = 1
         question31.firebaseId = 19
         question31.nextQuestionId = 2
-        question31.question = "Thinking about the principal job you held during the week of March 28, 2022, how would you rate your overall satisfaction?"
+        question31.question = "Thinking about the principal job you held during the week of April 25, 2022, how would you rate your overall satisfaction?"
         question31.answerType = "BCQ"
         question31.answerChoices = [
             "Very satisfied",
@@ -1469,7 +1469,7 @@ class LogInVC: UIViewController {
         question32.questionId = 2
         question32.firebaseId = 20
         question32.nextQuestionId = 3
-        question32.question = "Thinking about the principal job you held during the week of March 28, 2022, how satisfied or dissatisfied were you with the following aspects of the job?"
+        question32.question = "Thinking about the principal job you held during the week of April 25, 2022, how satisfied or dissatisfied were you with the following aspects of the job?"
         question32.gridQuestions = ["Salary",
                                     "Benefits",
                                     "Job security",
@@ -1493,7 +1493,7 @@ class LogInVC: UIViewController {
         question33.questionId = 3
         question33.firebaseId = 21
         question33.nextQuestionId = 4
-        question33.question = "For the principal job you held during the week of March 28, 2022, has your basic annual salary been affected at any time by the coronavirus pandemic?"
+        question33.question = "For the principal job you held during the week of April 25, 2022, has your basic annual salary been affected at any time by the coronavirus pandemic?"
         question33.answerType = "BCQ"
         question33.answerChoices = ["Yes",
                                     "No"]
@@ -1519,13 +1519,13 @@ class LogInVC: UIViewController {
         
         let newModule4 = Module(context: self.coreDataContext)
         newModule4.dateAdded = Calendar.current.date(byAdding: .minute, value: -3, to: Date())
-        newModule4.moduleName = "Module 4: Job benefits"
+        newModule4.moduleName = "Module 4: Job Benefits"
         
         let question41 = Question(context: self.coreDataContext)
         question41.questionId = 1
         question41.firebaseId = 24
         question41.nextQuestionId = 2
-        question41.question = "Thinking of your principal job during the week of March 28, 2022, which of the following benefits were available to you, even if you chose not to take them?"
+        question41.question = "Thinking of your principal job during the week of April 25, 2022, which of the following benefits were available to you, even if you chose not to take them?"
         question41.questionItalicText = "Check all that apply"
         question41.answerType = "MCQ"
         question41.answerChoices = ["Health insurance that was at least partially paid by your employer",
@@ -1542,7 +1542,7 @@ class LogInVC: UIViewController {
         question42.questionId = 2
         question42.firebaseId = 25
         question42.nextQuestionId = 3
-        question42.question = "Thinking of your principal job during the week of March 28, 2022, which of the following best describes whether you were allowed or required to telecommute/work remotely?"
+        question42.question = "Thinking of your principal job during the week of April 25, 2022, which of the following best describes whether you were allowed or required to telecommute/work remotely?"
         question42.answerType = "BCQ"
         question42.answerChoices = ["I was allowed or required to telecommute/work remotely due to the coronavirus pandemic",
                                     "I was allowed or required to telecommute/work remotely regardless of the coronavirus pandemic",
@@ -1594,19 +1594,19 @@ class LogInVC: UIViewController {
                                     "Not at all likely"]
         question45.module = newModule4
         
-        let question46 = Question(context: self.coreDataContext)
-        question46.questionId = 6
-        question46.firebaseId = 29
-        question46.nextQuestionId = 7
-        question46.question = "Could you tell us why you say that?"
-        question46.answerType = "TextView"
-        //question46.placeholderText = "Specify"
-        question46.module = newModule4
+//        let question46 = Question(context: self.coreDataContext)
+//        question46.questionId = 6
+//        question46.firebaseId = 29
+//        question46.nextQuestionId = 7
+//        question46.question = "Could you tell us why you say that?"
+//        question46.answerType = "TextView"
+//        //question46.placeholderText = "Specify"
+//        question46.module = newModule4
         
         let question47 = Question(context: self.coreDataContext)
-        question47.questionId = 7
+        question47.questionId = 6
         question47.firebaseId = 30
-        question47.nextQuestionId = 8
+        question47.nextQuestionId = 7
         question47.question = "About how easy would it be for you to find a job with another employer with approximately the same income and fringe benefits you now have?"
         question47.answerType = "BCQ"
         question47.answerChoices = ["Very likely",
@@ -1616,20 +1616,20 @@ class LogInVC: UIViewController {
         question47.module = newModule4
         
         
-        let question48 = Question(context: self.coreDataContext)
-        question48.questionId = 8
-        question48.firebaseId = 31
-        question48.nextQuestionId = 9
-        question48.question = "Could you tell us why you say that?"
-        question48.answerType = "TextView"
-        //question48.placeholderText = "Specify"
-        question48.module = newModule4
+//        let question48 = Question(context: self.coreDataContext)
+//        question48.questionId = 8
+//        question48.firebaseId = 31
+//        question48.nextQuestionId = 9
+//        question48.question = "Could you tell us why you say that?"
+//        question48.answerType = "TextView"
+//        //question48.placeholderText = "Specify"
+//        question48.module = newModule4
         
         let question49 = Question(context: self.coreDataContext)
-        question49.questionId = 9
+        question49.questionId = 7
         question49.firebaseId = 32
-        question49.nextQuestionId = 10
-        question49.question = "As of March 28, 2022, did you have any active professional certifications or state or industry licenses?"
+        question49.nextQuestionId = 8
+        question49.question = "As of April 25, 2022, did you have any active professional certifications or state or industry licenses?"
         question49.questionItalicText = "A professional certification or license shows you are qualified to perform a specific job. Only include certifications or licenses obtained by an individual. Examples include Certified Teacher, Registered Nurse, Licensed Professional Engineer, a Project Management certification, or an IT certification.\nDo not include licenses needed by a business to operate."
         question49.answerType = "BCQ"
         question49.answerChoices = ["Yes",
@@ -1637,9 +1637,9 @@ class LogInVC: UIViewController {
         question49.module = newModule4
         
         let question410 = Question(context: self.coreDataContext)
-        question410.questionId = 10
+        question410.questionId = 8
         question410.firebaseId = 33
-        question410.nextQuestionId = 11
+        question410.nextQuestionId = 9
         question410.question = "During the past 12 months, did you take any work-related training, such as workshops or seminars?"
         question410.questionItalicText = "Include conferences or professional meetings only if you attended a training session at the conference or meeting.\nDo not include college coursework for which you were enrolled in a degree program."
         question410.answerType = "BCQ"
@@ -1648,9 +1648,9 @@ class LogInVC: UIViewController {
         question410.module = newModule4
         
         let question411 = Question(context: self.coreDataContext)
-        question411.questionId = 11
+        question411.questionId = 9
         question411.firebaseId = 34
-        question411.nextQuestionId = 12
+        question411.nextQuestionId = 10
         question411.question = "During the past 12 months, did you attend any professional conferences or professional society or association meetings?"
         question411.questionItalicText = "Include regional, national, or international meetings."
         question411.answerType = "BCQ"
@@ -1659,7 +1659,7 @@ class LogInVC: UIViewController {
         question411.module = newModule4
         
         let question412 = Question(context: self.coreDataContext)
-        question412.questionId = 12
+        question412.questionId = 10
         question412.firebaseId = 35
         question412.question = "To how many regional, national, or international professional societies or associations do you currently belong?"
         question412.answerType = "Numeric"
@@ -1670,7 +1670,7 @@ class LogInVC: UIViewController {
         
         let newModule5 = Module(context: self.coreDataContext)
         newModule5.dateAdded = Calendar.current.date(byAdding: .minute, value: -3, to: Date())
-        newModule5.moduleName = "Module 5: Job expectations"
+        newModule5.moduleName = "Module 5: Job Expectations"
         
         
         let question51 = Question(context: self.coreDataContext)
@@ -1761,7 +1761,7 @@ class LogInVC: UIViewController {
         
         let newModule6 = Module(context: self.coreDataContext)
         newModule6.dateAdded = Calendar.current.date(byAdding: .minute, value: -3, to: Date())
-        newModule6.moduleName = "Module 6: Economy and society"
+        newModule6.moduleName = "Module 6: Economy and Society"
         
         let question61 = Question(context: self.coreDataContext)
         question61.questionId = 1
@@ -1832,18 +1832,18 @@ class LogInVC: UIViewController {
             "Against"]
         question64.module = newModule6
         
-        let question65 = Question(context: self.coreDataContext)
-        question65.questionId = 5
-        question65.firebaseId = 46
-        question65.nextQuestionId = 6
-        question65.question = "Could you tell us why you say that?"
-        question65.answerType = "TextView"
-        question65.module = newModule6
+//        let question65 = Question(context: self.coreDataContext)
+//        question65.questionId = 5
+//        question65.firebaseId = 46
+//        question65.nextQuestionId = 6
+//        question65.question = "Could you tell us why you say that?"
+//        question65.answerType = "TextView"
+//        question65.module = newModule6
         
         let question66 = Question(context: self.coreDataContext)
-        question66.questionId = 6
+        question66.questionId = 5
         question66.firebaseId = 47
-        question66.nextQuestionId = 7
+        question66.nextQuestionId = 6
         question66.question = "What do you think the chances are these days that a man won't get a job or promotion while an equally or less qualified woman gets one instead?"
         question66.answerType = "BCQ"
         question66.answerChoices = [
@@ -1855,9 +1855,8 @@ class LogInVC: UIViewController {
         question66.module = newModule6
         
         let question67 = Question(context: self.coreDataContext)
-        question67.questionId = 7
+        question67.questionId = 6
         question67.firebaseId = 48
-        question67.nextQuestionId = 8
         question67.question = "What do you think the chances are these days that a woman won't get a job or promotion while an equally or less qualified man gets one instead?"
         question67.answerType = "BCQ"
         question67.answerChoices = [
@@ -1868,12 +1867,12 @@ class LogInVC: UIViewController {
         ]
         question67.module = newModule6
         
-        let question68 = Question(context: self.coreDataContext)
-        question68.questionId = 8
-        question68.firebaseId = 49
-        question68.question = "Could you tell us more about that?"
-        question68.answerType = "TextView"
-        question68.module = newModule6
+//        let question68 = Question(context: self.coreDataContext)
+//        question68.questionId = 8
+//        question68.firebaseId = 49
+//        question68.question = "Could you tell us more about that?"
+//        question68.answerType = "TextView"
+//        question68.module = newModule6
         
         let newModule7 = Module(context: self.coreDataContext)
         newModule7.dateAdded = Calendar.current.date(byAdding: .minute, value: -3, to: Date())
@@ -1913,7 +1912,7 @@ class LogInVC: UIViewController {
         question74.firebaseId = 53
         question74.nextQuestionId = 5
         question74.question = "During the past week, how many minutes or hours did use the apps on your iPhone?"
-        question74.questionItalicText = "You can find this information on your iPhone in four steps: 1. launch the Settings app; 2. scroll down to the words \"Screen Time\" or search for \"screen time\"; 3. tap \"See All Activity\"; and 4. Tap \"Week\" at the top of the screen to see your \"Total Screen Time\" for the week."
+        question74.questionItalicText = "You can find this information on your iPhone in four steps: 1. launch the Settings app; 2. scroll down to the words \"Screen Time\" or search for \"screen time\"; 3. tap \"See All Activity\"; and 4. Tap \"Week\" at the top of the screen to see your \"Total Screen Time\" for the week. If you don't have Screen Time enabled then enter your best estimate"
         question74.answerType = "Numeric&Numeric"
         question74.placeholderText = "Hour:Minutes"
         question74.module = newModule7
@@ -1929,17 +1928,17 @@ class LogInVC: UIViewController {
             question75.answerType = "TextView"
         case "b":
             question75.answerType = "TextView"
-            question75.questionItalicText = "Instructions: tap on the text box to bring up your keyboard, tap on the dictation button and start speaking. You should notice the words come up as you speak. Tap on the keyboard button when you are done speaking."
-            question75.moduleStartInfo = "Next, please answer the following questions in your own words.\nPlease use the dictation button on your keyboard to answer this question."
+            question75.questionItalicText = "Instructions: tap anywhere in the text box to bring up your keyboard, and then tap on the microphone button on the bottom right corner to start speaking. When you are done speaking, tap the keyboard button to stop dictation. Your answer should appear in the text box."
+            question75.moduleStartInfo = "Please use the dictation button on your keyboard to answer this question."
         case "c":
             question75.answerType = "Voice"
-            question75.questionItalicText = "Instructions: tap and hold on the record button and start speaking. You can’t replay your voice answer, however, you can tap and hold on the button to record again. Only the last recorded answer will be submitted. Please note that your voice will be automatically transcribed by the app and as researchers we will not have access to your voice information.\nRecord your voice using the button below:"
-            question75.moduleStartInfo = "Next, please answer the following questions in your own words.\nPlease use the voice recording button below to record a voice answer."
+            question75.questionItalicText = "Instructions: tap the recording button below and start speaking, once you are done, tap the button again to stop recording. You can click on next to submit your voice answer. You can’t replay your voice answer, however, you can record again and only the last recorded answer will be submitted."
+            question75.moduleStartInfo = "Please use the voice recording button below to record a voice answer."
         case "d":
             question75.answerType = "TextAndVoice"
             question75.moduleStartInfo =
-                "Next, please answer the following questions in your own words.\nThere are a few ways you can answer this question: 1) using the text box to type in your answer, 2) using the dictation button to turn your voice into text, 3) using the voice recording button below to submit your answer. Please feel free to choose any one of them to answer this question."
-            question75.questionItalicText = "Dictation button: tap on the text box to bring up your keyboard, tap on the dictation button and start speaking. You should notice the words come up as you speak. Tap on the keyboard button when you are done speaking.\nVoice record button: tap and hold on the record button and start speaking. You can’t replay your voice answer, however, you can tap and hold on the button to record again. Only the last recorded answer will be submitted. Please note that your voice will be automatically transcribed by the app and as researchers we will not have access to your voice information."
+                "There are a few ways you can answer this question: 1) using the text box to type in your answer, 2) using the dictation button to turn your voice into text, 3) using the voice recording button below to submit your answer. Please feel free to choose any one of them to answer this question."
+            question75.questionItalicText = "Dictation button: tap anywhere in the text box to bring up your keyboard, and then tap on the microphone button on the bottom right corner to start speaking. When you are done speaking, tap the keyboard button to stop dictation. Your answer should appear in the text box.\nVoice record button: tap the recording button below and start speaking, once you are done, tap the button again to stop recording. You can click on next to submit your voice answer. You can’t replay your voice answer, however, you can record again and only the last recorded answer will be submitted."
         default:
             question75.answerType = "TextView"
         }
@@ -1955,16 +1954,16 @@ class LogInVC: UIViewController {
             question76.answerType = "TextView"
         case "b":
             question76.answerType = "TextView"
-            question76.questionItalicText = "Instructions: tap on the text box to bring up your keyboard, tap on the dictation button and start speaking. You should notice the words come up as you speak. Tap on the keyboard button when you are done speaking."
+            question76.questionItalicText = "Instructions: tap anywhere in the text box to bring up your keyboard, and then tap on the microphone button on the bottom right corner to start speaking. When you are done speaking, tap the keyboard button to stop dictation. Your answer should appear in the text box."
             question76.moduleStartInfo = "Please use the dictation button on your keyboard to answer this question."
         case "c":
             question76.answerType = "Voice"
-            question76.questionItalicText = "Instructions: tap and hold on the record button and start speaking. You can’t replay your voice answer, however, you can tap and hold on the button to record again. Only the last recorded answer will be submitted. Please note that your voice will be automatically transcribed by the app and as researchers we will not have access to your voice information.\nRecord your voice using the button below:"
+            question76.questionItalicText = "Instructions: tap the recording button below and start speaking, once you are done, tap the button again to stop recording. You can click on next to submit your voice answer. You can’t replay your voice answer, however, you can record again and only the last recorded answer will be submitted."
             question76.moduleStartInfo = "Please use the voice recording button below to record a voice answer."
         case "d":
             question76.moduleStartInfo =
                 "There are a few ways you can answer this question: 1) using the text box to type in your answer, 2) using the dictation button to turn your voice into text, 3) using the voice recording button below to submit your answer. Please feel free to choose any one of them to answer this question."
-            question76.questionItalicText = "Dictation button: tap on the text box to bring up your keyboard, tap on the dictation button and start speaking. You should notice the words come up as you speak. Tap on the keyboard button when you are done speaking.\nVoice record button: tap and hold on the record button and start speaking. You can’t replay your voice answer, however, you can tap and hold on the button to record again. Only the last recorded answer will be submitted. Please note that your voice will be automatically transcribed by the app and as researchers we will not have access to your voice information."
+            question76.questionItalicText = "Dictation button: tap anywhere in the text box to bring up your keyboard, and then tap on the microphone button on the bottom right corner to start speaking. When you are done speaking, tap the keyboard button to stop dictation. Your answer should appear in the text box.\nVoice record button: tap the recording button below and start speaking, once you are done, tap the button again to stop recording. You can click on next to submit your voice answer. You can’t replay your voice answer, however, you can record again and only the last recorded answer will be submitted."
             question76.answerType = "TextAndVoice"
         default:
             question76.answerType = "TextView"
@@ -1982,17 +1981,17 @@ class LogInVC: UIViewController {
             question77.answerType = "TextView"
         case "b":
             question77.answerType = "TextView"
-            question77.questionItalicText = "Instructions: tap on the text box to bring up your keyboard, tap on the dictation button and start speaking. You should notice the words come up as you speak. Tap on the keyboard button when you are done speaking."
+            question77.questionItalicText = "Instructions: tap anywhere in the text box to bring up your keyboard, and then tap on the microphone button on the bottom right corner to start speaking. When you are done speaking, tap the keyboard button to stop dictation. Your answer should appear in the text box."
             question77.moduleStartInfo = "Please use the dictation button on your keyboard to answer this question."
         case "c":
             question77.answerType = "Voice"
-            question77.questionItalicText = "Instructions: tap and hold on the record button and start speaking. You can’t replay your voice answer, however, you can tap and hold on the button to record again. Only the last recorded answer will be submitted. Please note that your voice will be automatically transcribed by the app and as researchers we will not have access to your voice information.\nRecord your voice using the button below:"
+            question77.questionItalicText = "Instructions: tap the recording button below and start speaking, once you are done, tap the button again to stop recording. You can click on next to submit your voice answer. You can’t replay your voice answer, however, you can record again and only the last recorded answer will be submitted."
             question77.moduleStartInfo = "Please use the voice recording button below to record a voice answer."
         case "d":
             question77.answerType = "TextAndVoice"
             question77.moduleStartInfo =
                 "There are a few ways you can answer this question: 1) using the text box to type in your answer, 2) using the dictation button to turn your voice into text, 3) using the voice recording button below to submit your answer. Please feel free to choose any one of them to answer this question."
-            question77.questionItalicText = "Dictation button: tap on the text box to bring up your keyboard, tap on the dictation button and start speaking. You should notice the words come up as you speak. Tap on the keyboard button when you are done speaking.\nVoice record button: tap and hold on the record button and start speaking. You can’t replay your voice answer, however, you can tap and hold on the button to record again. Only the last recorded answer will be submitted. Please note that your voice will be automatically transcribed by the app and as researchers we will not have access to your voice information."
+            question77.questionItalicText = "Dictation button: tap anywhere in the text box to bring up your keyboard, and then tap on the microphone button on the bottom right corner to start speaking. When you are done speaking, tap the keyboard button to stop dictation. Your answer should appear in the text box.\nVoice record button: tap the recording button below and start speaking, once you are done, tap the button again to stop recording. You can click on next to submit your voice answer. You can’t replay your voice answer, however, you can record again and only the last recorded answer will be submitted."
             
         default:
             question77.answerType = "TextView"
@@ -2125,7 +2124,7 @@ class LogInVC: UIViewController {
                 question717.questionId = 17
                 question717.nextQuestionId = 18
                 question717.firebaseId = 67
-                question717.question = "When answering open-ended questions like the one in the screenshot below, did you try using any voice input features as instructed?"
+                question717.question = "When answering open-ended questions earlier, did you try using any voice input features as instructed?"
                 
                 question717.answerType = "BCQ"
                 question717.answerChoices = ["Yes, I tried using the dictation button",
@@ -2203,7 +2202,7 @@ class LogInVC: UIViewController {
                 question717.questionId = 16
                 question717.nextQuestionId = 17
                 question717.firebaseId = 67
-                question717.question = "When answering open-ended questions like the one in the screenshot below, did you try using any voice input features as instructed?"
+                question717.question = "When answering open-ended questions earlier, did you try using any voice input features as instructed?"
                 
                 question717.answerType = "BCQ"
                 question717.answerChoices = ["Yes, I tried using the dictation button",
@@ -2256,7 +2255,7 @@ class LogInVC: UIViewController {
                 question717.questionId = 14
                 question717.nextQuestionId = 15
                 question717.firebaseId = 67
-                question717.question = "When answering open-ended questions like the one in the screenshot below, did you try using any voice input features as instructed?"
+                question717.question = "When answering open-ended questions earlier, did you try using any voice input features as instructed?"
                 
                 question717.answerType = "BCQ"
                 question717.answerChoices = ["Yes, I tried using the dictation button",
@@ -2323,7 +2322,7 @@ class LogInVC: UIViewController {
         let question1 = Question(context: self.coreDataContext)
         question1.questionId = 1
         question1.nextQuestionId = 2
-        question1.question = "During the week of Mar 28, 2022, who was your principal employer?"
+        question1.question = "During the week of April 25, 2022, who was your principal employer?"
         question1.questionItalicText = "If you had more than one job, report the one for which you worked the most hours that week.\nIf you worked for a contracting or consulting company, report the name of that company, not the client organization."
         question1.placeholderText = "Employer Name"
         question1.answerType = "Text"
@@ -2333,7 +2332,7 @@ class LogInVC: UIViewController {
         let question2 = Question(context: self.coreDataContext)
         question2.questionId = 2
         question2.nextQuestionId = 3
-        question2.question = "Which one of the following best describes your principal employer during the week of March 28, 2022?"
+        question2.question = "Which one of the following best describes your principal employer during the week of April 25, 2022?"
         question2.answerType = "BCQ"
         question2.answerChoices = [
             "in a non-incorporated business, professional practice, or farm",
@@ -2471,7 +2470,7 @@ class LogInVC: UIViewController {
         question1.questionId = 1
         question1.firebaseId = 1
         question1.nextQuestionId = 2
-        question1.question = "During the week of Mar 28, 2022, who was your principal employer?"
+        question1.question = "During the week of April 25, 2022, who was your principal employer?"
         question1.questionItalicText = "If you had more than one job, report the one for which you worked the most hours that week.\nIf you worked for a contracting or consulting company, report the name of that company, not the client organization."
         question1.placeholderText = "Employer Name"
         question1.answerType = "Text"
@@ -2483,7 +2482,7 @@ class LogInVC: UIViewController {
         question2.questionId = 2
         question2.firebaseId = 2
         question2.nextQuestionId = 3
-        question2.question = "Which one of the following best describes your principal employer during the week of March 28, 2022?"
+        question2.question = "Which one of the following best describes your principal employer during the week of April 25, 2022?"
         question2.answerType = "BCQ"
         question2.answerChoices = [
             "SELF EMPLOYED OR A BUSINESS OWNER in a non-incorporated business, professional practice, or farm",
@@ -2546,16 +2545,17 @@ class LogInVC: UIViewController {
         
         
         let newModule2 = Module(context: self.coreDataContext)
+        //let date2 = Calendar.current.date(byAdding: .day, value: 2, to: Date())
         let date2 = Calendar.current.date(byAdding: .minute, value: 2, to: Date())
         newModule2.dateAdded = date2
-        newModule2.moduleName = "Module 2: Job duties"
+        newModule2.moduleName = "Module 2: Job Duties"
         createLocalNotification(title: "New Module Published", body: "Module 2 has been released", date: date2!)
         
         let question21 = Question(context: self.coreDataContext)
         question21.questionId = 1
         question21.firebaseId = 7
         question21.nextQuestionId = 2
-        question21.question = "During the week of March 28, 2022, what was the title of the principal job you held?"
+        question21.question = "During the week of April 25, 2022, what was the title of the principal job you held?"
         question21.questionItalicText = "Example: Financial Analyst"
         question21.answerType = "Text"
         question21.isFirst = true
@@ -2595,7 +2595,7 @@ class LogInVC: UIViewController {
         question25.questionId = 5
         question25.firebaseId = 11
         question25.nextQuestionId = 6
-        question25.question = "During what month and year did you start this job (that is, the principal job you held during the week of March 28, 2022)?"
+        question25.question = "During what month and year did you start this job (that is, the principal job you held during the week of April 25, 2022)?"
         //question25.questionItalicText = "Principal job started??? Date Time??"
         question25.answerType = "Date"
         question25.placeholderText = "Principal job started"
@@ -2657,7 +2657,7 @@ class LogInVC: UIViewController {
         question28.questionId = 8
         question28.firebaseId = 14
         question28.nextQuestionId = 9
-        question28.question = "As part of the principal job you held during the week of March 28, 2022, did you supervise the work of others?"
+        question28.question = "As part of the principal job you held during the week of April 25, 2022, did you supervise the work of others?"
         question28.questionItalicText = "Mark “Yes” if you recommended or initiated personnel actions such as hiring, firing, evaluating, or promoting others.\nTeachers: Do not count students."
         question28.answerType = "BCQ"
         question28.answerChoices = ["Yes",
@@ -2677,7 +2677,7 @@ class LogInVC: UIViewController {
         question210.questionId = 10
         question210.firebaseId = 16
         question210.nextQuestionId = 11
-        question210.question = "As of the week of March 28, 2022, what was your basic annual salary on your principal job, before deductions?"
+        question210.question = "As of the week of April 25, 2022, what was your basic annual salary on your principal job, before deductions?"
         question210.questionItalicText = "Do not include bonuses, overtime, or additional compensation for summertime teaching or research. If you are not salaried, please estimate your earned income, excluding business expenses."
         question210.answerType = "Numeric"
         question210.placeholderText = "$"
@@ -2716,9 +2716,10 @@ class LogInVC: UIViewController {
         question212.module = newModule2
         
         let newModule3 = Module(context: self.coreDataContext)
+        //let date3 = Calendar.current.date(byAdding: .day, value: 4, to: Date())
         let date3 = Calendar.current.date(byAdding: .minute, value: 4, to: Date())
         newModule3.dateAdded = date3
-        newModule3.moduleName = "Module 3: Job satisfaction"
+        newModule3.moduleName = "Module 3: Job Satisfaction"
         createLocalNotification(title: "New Module Published", body: "Module 3 has been released", date: date3!)
         
         
@@ -2726,7 +2727,7 @@ class LogInVC: UIViewController {
         question31.questionId = 1
         question31.firebaseId = 19
         question31.nextQuestionId = 2
-        question31.question = "Thinking about the principal job you held during the week of March 28, 2022, how would you rate your overall satisfaction?"
+        question31.question = "Thinking about the principal job you held during the week of April 25, 2022, how would you rate your overall satisfaction?"
         question31.answerType = "BCQ"
         question31.answerChoices = [
             "Very satisfied",
@@ -2744,7 +2745,7 @@ class LogInVC: UIViewController {
         question32.questionId = 2
         question32.firebaseId = 20
         question32.nextQuestionId = 3
-        question32.question = "Thinking about the principal job you held during the week of March 28, 2022, how satisfied or dissatisfied were you with the following aspects of the job?"
+        question32.question = "Thinking about the principal job you held during the week of April 25, 2022, how satisfied or dissatisfied were you with the following aspects of the job?"
         question32.gridQuestions = ["Salary",
                                     "Benefits",
                                     "Job security",
@@ -2768,7 +2769,7 @@ class LogInVC: UIViewController {
         question33.questionId = 3
         question33.firebaseId = 21
         question33.nextQuestionId = 4
-        question33.question = "For the principal job you held during the week of March 28, 2022, has your basic annual salary been affected at any time by the coronavirus pandemic?"
+        question33.question = "For the principal job you held during the week of April 25, 2022, has your basic annual salary been affected at any time by the coronavirus pandemic?"
         question33.answerType = "BCQ"
         question33.answerChoices = ["Yes",
                                     "No"]
@@ -2793,16 +2794,17 @@ class LogInVC: UIViewController {
         
         
         let newModule4 = Module(context: self.coreDataContext)
+        //let date4 = Calendar.current.date(byAdding: .day, value: 6, to: Date())
         let date4 = Calendar.current.date(byAdding: .minute, value: 6, to: Date())
         newModule4.dateAdded = date4
-        newModule4.moduleName = "Module 4: Job benefits"
+        newModule4.moduleName = "Module 4: Job Benefits"
         createLocalNotification(title: "New Module Published", body: "Module 4 has been released", date: date4!)
         
         let question41 = Question(context: self.coreDataContext)
         question41.questionId = 1
         question41.firebaseId = 24
         question41.nextQuestionId = 2
-        question41.question = "Thinking of your principal job during the week of March 28, 2022, which of the following benefits were available to you, even if you chose not to take them?"
+        question41.question = "Thinking of your principal job during the week of April 25, 2022, which of the following benefits were available to you, even if you chose not to take them?"
         question41.questionItalicText = "Check all that apply"
         question41.answerType = "MCQ"
         question41.answerChoices = ["Health insurance that was at least partially paid by your employer",
@@ -2819,7 +2821,7 @@ class LogInVC: UIViewController {
         question42.questionId = 2
         question42.firebaseId = 25
         question42.nextQuestionId = 3
-        question42.question = "Thinking of your principal job during the week of March 28, 2022, which of the following best describes whether you were allowed or required to telecommute/work remotely?"
+        question42.question = "Thinking of your principal job during the week of April 25, 2022, which of the following best describes whether you were allowed or required to telecommute/work remotely?"
         question42.answerType = "BCQ"
         question42.answerChoices = ["I was allowed or required to telecommute/work remotely due to the coronavirus pandemic",
                                     "I was allowed or required to telecommute/work remotely regardless of the coronavirus pandemic",
@@ -2871,19 +2873,19 @@ class LogInVC: UIViewController {
                                     "Not at all likely"]
         question45.module = newModule4
         
-        let question46 = Question(context: self.coreDataContext)
-        question46.questionId = 6
-        question46.firebaseId = 29
-        question46.nextQuestionId = 7
-        question46.question = "Could you tell us why you say that?"
-        question46.answerType = "TextView"
-        //question46.placeholderText = "Specify"
-        question46.module = newModule4
+//        let question46 = Question(context: self.coreDataContext)
+//        question46.questionId = 6
+//        question46.firebaseId = 29
+//        question46.nextQuestionId = 7
+//        question46.question = "Could you tell us why you say that?"
+//        question46.answerType = "TextView"
+//        //question46.placeholderText = "Specify"
+//        question46.module = newModule4
         
         let question47 = Question(context: self.coreDataContext)
-        question47.questionId = 7
+        question47.questionId = 6
         question47.firebaseId = 30
-        question47.nextQuestionId = 8
+        question47.nextQuestionId = 7
         question47.question = "About how easy would it be for you to find a job with another employer with approximately the same income and fringe benefits you now have?"
         question47.answerType = "BCQ"
         question47.answerChoices = ["Very likely",
@@ -2893,20 +2895,20 @@ class LogInVC: UIViewController {
         question47.module = newModule4
         
         
-        let question48 = Question(context: self.coreDataContext)
-        question48.questionId = 8
-        question48.firebaseId = 31
-        question48.nextQuestionId = 9
-        question48.question = "Could you tell us why you say that?"
-        question48.answerType = "TextView"
-        //question48.placeholderText = "Specify"
-        question48.module = newModule4
+//        let question48 = Question(context: self.coreDataContext)
+//        question48.questionId = 8
+//        question48.firebaseId = 31
+//        question48.nextQuestionId = 9
+//        question48.question = "Could you tell us why you say that?"
+//        question48.answerType = "TextView"
+//        //question48.placeholderText = "Specify"
+//        question48.module = newModule4
         
         let question49 = Question(context: self.coreDataContext)
-        question49.questionId = 9
+        question49.questionId = 7
         question49.firebaseId = 32
-        question49.nextQuestionId = 10
-        question49.question = "As of March 28, 2022, did you have any active professional certifications or state or industry licenses?"
+        question49.nextQuestionId = 8
+        question49.question = "As of April 25, 2022, did you have any active professional certifications or state or industry licenses?"
         question49.questionItalicText = "A professional certification or license shows you are qualified to perform a specific job. Only include certifications or licenses obtained by an individual. Examples include Certified Teacher, Registered Nurse, Licensed Professional Engineer, a Project Management certification, or an IT certification.\nDo not include licenses needed by a business to operate."
         question49.answerType = "BCQ"
         question49.answerChoices = ["Yes",
@@ -2914,9 +2916,9 @@ class LogInVC: UIViewController {
         question49.module = newModule4
         
         let question410 = Question(context: self.coreDataContext)
-        question410.questionId = 10
+        question410.questionId = 8
         question410.firebaseId = 33
-        question410.nextQuestionId = 11
+        question410.nextQuestionId = 9
         question410.question = "During the past 12 months, did you take any work-related training, such as workshops or seminars?"
         question410.questionItalicText = "Include conferences or professional meetings only if you attended a training session at the conference or meeting.\nDo not include college coursework for which you were enrolled in a degree program."
         question410.answerType = "BCQ"
@@ -2925,9 +2927,9 @@ class LogInVC: UIViewController {
         question410.module = newModule4
         
         let question411 = Question(context: self.coreDataContext)
-        question411.questionId = 11
+        question411.questionId = 9
         question411.firebaseId = 34
-        question411.nextQuestionId = 12
+        question411.nextQuestionId = 10
         question411.question = "During the past 12 months, did you attend any professional conferences or professional society or association meetings?"
         question411.questionItalicText = "Include regional, national, or international meetings."
         question411.answerType = "BCQ"
@@ -2936,7 +2938,7 @@ class LogInVC: UIViewController {
         question411.module = newModule4
         
         let question412 = Question(context: self.coreDataContext)
-        question412.questionId = 12
+        question412.questionId = 10
         question412.firebaseId = 35
         question412.question = "To how many regional, national, or international professional societies or associations do you currently belong?"
         question412.answerType = "Numeric"
@@ -2946,9 +2948,10 @@ class LogInVC: UIViewController {
         
         
         let newModule5 = Module(context: self.coreDataContext)
+        //let date5 = Calendar.current.date(byAdding: .day, value: 8, to: Date())
         let date5 = Calendar.current.date(byAdding: .minute, value: 8, to: Date())
         newModule5.dateAdded = date5
-        newModule5.moduleName = "Module 5: Job expectations"
+        newModule5.moduleName = "Module 5: Job Expectations"
         createLocalNotification(title: "New Module Published", body: "Module 5 has been released", date: date5!)
         
         
@@ -3039,9 +3042,10 @@ class LogInVC: UIViewController {
         
         
         let newModule6 = Module(context: self.coreDataContext)
+        //let date6 = Calendar.current.date(byAdding: .day, value: 10, to: Date())
         let date6 = Calendar.current.date(byAdding: .minute, value: 10, to: Date())
         newModule6.dateAdded = date6
-        newModule6.moduleName = "Module 6: Economy and society"
+        newModule6.moduleName = "Module 6: Economy and Society"
         createLocalNotification(title: "New Module Published", body: "Module 6 has been released", date: date6!)
         
         let question61 = Question(context: self.coreDataContext)
@@ -3113,18 +3117,18 @@ class LogInVC: UIViewController {
             "Against"]
         question64.module = newModule6
         
-        let question65 = Question(context: self.coreDataContext)
-        question65.questionId = 5
-        question65.firebaseId = 46
-        question65.nextQuestionId = 6
-        question65.question = "Could you tell us why you say that?"
-        question65.answerType = "TextView"
-        question65.module = newModule6
+//        let question65 = Question(context: self.coreDataContext)
+//        question65.questionId = 5
+//        question65.firebaseId = 46
+//        question65.nextQuestionId = 6
+//        question65.question = "Could you tell us why you say that?"
+//        question65.answerType = "TextView"
+//        question65.module = newModule6
         
         let question66 = Question(context: self.coreDataContext)
-        question66.questionId = 6
+        question66.questionId = 5
         question66.firebaseId = 47
-        question66.nextQuestionId = 7
+        question66.nextQuestionId = 6
         question66.question = "What do you think the chances are these days that a man won't get a job or promotion while an equally or less qualified woman gets one instead?"
         question66.answerType = "BCQ"
         question66.answerChoices = [
@@ -3136,9 +3140,8 @@ class LogInVC: UIViewController {
         question66.module = newModule6
         
         let question67 = Question(context: self.coreDataContext)
-        question67.questionId = 7
+        question67.questionId = 6
         question67.firebaseId = 48
-        question67.nextQuestionId = 8
         question67.question = "What do you think the chances are these days that a woman won't get a job or promotion while an equally or less qualified man gets one instead?"
         question67.answerType = "BCQ"
         question67.answerChoices = [
@@ -3149,14 +3152,15 @@ class LogInVC: UIViewController {
         ]
         question67.module = newModule6
         
-        let question68 = Question(context: self.coreDataContext)
-        question68.questionId = 8
-        question68.firebaseId = 49
-        question68.question = "Could you tell us more about that?"
-        question68.answerType = "TextView"
-        question68.module = newModule6
+//        let question68 = Question(context: self.coreDataContext)
+//        question68.questionId = 8
+//        question68.firebaseId = 49
+//        question68.question = "Could you tell us more about that?"
+//        question68.answerType = "TextView"
+//        question68.module = newModule6
         
         let newModule7 = Module(context: self.coreDataContext)
+        //let date7 = Calendar.current.date(byAdding: .day, value: 12, to: Date())
         let date7 = Calendar.current.date(byAdding: .minute, value: 12, to: Date())
         newModule7.dateAdded = date7
         newModule7.moduleName = "Module 7: Technology"
@@ -3197,7 +3201,7 @@ class LogInVC: UIViewController {
         question74.firebaseId = 53
         question74.nextQuestionId = 5
         question74.question = "During the past week, how many minutes or hours did use the apps on your iPhone?"
-        question74.questionItalicText = "You can find this information on your iPhone in four steps: 1. launch the Settings app; 2. scroll down to the words \"Screen Time\" or search for \"screen time\"; 3. tap \"See All Activity\"; and 4. Tap \"Week\" at the top of the screen to see your \"Total Screen Time\" for the week."
+        question74.questionItalicText = "You can find this information on your iPhone in four steps: 1. launch the Settings app; 2. scroll down to the words \"Screen Time\" or search for \"screen time\"; 3. tap \"See All Activity\"; and 4. Tap \"Week\" at the top of the screen to see your \"Total Screen Time\" for the week. If you don't have Screen Time enabled then enter your best estimate"
         question74.answerType = "Numeric&Numeric"
         question74.placeholderText = "Hour:Minutes"
         question74.module = newModule7
@@ -3213,17 +3217,17 @@ class LogInVC: UIViewController {
             question75.answerType = "TextView"
         case "b":
             question75.answerType = "TextView"
-            question75.questionItalicText = "Instructions: tap on the text box to bring up your keyboard, tap on the dictation button and start speaking. You should notice the words come up as you speak. Tap on the keyboard button when you are done speaking."
-            question75.moduleStartInfo = "Next, please answer the following questions in your own words.\nPlease use the dictation button on your keyboard to answer this question."
+            question75.questionItalicText = "Instructions: tap anywhere in the text box to bring up your keyboard, and then tap on the microphone button on the bottom right corner to start speaking. When you are done speaking, tap the keyboard button to stop dictation. Your answer should appear in the text box."
+            question75.moduleStartInfo = "Please use the dictation button on your keyboard to answer this question."
         case "c":
             question75.answerType = "Voice"
-            question75.questionItalicText = "Instructions: tap and hold on the record button and start speaking. You can’t replay your voice answer, however, you can tap and hold on the button to record again. Only the last recorded answer will be submitted. Please note that your voice will be automatically transcribed by the app and as researchers we will not have access to your voice information.\nRecord your voice using the button below:"
-            question75.moduleStartInfo = "Next, please answer the following questions in your own words.\nPlease use the voice recording button below to record a voice answer."
+            question75.questionItalicText = "Instructions: tap the recording button below and start speaking, once you are done, tap the button again to stop recording. You can click on next to submit your voice answer. You can’t replay your voice answer, however, you can record again and only the last recorded answer will be submitted."
+            question75.moduleStartInfo = "Please use the voice recording button below to record a voice answer."
         case "d":
             question75.answerType = "TextAndVoice"
             question75.moduleStartInfo =
-                "Next, please answer the following questions in your own words.\nThere are a few ways you can answer this question: 1) using the text box to type in your answer, 2) using the dictation button to turn your voice into text, 3) using the voice recording button below to submit your answer. Please feel free to choose any one of them to answer this question."
-            question75.questionItalicText = "Dictation button: tap on the text box to bring up your keyboard, tap on the dictation button and start speaking. You should notice the words come up as you speak. Tap on the keyboard button when you are done speaking.\nVoice record button: tap and hold on the record button and start speaking. You can’t replay your voice answer, however, you can tap and hold on the button to record again. Only the last recorded answer will be submitted. Please note that your voice will be automatically transcribed by the app and as researchers we will not have access to your voice information."
+                "There are a few ways you can answer this question: 1) using the text box to type in your answer, 2) using the dictation button to turn your voice into text, 3) using the voice recording button below to submit your answer. Please feel free to choose any one of them to answer this question."
+            question75.questionItalicText = "Dictation button: tap anywhere in the text box to bring up your keyboard, and then tap on the microphone button on the bottom right corner to start speaking. When you are done speaking, tap the keyboard button to stop dictation. Your answer should appear in the text box.\nVoice record button: tap the recording button below and start speaking, once you are done, tap the button again to stop recording. You can click on next to submit your voice answer. You can’t replay your voice answer, however, you can record again and only the last recorded answer will be submitted."
         default:
             question75.answerType = "TextView"
         }
@@ -3239,16 +3243,16 @@ class LogInVC: UIViewController {
             question76.answerType = "TextView"
         case "b":
             question76.answerType = "TextView"
-            question76.questionItalicText = "Instructions: tap on the text box to bring up your keyboard, tap on the dictation button and start speaking. You should notice the words come up as you speak. Tap on the keyboard button when you are done speaking."
+            question76.questionItalicText = "Instructions: tap anywhere in the text box to bring up your keyboard, and then tap on the microphone button on the bottom right corner to start speaking. When you are done speaking, tap the keyboard button to stop dictation. Your answer should appear in the text box."
             question76.moduleStartInfo = "Please use the dictation button on your keyboard to answer this question."
         case "c":
             question76.answerType = "Voice"
-            question76.questionItalicText = "Instructions: tap and hold on the record button and start speaking. You can’t replay your voice answer, however, you can tap and hold on the button to record again. Only the last recorded answer will be submitted. Please note that your voice will be automatically transcribed by the app and as researchers we will not have access to your voice information.\nRecord your voice using the button below:"
+            question76.questionItalicText = "Instructions: tap the recording button below and start speaking, once you are done, tap the button again to stop recording. You can click on next to submit your voice answer. You can’t replay your voice answer, however, you can record again and only the last recorded answer will be submitted."
             question76.moduleStartInfo = "Please use the voice recording button below to record a voice answer."
         case "d":
             question76.moduleStartInfo =
                 "There are a few ways you can answer this question: 1) using the text box to type in your answer, 2) using the dictation button to turn your voice into text, 3) using the voice recording button below to submit your answer. Please feel free to choose any one of them to answer this question."
-            question76.questionItalicText = "Dictation button: tap on the text box to bring up your keyboard, tap on the dictation button and start speaking. You should notice the words come up as you speak. Tap on the keyboard button when you are done speaking.\nVoice record button: tap and hold on the record button and start speaking. You can’t replay your voice answer, however, you can tap and hold on the button to record again. Only the last recorded answer will be submitted. Please note that your voice will be automatically transcribed by the app and as researchers we will not have access to your voice information."
+            question76.questionItalicText = "Dictation button: tap anywhere in the text box to bring up your keyboard, and then tap on the microphone button on the bottom right corner to start speaking. When you are done speaking, tap the keyboard button to stop dictation. Your answer should appear in the text box.\nVoice record button: tap the recording button below and start speaking, once you are done, tap the button again to stop recording. You can click on next to submit your voice answer. You can’t replay your voice answer, however, you can record again and only the last recorded answer will be submitted."
             question76.answerType = "TextAndVoice"
         default:
             question76.answerType = "TextView"
@@ -3266,17 +3270,17 @@ class LogInVC: UIViewController {
             question77.answerType = "TextView"
         case "b":
             question77.answerType = "TextView"
-            question77.questionItalicText = "Instructions: tap on the text box to bring up your keyboard, tap on the dictation button and start speaking. You should notice the words come up as you speak. Tap on the keyboard button when you are done speaking."
+            question77.questionItalicText = "Instructions: tap anywhere in the text box to bring up your keyboard, and then tap on the microphone button on the bottom right corner to start speaking. When you are done speaking, tap the keyboard button to stop dictation. Your answer should appear in the text box."
             question77.moduleStartInfo = "Please use the dictation button on your keyboard to answer this question."
         case "c":
             question77.answerType = "Voice"
-            question77.questionItalicText = "Instructions: tap and hold on the record button and start speaking. You can’t replay your voice answer, however, you can tap and hold on the button to record again. Only the last recorded answer will be submitted. Please note that your voice will be automatically transcribed by the app and as researchers we will not have access to your voice information.\nRecord your voice using the button below:"
+            question77.questionItalicText = "Instructions: tap the recording button below and start speaking, once you are done, tap the button again to stop recording. You can click on next to submit your voice answer. You can’t replay your voice answer, however, you can record again and only the last recorded answer will be submitted."
             question77.moduleStartInfo = "Please use the voice recording button below to record a voice answer."
         case "d":
             question77.answerType = "TextAndVoice"
             question77.moduleStartInfo =
                 "There are a few ways you can answer this question: 1) using the text box to type in your answer, 2) using the dictation button to turn your voice into text, 3) using the voice recording button below to submit your answer. Please feel free to choose any one of them to answer this question."
-            question77.questionItalicText = "Dictation button: tap on the text box to bring up your keyboard, tap on the dictation button and start speaking. You should notice the words come up as you speak. Tap on the keyboard button when you are done speaking.\nVoice record button: tap and hold on the record button and start speaking. You can’t replay your voice answer, however, you can tap and hold on the button to record again. Only the last recorded answer will be submitted. Please note that your voice will be automatically transcribed by the app and as researchers we will not have access to your voice information."
+            question77.questionItalicText = "Dictation button: tap anywhere in the text box to bring up your keyboard, and then tap on the microphone button on the bottom right corner to start speaking. When you are done speaking, tap the keyboard button to stop dictation. Your answer should appear in the text box.\nVoice record button: tap the recording button below and start speaking, once you are done, tap the button again to stop recording. You can click on next to submit your voice answer. You can’t replay your voice answer, however, you can record again and only the last recorded answer will be submitted."
             
         default:
             question77.answerType = "TextView"
@@ -3409,7 +3413,7 @@ class LogInVC: UIViewController {
                 question717.questionId = 17
                 question717.nextQuestionId = 18
                 question717.firebaseId = 67
-                question717.question = "When answering open-ended questions like the one in the screenshot below, did you try using any voice input features as instructed?"
+                question717.question = "When answering open-ended questions earlier, did you try using any voice input features as instructed?"
                 
                 question717.answerType = "BCQ"
                 question717.answerChoices = ["Yes, I tried using the dictation button",
@@ -3487,7 +3491,7 @@ class LogInVC: UIViewController {
                 question717.questionId = 16
                 question717.nextQuestionId = 17
                 question717.firebaseId = 67
-                question717.question = "When answering open-ended questions like the one in the screenshot below, did you try using any voice input features as instructed?"
+                question717.question = "When answering open-ended questions earlier, did you try using any voice input features as instructed?"
                 
                 question717.answerType = "BCQ"
                 question717.answerChoices = ["Yes, I tried using the dictation button",
@@ -3540,7 +3544,7 @@ class LogInVC: UIViewController {
                 question717.questionId = 14
                 question717.nextQuestionId = 15
                 question717.firebaseId = 67
-                question717.question = "When answering open-ended questions like the one in the screenshot below, did you try using any voice input features as instructed?"
+                question717.question = "When answering open-ended questions earlier, did you try using any voice input features as instructed?"
                 
                 question717.answerType = "BCQ"
                 question717.answerChoices = ["Yes, I tried using the dictation button",

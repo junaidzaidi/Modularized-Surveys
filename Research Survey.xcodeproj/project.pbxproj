@@ -67,6 +67,8 @@
 		39C53F7D27BC09C200D42EA5 /* DeadCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C53F7C27BC09C200D42EA5 /* DeadCode.swift */; };
 		39C53F8027BC2A6900D42EA5 /* GridSatisfyTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C53F7E27BC2A6800D42EA5 /* GridSatisfyTVC.swift */; };
 		39C53F8127BC2A6900D42EA5 /* GridSatisfyTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39C53F7F27BC2A6800D42EA5 /* GridSatisfyTVC.xib */; };
+		39D2DA4327FEDFA500A71A60 /* questionHeaderTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D2DA4127FEDFA500A71A60 /* questionHeaderTVC.swift */; };
+		39D2DA4427FEDFA500A71A60 /* questionHeaderTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39D2DA4227FEDFA500A71A60 /* questionHeaderTVC.xib */; };
 		39DE96DF27E8F15D00671978 /* DatePickerTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DE96DD27E8F15D00671978 /* DatePickerTVC.swift */; };
 		39DE96E027E8F15D00671978 /* DatePickerTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39DE96DE27E8F15D00671978 /* DatePickerTVC.xib */; };
 		39DE96E327EA343600671978 /* TextViewTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DE96E127EA343600671978 /* TextViewTVC.swift */; };
@@ -160,6 +162,8 @@
 		39C53F7C27BC09C200D42EA5 /* DeadCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadCode.swift; sourceTree = "<group>"; };
 		39C53F7E27BC2A6800D42EA5 /* GridSatisfyTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridSatisfyTVC.swift; sourceTree = "<group>"; };
 		39C53F7F27BC2A6800D42EA5 /* GridSatisfyTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GridSatisfyTVC.xib; sourceTree = "<group>"; };
+		39D2DA4127FEDFA500A71A60 /* questionHeaderTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = questionHeaderTVC.swift; sourceTree = "<group>"; };
+		39D2DA4227FEDFA500A71A60 /* questionHeaderTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = questionHeaderTVC.xib; sourceTree = "<group>"; };
 		39DE96DD27E8F15D00671978 /* DatePickerTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerTVC.swift; sourceTree = "<group>"; };
 		39DE96DE27E8F15D00671978 /* DatePickerTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePickerTVC.xib; sourceTree = "<group>"; };
 		39DE96E127EA343600671978 /* TextViewTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewTVC.swift; sourceTree = "<group>"; };
@@ -334,6 +338,8 @@
 				39DE96DE27E8F15D00671978 /* DatePickerTVC.xib */,
 				39DE96E127EA343600671978 /* TextViewTVC.swift */,
 				39DE96E227EA343600671978 /* TextViewTVC.xib */,
+				39D2DA4127FEDFA500A71A60 /* questionHeaderTVC.swift */,
+				39D2DA4227FEDFA500A71A60 /* questionHeaderTVC.xib */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -502,6 +508,7 @@
 				3946BEFF272AF7A5005DFFC2 /* Assets.xcassets in Resources */,
 				391FA1A127DA6ED000A51863 /* GoogleService-Info.plist in Resources */,
 				39C53F8127BC2A6900D42EA5 /* GridSatisfyTVC.xib in Resources */,
+				39D2DA4427FEDFA500A71A60 /* questionHeaderTVC.xib in Resources */,
 				398C3B75274185DD00504A5F /* FooterTVC.xib in Resources */,
 				396D304E279F8A0100BC768B /* OtherTVC.xib in Resources */,
 				396D304227956E0300BC768B /* HomeCompletedTVC.xib in Resources */,
@@ -674,6 +681,7 @@
 				3946BF2F272AFEAF005DFFC2 /* HomeTVC.swift in Sources */,
 				3993358A275835F5006F9C11 /* Module.swift in Sources */,
 				398C3B7B2741BE5300504A5F /* ReleaseDateTVC.swift in Sources */,
+				39D2DA4327FEDFA500A71A60 /* questionHeaderTVC.swift in Sources */,
 				3993358C2758367D006F9C11 /* Question.swift in Sources */,
 				396D304D279F8A0100BC768B /* OtherTVC.swift in Sources */,
 				39376AC927ED11B3009EFCF0 /* SplashVC.swift in Sources */,
@@ -862,7 +870,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_TEAM = 689H338NR2;
 				INFOPLIST_FILE = "Research Survey/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -885,7 +893,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_TEAM = 689H338NR2;
 				INFOPLIST_FILE = "Research Survey/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;

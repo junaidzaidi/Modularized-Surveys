@@ -171,7 +171,7 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource {
         
         let answerCount = modules?[indexPath.row].lastQuestionAnswered ?? 0
         var questionCount = modules?[indexPath.row].questions?.count ?? 0
-        if questionCount == 18 || questionCount == 16 || questionCount == 19 || questionCount == 65 {
+        if questionCount == 18 || questionCount == 16 || questionCount == 19 || questionCount == 61 {
             questionCount -= 1
         }
         cell.questionStatus.text = "\(String(describing: answerCount))/\(String(describing: questionCount))"

@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class QuestionVC: UIViewController {
 
     var answerType : String = "MCQ"
@@ -16,11 +17,8 @@ class QuestionVC: UIViewController {
     @IBOutlet weak var headerTitleLbl: UILabel!
    
     @IBOutlet weak var questionNumberLbl: UILabel!
-    @IBOutlet weak var questionLbl: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var homeView: UIView!
-    @IBOutlet weak var ItalicLbl: UILabel!
-    @IBOutlet weak var moduleStartLbl: UILabel!
     @IBOutlet weak var moduleNameLbl: UILabel!
     
     //MARK:- Helper Variables
@@ -35,6 +33,7 @@ class QuestionVC: UIViewController {
     let coreDataContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var multipleAnswerType :[String] = []
     var answerCount = 0
+    
     
    
     //MARK:- LifeCycle Methods
@@ -57,13 +56,13 @@ class QuestionVC: UIViewController {
         answer = question?.answer?.answer ?? []
         answerCount = answer.count
         moduleNameLbl.text = moduleName
-        questionLbl.text = question?.question ?? nil
-        if (question?.firebaseId == 22 || question?.firebaseId == 23) {
-            Helper.setUnderlineText(forLabel: questionLbl, onText: "result of the coronavirus pandemic", labelText: question?.question ?? "")
-        }
-        ItalicLbl.text = question?.questionItalicText ?? nil
+        //questionLbl.text = question?.question ?? nil
+//        if (question?.firebaseId == 22 || question?.firebaseId == 23) {
+//            Helper.setUnderlineText(forLabel: questionLbl, onText: "result of the coronavirus pandemic", labelText: question?.question ?? "")
+//        }
+        //ItalicLbl.text = question?.questionItalicText ?? nil
         var count = module?.questions?.count ?? 0
-        if count == 18 || count == 65 || count == 19 {
+        if count == 18 || count == 61 || count == 19 || count == 16 {
             count -= 1
         }
         questionNumberLbl.text = "\(questionNumber)/\(count)"
@@ -101,12 +100,16 @@ class QuestionVC: UIViewController {
         tableView.register(UINib(nibName: "DatePickerTVC", bundle: nil), forCellReuseIdentifier: "DatePickerTVC")
         
         tableView.register(UINib(nibName: "FooterTVC", bundle: nil), forHeaderFooterViewReuseIdentifier: "FooterTVC")
+        tableView.register(UINib(nibName: "questionHeaderTVC", bundle: nil), forHeaderFooterViewReuseIdentifier: "questionHeaderTVC")
         
-        questionLbl.font = questionLbl.font.bold
-        ItalicLbl.font = ItalicLbl.font.italic
+//        questionLbl.font = questionLbl.font.bold
+//        ItalicLbl.font = ItalicLbl.font.italic
+//        
+//        moduleStartLbl.isHidden = ((question?.moduleStartInfo) == nil)
+//        moduleStartLbl.text = question?.moduleStartInfo
         
-        moduleStartLbl.isHidden = ((question?.moduleStartInfo) == nil)
-        moduleStartLbl.text = question?.moduleStartInfo
+        tableView.sectionHeaderHeight = UITableView.automaticDimension
+        tableView.estimatedSectionHeaderHeight = 36
         
         self.hideKeyboardWhenTappedAround()
     }
@@ -190,8 +193,22 @@ extension QuestionVC : UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
+        let cell = tableView.dequeueReusableHeaderFooterView(withIdentifier: "questionHeaderTVC") as? questionHeaderTVC ?? questionHeaderTVC()
+        
+        
+        if (question?.firebaseId == 54 || question?.firebaseId == 55 || question?.firebaseId == 56) {
+            cell.setLbls(moduleStart: question?.question, question: question?.moduleStartInfo, italic: question?.questionItalicText)
+            cell.changeLblsFonts()
+        }
+        else {
+            cell.setLbls(moduleStart: question?.moduleStartInfo, question: question?.question, italic: question?.questionItalicText)
+        }
+        return cell
     }
+//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//        return 400
+//    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         /*
@@ -278,6 +295,8 @@ extension QuestionVC : UITableViewDelegate, UITableViewDataSource {
                 let previousAnswer = answer.count > 0 ? answer[0] : nil
                 cell.setPlaceholder(placeholderText: question?.placeholderText)
                 cell.setText(text: previousAnswer ?? "")
+                
+                
                 
                 return cell
             
@@ -376,7 +395,7 @@ extension QuestionVC : UITableViewDelegate, UITableViewDataSource {
         cell.delegate = self
         
         questionNumber == 1 ? cell.setPreviousBtnInactive() : cell.setPreviousBtnActive()
-        if (questionNumber == module?.questions?.count || (module?.questions?.count == 18 && questionNumber == 17) || (module?.questions?.count == 16 && questionNumber == 15) || (module?.questions?.count == 19 && questionNumber == 18) || (module?.questions?.count == 65 && questionNumber == 64)) {
+        if (questionNumber == module?.questions?.count || (module?.questions?.count == 18 && questionNumber == 17) || (module?.questions?.count == 16 && questionNumber == 15) || (module?.questions?.count == 19 && questionNumber == 18) || (module?.questions?.count == 61 && questionNumber == 60)) {
             cell.setNextBtnToProceed()
         }
         
@@ -406,6 +425,8 @@ extension QuestionVC : FooterTVCDelegate {
     }
     
     func nextBtnTapped() {
+        
+        NotificationCenter.default.post(name: Notification.Name("nextBtnTapped"), object: nil)
         
         saveAnswer()
         

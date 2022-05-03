@@ -19,6 +19,7 @@ class VoiceTVC: UITableViewCell {
     @IBOutlet weak var btnStart: UIButton!
     @IBOutlet weak var playImgView: UIImageView!
     
+    @IBOutlet weak var voiceLbl: UILabel!
     //MARK:- Helper Variables
     var textFldValue = "Voice: "
     let speechRecognizer        = SFSpeechRecognizer(locale: Locale(identifier: "en-US"))
@@ -34,6 +35,8 @@ class VoiceTVC: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        voiceLbl.text = "Start Recording"
+        NotificationCenter.default.addObserver(self, selector: #selector(self.methodOfReceivedNotification(notification:)), name: Notification.Name("nextBtnTapped"), object: nil)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -42,24 +45,48 @@ class VoiceTVC: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    //MARK:- IBActions
-    @IBAction func btnTapped(_ sender: UIButton) {
+    @objc func methodOfReceivedNotification(notification: Notification) {
         if audioEngine.isRunning {
             
             self.playImgView.image = UIImage(systemName: "mic.circle")
+            playImgView.image = playImgView.image?.withRenderingMode(.alwaysTemplate)
+            playImgView.tintColor = UIColor.systemBlue
             if let delegate = delegate {
                 delegate.voiceTextValueChanged(newValue: "Voice: \(textFldValue)")
             }
             self.audioEngine.stop()
             self.recognitionRequest?.endAudio()
             self.btnStart.isEnabled = false
+            voiceLbl.text = "Done Recording"
+
+            //self.btnStart.setTitle("Start Recording", for: .normal)
+        }
+    }
+    
+    //MARK:- IBActions
+    @IBAction func btnTapped(_ sender: UIButton) {
+        if audioEngine.isRunning {
+            
+            self.playImgView.image = UIImage(systemName: "mic.circle")
+            playImgView.image = playImgView.image?.withRenderingMode(.alwaysTemplate)
+            playImgView.tintColor = UIColor.systemBlue
+            if let delegate = delegate {
+                delegate.voiceTextValueChanged(newValue: "Voice: \(textFldValue)")
+            }
+            self.audioEngine.stop()
+            self.recognitionRequest?.endAudio()
+            self.btnStart.isEnabled = false
+            voiceLbl.text = "Done Recording"
+
             //self.btnStart.setTitle("Start Recording", for: .normal)
         } else {
             self.startRecording()
             //self.btnStart.setTitle("Stop Recording", for: .normal)
             self.playImgView.image = UIImage(systemName: "stop.circle.fill")
+            playImgView.image = playImgView.image?.withRenderingMode(.alwaysTemplate)
+            playImgView.tintColor = UIColor.red
+            voiceLbl.text = "Recording...."
         }
-        playImgView.tintColor = .systemBlue
     }
     
     func setupSpeech() {

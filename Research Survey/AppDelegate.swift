@@ -42,7 +42,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 
                 if (Helper.isSurveyPending()) {
                     
-                    let scheduledDate = Calendar.current.date(byAdding: .second, value: 5, to: Date()) ?? Date()
+                    //let scheduledDate = Calendar.current.date(byAdding: .day, value: 4, to: Date()) ?? Date()
+                    let scheduledDate = Calendar.current.date(byAdding: .minute, value: 4, to: Date()) ?? Date()
                     self.createLocalNotification(title: "Survey Pending", body: "You still have some questions that have not been answered on the General Economic Survey. Please tap here to continue!", date: scheduledDate)
                     }
             }

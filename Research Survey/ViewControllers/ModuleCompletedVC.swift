@@ -15,6 +15,7 @@ class ModuleCompletedVC: UIViewController {
     @IBOutlet weak var homeBtn: UIButton!
     @IBOutlet weak var nextModuleBtn: UIButton!
     
+    @IBOutlet weak var thanksLbl: UILabel!
     @IBOutlet weak var nextModuleView: UIView!
     //MARK:- Helper Variable
     
@@ -26,6 +27,7 @@ class ModuleCompletedVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setText()
         var modules = Helper.modules
         
         modules = modules?.filter({ $0.dateAdded! <= Date()
@@ -53,6 +55,11 @@ class ModuleCompletedVC: UIViewController {
         
     }
 
+    func setText() {
+        
+        thanksLbl.text = Helper.isSurveyPending() ? "Thank you for completing this module! We appreciate your time." : "Thank you for completing this study! We appreciate your time. You may remove the app from your phone now. You will receive your incentive shortly (within 7 days)."
+        
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         nextModuleBtn.layer.cornerRadius = 8

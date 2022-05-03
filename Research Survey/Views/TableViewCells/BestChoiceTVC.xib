@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -28,7 +29,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="92"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="E7h-JU-es5">
-                                <rect key="frame" x="15" y="36.5" width="20" height="19"/>
+                                <rect key="frame" x="10" y="36.5" width="20" height="19"/>
                                 <color key="tintColor" systemColor="systemBlueColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="J5Y-Ly-Ptq"/>
@@ -36,7 +37,7 @@
                                 </constraints>
                             </imageView>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="oVD-8A-jnt">
-                                <rect key="frame" x="20" y="41.5" width="10" height="9"/>
+                                <rect key="frame" x="15" y="41.5" width="10" height="9"/>
                                 <color key="tintColor" systemColor="systemBlueColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="10" id="Dch-Ij-erp"/>
@@ -44,8 +45,8 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Option" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSg-zE-7Xb">
-                                <rect key="frame" x="50" y="12" width="255" height="68"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="40" y="12" width="265" height="68"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -54,9 +55,9 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="pSg-zE-7Xb" secondAttribute="trailing" constant="15" id="5dN-fz-nAj"/>
                             <constraint firstItem="oVD-8A-jnt" firstAttribute="centerY" secondItem="E7h-JU-es5" secondAttribute="centerY" id="6kq-Kc-p6m"/>
-                            <constraint firstItem="E7h-JU-es5" firstAttribute="leading" secondItem="GHO-Ia-7Cp" secondAttribute="leading" constant="15" id="EaD-3B-Vru"/>
+                            <constraint firstItem="E7h-JU-es5" firstAttribute="leading" secondItem="GHO-Ia-7Cp" secondAttribute="leading" constant="10" id="EaD-3B-Vru"/>
                             <constraint firstItem="oVD-8A-jnt" firstAttribute="centerX" secondItem="E7h-JU-es5" secondAttribute="centerX" id="GhN-Qr-b3g"/>
-                            <constraint firstItem="pSg-zE-7Xb" firstAttribute="leading" secondItem="E7h-JU-es5" secondAttribute="trailing" constant="15" id="bfo-TV-v7N"/>
+                            <constraint firstItem="pSg-zE-7Xb" firstAttribute="leading" secondItem="E7h-JU-es5" secondAttribute="trailing" constant="10" id="bfo-TV-v7N"/>
                             <constraint firstItem="E7h-JU-es5" firstAttribute="centerY" secondItem="GHO-Ia-7Cp" secondAttribute="centerY" id="kVD-3y-QOZ"/>
                             <constraint firstItem="pSg-zE-7Xb" firstAttribute="top" secondItem="GHO-Ia-7Cp" secondAttribute="top" constant="12" id="r2o-ww-FQV"/>
                             <constraint firstAttribute="bottom" secondItem="pSg-zE-7Xb" secondAttribute="bottom" constant="12" id="wV8-Gz-dEH"/>

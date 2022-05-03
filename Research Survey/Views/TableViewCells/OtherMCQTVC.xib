@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -25,7 +26,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="378" height="50.5"/>
                         <subviews>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ETl-2M-tRe">
-                                <rect key="frame" x="15" y="16.5" width="20" height="17.5"/>
+                                <rect key="frame" x="10" y="16.5" width="20" height="17.5"/>
                                 <color key="tintColor" systemColor="systemBlueColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="Fe6-3z-QO7"/>
@@ -33,7 +34,7 @@
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="xa4-6d-kx7">
-                                <rect key="frame" x="15" y="16" width="20" height="19"/>
+                                <rect key="frame" x="10" y="16" width="20" height="19"/>
                                 <color key="tintColor" systemColor="systemBlueColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="17R-FG-Req"/>
@@ -41,7 +42,7 @@
                                 </constraints>
                             </imageView>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="SrM-O8-OLi">
-                                <rect key="frame" x="20" y="21" width="10" height="9"/>
+                                <rect key="frame" x="15" y="21" width="10" height="9"/>
                                 <color key="tintColor" systemColor="systemBlueColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="10" id="Kop-JM-Sac"/>
@@ -49,11 +50,11 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Other" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8H0-0l-DfE">
-                                <rect key="frame" x="50" y="15" width="313" height="20.5"/>
+                                <rect key="frame" x="40" y="15" width="323" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20.5" id="vYJ-DR-rrK"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -67,10 +68,10 @@
                             <constraint firstAttribute="trailing" secondItem="8H0-0l-DfE" secondAttribute="trailing" constant="15" id="Nql-pk-SkX"/>
                             <constraint firstItem="xa4-6d-kx7" firstAttribute="leading" secondItem="ETl-2M-tRe" secondAttribute="leading" id="R5C-dI-1p4"/>
                             <constraint firstAttribute="height" constant="50.5" id="XAz-Od-Ggg"/>
-                            <constraint firstItem="ETl-2M-tRe" firstAttribute="leading" secondItem="QwQ-C9-2eZ" secondAttribute="leading" constant="15" id="dnm-hL-ekf"/>
+                            <constraint firstItem="ETl-2M-tRe" firstAttribute="leading" secondItem="QwQ-C9-2eZ" secondAttribute="leading" constant="10" id="dnm-hL-ekf"/>
                             <constraint firstItem="xa4-6d-kx7" firstAttribute="trailing" secondItem="ETl-2M-tRe" secondAttribute="trailing" id="eAC-4x-5Il"/>
                             <constraint firstItem="xa4-6d-kx7" firstAttribute="top" secondItem="ETl-2M-tRe" secondAttribute="top" id="j50-Jl-4yB"/>
-                            <constraint firstItem="8H0-0l-DfE" firstAttribute="leading" secondItem="ETl-2M-tRe" secondAttribute="trailing" constant="15" id="sN1-Vx-NFR"/>
+                            <constraint firstItem="8H0-0l-DfE" firstAttribute="leading" secondItem="ETl-2M-tRe" secondAttribute="trailing" constant="10" id="sN1-Vx-NFR"/>
                             <constraint firstItem="SrM-O8-OLi" firstAttribute="centerX" secondItem="xa4-6d-kx7" secondAttribute="centerX" id="vdn-d2-ccd"/>
                             <constraint firstItem="xa4-6d-kx7" firstAttribute="bottom" secondItem="ETl-2M-tRe" secondAttribute="bottom" id="vxo-qr-St5"/>
                         </constraints>
