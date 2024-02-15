@@ -21,6 +21,8 @@ An application introducing a modularized approach to surveys that helps you to c
 - Publish your survey as you like (all at once or through fixed time intervals through local notifications).
 - Connect your Firebase (.plist) to get the data.
 
+# My Published Version
 
-
-[Check out the published version of the Application at AppStore](https://apps.apple.com/us/app/smartphone-surveys/id1616206393)
+- Successfully surveyed 1000+ participants
+- No crashes reported
+- [Go to the published version](https://apps.apple.com/us/app/smartphone-surveys/id1616206393)
